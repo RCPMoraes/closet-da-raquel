@@ -1129,23 +1129,24 @@ function pdfCheckbox(target,label,value,checked,onChange){const wrap=document.cr
 function setupPdfFilters(){
  const cats=[...new Set(['Roupas','Sapatos','Tênis','Relógios','Joias','Anéis','Pulseiras','Colares',...items.map(x=>x.categoria||'Relógios')])].sort(atelierAlphabetical);
  const catBox=$('pdfCategories');catBox.replaceChildren();
- cats.forEach(cat=>pdfCheckbox(catBox,cat,cat,!pdfCategoryTouched||pdfSelectedCategories.has(cat),on=>{
+ cats.forEach(cat=>pdfCheckbox(catBox,cat+' ('+items.filter(x=>(x.categoria||'Relógios')===cat).length+')',cat,!pdfCategoryTouched||pdfSelectedCategories.has(cat),on=>{
   pdfCategoryTouched=true;if(on)pdfSelectedCategories.add(cat);else pdfSelectedCategories.delete(cat);
   updatePdfSubcategories();setupPdfFilters();renderPortfolio();
  }));
- $('pdfCatSelected').textContent=pdfCategoryTouched?pdfSelectedCategories.size+' selecionada(s)':'Todas';
+ $('pdfCatSelected').textContent=pdfCategoryTouched?pdfSelectedCategories.size+' selecionada(s) · '+items.filter(x=>pdfSelectedCategories.has(x.categoria||'Relógios')).length+' peças':'Todas · '+items.length+' peças';
  updatePdfSubcategories();
 }
 function updatePdfSubcategories(){
  const relevant=items.filter(x=>!pdfCategoryTouched||pdfSelectedCategories.has(x.categoria||'Relógios'));
- const values=[...new Map(relevant.map(x=>[pdfSubKey(x),{key:pdfSubKey(x),label:(x.categoria||'Relógios')+' — '+pdfSubcategoryValue(x)}])).values()].sort((a,b)=>a.label.localeCompare(b.label,'pt-BR'));
+ const subCount={};relevant.forEach(x=>{const k=pdfSubKey(x);subCount[k]=(subCount[k]||0)+1});
+ const values=[...new Map(relevant.map(x=>[pdfSubKey(x),{key:pdfSubKey(x),label:(x.categoria||'Relógios')+' — '+pdfSubcategoryValue(x)+' ('+(subCount[pdfSubKey(x)]||0)+')'}])).values()].sort((a,b)=>a.label.localeCompare(b.label,'pt-BR'));
  const box=$('pdfSubcategories');box.replaceChildren();
  if(!values.length){box.append(el('p','muted','Nenhuma subcategoria cadastrada nas categorias escolhidas.'))}
  values.forEach(v=>pdfCheckbox(box,v.label,v.key,!pdfSubcategoryTouched||pdfSelectedSubcategories.has(v.key),on=>{
   pdfSubcategoryTouched=true;if(on)pdfSelectedSubcategories.add(v.key);else pdfSelectedSubcategories.delete(v.key);
   updatePdfSubcategories();renderPortfolio();
  }));
- $('pdfSubSelected').textContent=pdfSubcategoryTouched?values.filter(v=>pdfSelectedSubcategories.has(v.key)).length+' selecionada(s)':'Todas';
+ $('pdfSubSelected').textContent=pdfSubcategoryTouched?values.filter(v=>pdfSelectedSubcategories.has(v.key)).length+' selecionada(s) · '+relevant.filter(x=>pdfSelectedSubcategories.has(pdfSubKey(x))).length+' peças':'Todas · '+relevant.length+' peças';
 }
 $('pdfAllCategories').addEventListener('click',()=>{pdfCategoryTouched=false;pdfSelectedCategories.clear();setupPdfFilters();renderPortfolio()});
 $('pdfNoCategories').addEventListener('click',()=>{pdfCategoryTouched=true;pdfSelectedCategories.clear();setupPdfFilters();renderPortfolio()});
@@ -1337,6 +1338,46 @@ function shortText(x){
  if(source)return source.length>220?source.slice(0,217)+'…':source;
  return [['Marca',x.marca],['Modelo',x.modelo],['Cor',x.cor],['Material',x.material],['Estilo',x.estilo]].filter(([,v])=>v).map(([k,v])=>k+': '+v).join(' · ')||'Sem descrição cadastrada.';
 }
+function reportPaginate(){
+ var src=document.getElementById('src'),out=document.getElementById('sheets');
+ var title=document.body.getAttribute('data-title')||'';
+ var pageOf={},catPage={};
+ function mk(kind){var s=document.createElement('section');s.className='sheet '+kind;var b=document.createElement('div');b.className='sbody';var f=document.createElement('div');f.className='sfoot';s.appendChild(b);s.appendChild(f);out.appendChild(s);return b}
+ function over(b){return b.scrollHeight>b.clientHeight+2}
+ function pageNo(b){return Array.prototype.indexOf.call(out.children,b.parentNode)+1}
+ function el(tag,cls,txt){var e=document.createElement(tag);if(cls)e.className=cls;if(txt!==undefined)e.textContent=txt;return e}
+ var cb=mk('capa');cb.appendChild(document.getElementById('cover'));
+ var cats=[].map.call(src.querySelectorAll('section[data-cat]'),function(sec){return {name:sec.getAttribute('data-cat'),items:[].slice.call(sec.querySelectorAll('article.piece'))}});
+ var curBody,cur;
+ function newIdx(first){curBody=mk('index');curBody.appendChild(el('h2','idx-title',first?'Índice de referência':'Índice de referência (continuação)'));cur=el('div','idx');curBody.appendChild(cur)}
+ function addRows(rows){rows.forEach(function(r){cur.appendChild(r)});if(over(curBody)){rows.forEach(function(r){cur.removeChild(r)});newIdx(false);rows.forEach(function(r){cur.appendChild(r)})}}
+ function row(cls,label,ref){var r=el('div','irow '+cls);r.appendChild(el('span','l',label));r.appendChild(el('i'));var p=el('b','pg');p.setAttribute('data-ref',ref);r.appendChild(p);return r}
+ newIdx(true);
+ cats.forEach(function(c){
+  var head=row('cat',c.name+' · '+c.items.length+(c.items.length===1?' peça':' peças'),'cat:'+c.name);
+  c.items.forEach(function(a,i){
+   var r=row('item',a.getAttribute('data-name')||'Sem nome',a.getAttribute('data-id'));
+   if(i===0)addRows([head,r]);else addRows([r]);
+  });
+  if(!c.items.length)addRows([head]);
+ });
+ cats.forEach(function(c){
+  var b=mk('content');
+  function head(isCont){var hd=el('header','cat-head');hd.appendChild(el('h2','',c.name+(isCont?' (continuação)':'')));hd.appendChild(el('span','',c.items.length+(c.items.length===1?' peça':' peças')));return hd}
+  b.appendChild(head(false));catPage[c.name]=pageNo(b);
+  var grid=el('div','cards');b.appendChild(grid);
+  c.items.forEach(function(a){
+   grid.appendChild(a);
+   if(over(b)&&grid.children.length>1){grid.removeChild(a);b=mk('content');b.appendChild(head(true));grid=el('div','cards');b.appendChild(grid);grid.appendChild(a)}
+   pageOf[a.getAttribute('data-id')]=pageNo(b);
+  });
+ });
+ [].forEach.call(document.querySelectorAll('.pg'),function(e){var r=e.getAttribute('data-ref');e.textContent=String(r.indexOf('cat:')===0?catPage[r.slice(4)]:pageOf[r])});
+ var N=out.children.length;
+ [].forEach.call(out.children,function(s,i){if(i===0)return;var f=s.querySelector('.sfoot');f.appendChild(el('span','',title));f.appendChild(el('span','','Página '+(i+1)+' de '+N))});
+ src.parentNode.removeChild(src);
+ window.__paginated=true;
+}
 function report(mode){
  if(typeof items==='undefined'||!items.length){toast('Nenhuma peça cadastrada.');return;}
  const data=items.filter(x=>(mode==='all'||selected.has(x.id))&&matchesPdfFilter(x));
@@ -1374,16 +1415,33 @@ function report(mode){
  }`;
  const filterText=typeof pdfFilterDescription==='function'?pdfFilterDescription():'';
  const bars=categories.map(([cat,list])=>`<div class="bar"><span>${esc(cat)}</span><div class="track"><div class="fill" style="width:${(list.length/total*100).toFixed(2)}%"></div></div><b>${list.length}</b></div>`).join('');
- const sections=categories.map(([cat,list])=>`<section class="category"><header class="cat-head"><h2>${esc(cat)}</h2><span>${list.length} ${list.length===1?'peça':'peças'}</span></header><div class="cards">${list.map(x=>{
+ const sections=categories.map(([cat,list])=>`<section data-cat="${esc(cat)}">${list.map(x=>{
  const photo=x.foto&&/^data:image\/(jpeg|png|webp|gif);base64,/i.test(x.foto)?`<img src="${x.foto}" alt="${esc(x.nome)}">`:'<span class="no-photo">Sem fotografia cadastrada</span>';
  const details=[['Marca',x.marca],['Modelo',x.modelo],['Tipo',x.tipoRoupa||x.tipo],['Tamanho',x.tamanhoRoupa||x.numeracao],['Cor',x.cor],['Material',x.material],['Estilo',x.estilo],['Referência',x.referencia],...Object.entries(x.detalhesCategoria||{}).map(([key,val])=>[key.replace(/([A-Z])/g,' $1'),val])].filter(([,v])=>v!==null&&v!==undefined&&String(v).trim());
- return `<article class="piece"><div class="photo">${photo}</div><div class="piece-content"><h3>${esc(x.nome)}</h3><p class="description">${esc(shortText(x))}</p>${details.length?`<dl>${details.map(([k,v])=>`<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>`:''}</div></article>`;
- }).join('')}</div></section>`).join('');
- const doc=`<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>${esc(title)} — Relatório</title><style>
+ return `<article class="piece" data-id="${esc(x.id)}" data-name="${esc(x.nome)}"><div class="photo">${photo}</div><div class="piece-content"><h3>${esc(x.nome)}</h3><p class="description">${esc(shortText(x))}</p>${details.length?`<dl>${details.map(([k,v])=>`<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>`:''}</div></article>`;
+ }).join('')}</section>`).join('');
+ const doc=`<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=820"><meta name="color-scheme" content="light"><title>${esc(title)} — Relatório</title><style>
  *{box-sizing:border-box}body{font-family:Arial,Helvetica,sans-serif;margin:0;color:#25352b;background:#fff;line-height:1.4}.tools{position:sticky;top:0;display:flex;align-items:center;gap:12px;padding:12px 22px;background:#fff;border-bottom:1px solid #ddd;z-index:5}.tools button{background:#174c3a;color:#fff;border:0;border-radius:8px;padding:11px 18px;font-weight:700;cursor:pointer}.tools span{font-size:13px;color:#55645b}.report{max-width:900px;margin:22px auto;padding:34px 42px;background:#fff;box-shadow:0 5px 22px #0001}.cover{border-bottom:4px solid #174c3a;padding:15px 0 24px}.kicker{letter-spacing:2px;font-size:11px;color:#53715d;text-transform:uppercase}.cover h1{font-size:32px;margin:8px 0;color:#174c3a}.cover p{font-size:12px;color:#526058}.summary{display:flex;gap:12px;margin:22px 0}.metric{flex:1;padding:14px;border:1px solid #d8e3da;background:#f5f9f5;border-radius:8px}.metric strong{display:block;font-size:24px;color:#174c3a}.metric span{font-size:11px}.chart{margin:24px 0 32px}.chart h2{font-size:17px}.bar{display:grid;grid-template-columns:145px 1fr 36px;align-items:center;gap:12px;margin:10px 0;font-size:12px}.bar b{text-align:right}.track{height:16px;border-radius:8px;background:#e7eee8;overflow:hidden}.fill{height:100%;background:#34845b}.category{break-before:page;margin-top:30px}.cat-head{display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid #174c3a;margin-bottom:16px}.cat-head h2{font-size:22px;margin:0 0 9px}.cat-head span{font-size:12px;color:#53655b}.cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}.piece{border:1px solid #dce5dd;border-radius:8px;overflow:hidden;break-inside:avoid-page;background:#fff}.photo{height:190px;display:flex;align-items:center;justify-content:center;background:#f6f8f5}.photo img{width:100%;height:100%;object-fit:contain}.no-photo{font-size:12px;color:#8b978e}.piece-content{padding:12px}.piece h3{font-size:15px;margin:0 0 6px}.description{font-size:11px;color:#536359;margin:0 0 9px}.piece dl{display:grid;grid-template-columns:75px 1fr;gap:3px 8px;font-size:10px;margin:0}.piece dt{color:#68756b}.piece dd{margin:0;overflow-wrap:anywhere}.footer{font-size:10px;color:#758178;margin-top:26px;border-top:1px solid #dce5dd;padding-top:10px}
  @page{size:A4;margin:13mm}@media print{body{background:white!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.tools{display:none!important}.report{max-width:none;margin:0;padding:0;box-shadow:none}.category{break-before:page}.piece{break-inside:avoid-page}.cover{break-after:avoid}.cards{gap:10px}.photo{height:165px}}@media(max-width:600px){.report{padding:20px;margin:0}.cards{grid-template-columns:1fr}.summary{flex-wrap:wrap}.bar{grid-template-columns:100px 1fr 30px}}
+ @page{size:A4;margin:0}
+ body{background:#e9ede9}
+ .sheet{width:210mm;height:296mm;margin:14px auto;background:#fff;box-shadow:0 5px 22px #0002;padding:13mm 13mm 0;position:relative;overflow:hidden;box-sizing:border-box}
+ .sbody{height:265mm;overflow:hidden}
+ .sfoot{position:absolute;left:13mm;right:13mm;bottom:8mm;display:flex;justify-content:space-between;font-size:10px;color:#758178;border-top:1px solid #dce5dd;padding-top:6px}
+ .sheet.capa .sfoot{display:none}
+ .cards{display:grid;grid-template-columns:1fr 1fr!important;gap:10px}
+ .photo{height:150px!important}
+ .cat-head{margin-bottom:12px}
+ .summary{flex-wrap:nowrap!important}.bar{grid-template-columns:145px 1fr 36px!important}
+ .idx-title{font-size:24px;color:#174c3a;border-bottom:3px solid #174c3a;padding-bottom:8px;margin:0 0 12px}
+ .irow{display:flex;align-items:baseline;gap:6px;font-size:11px;line-height:17px;color:#25352b}
+ .irow.cat{font-weight:700;font-size:13px;margin-top:8px;color:#174c3a}
+ .irow .l{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:78%}
+ .irow i{flex:1;border-bottom:1px dotted #9aa89e;min-width:10px}
+ .irow .pg{min-width:24px;text-align:right}
+ @media print{body{background:#fff!important}.sheet{margin:0!important;box-shadow:none!important;break-after:page;page-break-after:always}.sheet:last-child{break-after:auto;page-break-after:auto}}
  ${reportColorStyle}
- </style></head><body><div class="tools"><button id="printReport" type="button">Salvar / Imprimir PDF</button><span>Relatório independente do site · escolha “Salvar como PDF”</span></div><main class="report"><div class="cover"><div class="kicker">Inventário ilustrado • coleção pessoal</div><h1>${esc(title)}</h1><p>Gerado em ${esc(new Date().toLocaleDateString('pt-BR'))}</p><p>${esc(filterText)}</p></div><div class="summary"><div class="metric"><strong>${total}</strong><span>Peças filtradas</span></div><div class="metric"><strong>${categories.length}</strong><span>Categorias</span></div><div class="metric"><strong>${photographed}</strong><span>Com fotografia</span></div></div><div class="chart"><h2>Quantidades por categoria</h2>${bars}</div>${sections}<div class="footer">Closet da Raquel · Relatório gerado a partir dos registros cadastrados</div></main><script>document.getElementById('printReport').addEventListener('click',async()=>{await Promise.all(Array.from(document.images).map(img=>img.complete?Promise.resolve():new Promise(r=>{img.onload=r;img.onerror=r;setTimeout(r,5000)})));window.print()});<\/script></body></html>`;
+ </style></head><body data-title="${esc(title)}"><div class="tools"><button id="printReport" type="button">Salvar / Imprimir PDF</button><span>Relatório independente do site · escolha “Salvar como PDF”</span></div><div id="sheets"></div><div id="src" hidden><div id="cover"><div class="cover"><div class="kicker">Inventário ilustrado • coleção pessoal</div><h1>${esc(title)}</h1><p>Gerado em ${esc(new Date().toLocaleDateString('pt-BR'))}</p><p>${esc(filterText)}</p></div><div class="summary"><div class="metric"><strong>${total}</strong><span>Peças filtradas</span></div><div class="metric"><strong>${categories.length}</strong><span>Categorias</span></div><div class="metric"><strong>${photographed}</strong><span>Com fotografia</span></div></div><div class="chart"><h2>Quantidades por categoria</h2>${bars}</div></div>${sections}</div><script>(${reportPaginate.toString()})();document.getElementById('printReport').addEventListener('click',async()=>{await Promise.all(Array.from(document.images).map(img=>img.complete?Promise.resolve():new Promise(r=>{img.onload=r;img.onerror=r;setTimeout(r,5000)})));window.print()});<\/script></body></html>`;
  // Abre imediatamente durante o clique: evita bloqueio de pop-up assíncrono.
  const win=window.open('','_blank');
  if(!win){toast('Permita a abertura de uma nova aba para visualizar o relatório PDF.');return;}
