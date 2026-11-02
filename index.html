@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><script>document.documentElement.setAttribute("data-theme","light");try{localStorage.setItem("atelier-theme","light")}catch(e){}</script><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/><title>Closet da Raquel — Dashboard & GitHub Pages</title><style>
+:root{--bg:#f5f3ef;--paper:#fff;--ink:#242823;--muted:#81867e;--line:#e6e6df;--accent:#556c59;--soft:#e9eee8;--gold:#b19768;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;color:var(--ink);background:var(--bg)}*{box-sizing:border-box}body{margin:0}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.5;cursor:not-allowed}.app{max-width:1460px;margin:auto;display:grid;grid-template-columns:246px 1fr;min-height:100vh}.side{background:#fff;border-right:1px solid var(--line);padding:32px 19px;display:flex;flex-direction:column;gap:34px}.brand{padding:0 13px}.eyebrow{font-size:10px;letter-spacing:3px;color:var(--accent);font-weight:800;text-transform:uppercase}.brand h1{font:normal 31px Georgia,serif;letter-spacing:-1px;margin:8px 0 4px}.brand small{color:var(--muted);font-size:12px}.nav{display:grid;gap:7px}.nav button{border:0;background:transparent;text-align:left;padding:13px 15px;border-radius:12px;color:#686e67;font-weight:600;display:flex;align-items:center;gap:13px}.nav button.active{background:var(--soft);color:var(--accent)}.nav button span{font-size:19px}.foot{margin-top:auto;font-size:12px;color:var(--muted);padding:14px;line-height:1.7}.main{padding:40px clamp(20px,4vw,66px) 80px;min-width:0}.top{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:33px}.top .sub{color:var(--muted);font-size:13px}.title{font:normal clamp(30px,4vw,46px) Georgia,serif;letter-spacing:-1.6px;margin:0 0 10px}.intro{color:var(--muted);margin:0 0 25px;line-height:1.6}.btn{border:1px solid var(--line);background:#fff;border-radius:11px;padding:12px 17px;color:var(--ink);font-weight:650;white-space:nowrap;display:inline-flex;align-items:center;gap:7px;justify-content:center}.btn.primary{background:var(--accent);border-color:var(--accent);color:white}.btn.ghost{background:transparent}.btn.danger{color:#a34c4c}.btn.sm{font-size:12px;padding:9px 12px}.toolbar{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-bottom:30px}.stat{background:white;border:1px solid var(--line);border-radius:18px;padding:23px}.stat strong{display:block;font:normal 34px Georgia,serif;margin:9px 0}.stat small{color:var(--muted);font-size:12px}.panel{background:white;border:1px solid var(--line);border-radius:20px;padding:25px;margin-bottom:20px}.searchrow{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px}.searchrow input{flex:2;min-width:180px}.searchrow select{flex:1;min-width:125px}input,select,textarea{width:100%;border:1px solid #dfe2da;border-radius:11px;background:white;padding:13px 14px;color:var(--ink);outline-color:var(--accent)}textarea{resize:vertical;min-height:94px}label{display:block;font-size:12px;font-weight:700;color:#596157;margin-bottom:8px}label input,label select,label textarea{margin-top:8px;font-weight:400}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(225px,1fr));gap:17px}.watch{background:#fff;border:1px solid var(--line);border-radius:17px;overflow:hidden;transition:transform .15s,box-shadow .15s}.watch:hover{transform:translateY(-3px);box-shadow:0 12px 26px #263b2910}.photo{height:230px;background:#eaece7;display:grid;place-items:center;overflow:hidden;position:relative}.photo img{width:100%;height:100%;object-fit:contain}.photo .empty{font-size:60px;color:#a4b0a4}.watch-body{padding:18px}.watch h3{font:normal 21px Georgia,serif;margin:0 0 6px}.muted{color:var(--muted);font-size:13px;line-height:1.5}.chip{display:inline-block;background:#f0f3ee;color:#647665;padding:6px 9px;border-radius:20px;font-size:11px;margin:11px 5px 0 0}.watch-actions{display:flex;justify-content:space-between;align-items:center;gap:7px;margin-top:16px}.watch-actions label{margin:0;display:flex;gap:7px;align-items:center;font-weight:500}.watch-actions input{width:auto;margin:0;accent-color:var(--accent)}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 19px}.upload{border:1.5px dashed #bfcbbd;background:#f7f9f6;border-radius:18px;padding:22px;text-align:center;margin:10px 0 20px}.upload.drag{background:#e2ecdf;border-color:var(--accent)}.upload .icon{font-size:33px}.upload p{color:var(--muted);font-size:13px}.preview{max-width:100%;width:240px;height:220px;object-fit:contain;border-radius:13px;margin:14px auto;display:block;background:#fff}.hidden{display:none!important}section[hidden]{display:none!important}.port-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.port-card{border:1px solid var(--line);border-radius:14px;overflow:hidden;break-inside:avoid;background:white}.port-card .photo{height:210px}.port-card .info{padding:15px}.port-card h3{font:normal 19px Georgia,serif;margin:0 0 6px}.notice{padding:14px;border-radius:11px;background:var(--soft);color:#526753;font-size:13px;line-height:1.6;margin:14px 0}.empty-state{text-align:center;padding:60px 20px;border:1px dashed #cbd2c7;border-radius:20px;color:var(--muted)}.empty-state .symbol{font-size:48px;margin-bottom:12px}.toast{position:fixed;bottom:20px;right:20px;background:#29392c;color:white;padding:14px 20px;border-radius:12px;box-shadow:0 10px 30px #0003;z-index:50;max-width:330px}.mobile-nav{display:none}.camera{background:#131b16;border-radius:15px;overflow:hidden;margin:15px auto;max-width:480px}.camera video{display:block;width:100%;max-height:400px;object-fit:cover}.print-head{display:none}@media(max-width:800px){.app{display:block}.side{display:none}.main{padding:25px 17px 110px}.top{align-items:flex-start}.stats{gap:8px}.stat{padding:16px 12px}.stat strong{font-size:26px}.stat small{font-size:10px}.formgrid{grid-template-columns:1fr}.port-grid{grid-template-columns:repeat(2,1fr)}.mobile-nav{display:flex;position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);justify-content:space-around;padding:9px 5px max(12px,env(safe-area-inset-bottom));z-index:20}.mobile-nav button{border:0;background:transparent;font-size:11px;color:#7b817a;display:grid;justify-items:center;gap:3px}.mobile-nav button b{font-size:20px;font-weight:400}.mobile-nav button.active{color:var(--accent)}.photo{height:200px}}@media(max-width:460px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.watch-body{padding:12px}.watch h3{font-size:17px}.watch-actions{flex-wrap:wrap}.photo{height:155px}.port-grid{grid-template-columns:1fr 1fr}.port-card .photo{height:150px}.panel{padding:16px}}
+
+/* Premium category navigation */
+#filterCategoria{min-width:150px}.category-strip{display:flex;gap:8px;overflow-x:auto;padding:4px 0 18px}.category-strip button{white-space:nowrap;border:1px solid var(--line);background:var(--paper);padding:11px 17px;border-radius:30px;color:var(--ink);cursor:pointer}.category-strip button.active{background:var(--ink);color:white;border-color:var(--ink)}
+
+/* ATELIER 4.0 · editorial luxury interface */
+:root{--bg:#f3f0ea;--paper:#fffdf9;--ink:#202326;--muted:#777b7b;--line:#e5dfd4;--accent:#273c3b;--soft:#e9e9e3;--gold:#ae8856;font-family:Inter,ui-sans-serif,system-ui,sans-serif}
+body{background:radial-gradient(circle at 75% 0%,#e6dfd3 0%,transparent 34%),var(--bg)}
+.app{max-width:none;grid-template-columns:270px minmax(0,1fr)}
+.side{background:#172b2c;color:#f8f5ee;border:0;padding:38px 20px;position:sticky;top:0;height:100vh}
+.brand{border-bottom:1px solid #ffffff2b;padding-bottom:32px}.brand h1{font-size:37px;letter-spacing:3px;color:#fff9ed}.brand small,.side .foot{color:#bdc8c4}.side .eyebrow{color:#d3b68b}
+.nav button{color:#c4d0cb;border:1px solid transparent;border-radius:10px}.nav button:hover{background:#ffffff12}.nav button.active{background:#f6f2e9;color:#172b2c}
+.main{padding:42px clamp(22px,4.4vw,78px) 90px}.top{padding-bottom:22px;border-bottom:1px solid #d9d4c9}.title{font-size:clamp(36px,4.5vw,62px);letter-spacing:-2px;line-height:1.08}.intro{font-size:14px;max-width:620px}
+.btn{border-radius:8px;transition:transform .2s,background .2s,box-shadow .2s}.btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px #142b2515}.btn.primary{background:#223c3c;border-color:#223c3c}.btn.primary:hover{background:#345453}
+.stats{gap:12px}.stat{border-radius:12px;background:#fffdf9;border:1px solid #e3ddd2;padding:26px;position:relative;overflow:hidden}.stat:before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#ad8b57,transparent)}.stat strong{font-size:44px}.stat small{letter-spacing:.4px}
+.panel{background:#fffefa;border-color:#e6e0d6;border-radius:14px;padding:clamp(20px,3vw,36px);box-shadow:0 12px 36px #28231b08}.grid{grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px}.watch{border:1px solid #e6e0d6;border-radius:12px;background:#fffefa;box-shadow:0 4px 20px #00000008}.watch:hover{transform:translateY(-6px);box-shadow:0 20px 40px #1b25201c}.photo{height:280px;background:linear-gradient(140deg,#f2eee7,#e9e5dc)}.watch-body{padding:21px}.watch h3{font-size:24px}.chip{background:#eeeae2;color:#596760}.category-strip button{border-radius:7px;background:#fffdf9}.category-strip button.active{background:#233c3c}.searchrow{background:#fffefa;border:1px solid #e4ded4;border-radius:12px;padding:13px;gap:8px}.searchrow input,.searchrow select{background:#faf8f4}
+input,select,textarea{border-radius:8px;background:#fffefa;border-color:#ddd8cd;min-height:46px}input:focus,select:focus,textarea:focus{outline:2px solid #b4a181;outline-offset:1px}.upload{border-radius:12px;background:#f4f1e9;border-color:#bba987;padding:30px}.eyebrow{color:#8c6d42}.notice{border-radius:8px;background:#f0ede6;color:#57635c}.port-card{border-radius:10px}.port-card .photo{height:240px}
+#modeloField{background:#f3efe6;padding:12px;border-radius:10px;border:1px solid #d8c8ad;color:#4a473f}#modeloField input{background:#fff}
+@media(max-width:800px){.side{display:none}.main{padding:25px 16px 110px}.title{font-size:38px}.mobile-nav{background:#172b2c;border-color:#172b2c;box-shadow:0 -10px 24px #0002}.mobile-nav button{color:#b7c7c1}.mobile-nav button.active{color:#e3c398}.stats .stat{padding:16px 12px}.stat strong{font-size:30px}.photo{height:220px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.watch-body{padding:13px}.watch h3{font-size:18px}.searchrow{padding:10px}}
+@media(max-width:410px){.photo{height:170px}.watch-actions .toolbar{gap:5px}.watch-actions .btn{padding:8px}.stats .stat small{font-size:9px}}
+
+/* ATELIER 6 — retail-inspired editorial storefront */
+.shop-hero{display:grid;grid-template-columns:1.35fr 1fr;min-height:280px;background:#192c2c;color:#fffaf1;border-radius:18px;overflow:hidden;margin:25px 0 24px}.shop-hero>div:first-child{padding:35px clamp(20px,4vw,55px)}.shop-kicker{letter-spacing:3px;font-size:10px;color:#d9bc8c}.shop-hero h3{font-family:Georgia,serif;font-size:clamp(28px,3.4vw,48px);font-weight:400;line-height:1.12;margin:16px 0}.shop-hero em{color:#d9bc8c;font-weight:400}.shop-hero p{color:#d2d8d2;font-size:13px;max-width:390px}.hero-btn{background:#e7d5b6!important;color:#243332!important;border:0!important;margin-top:14px}.shop-art{background:radial-gradient(ellipse at 70% 40%,#bba27b66,transparent 47%),linear-gradient(135deg,#3c5650,#172a2b);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;min-height:210px}.shop-art span{font:italic 50px Georgia,serif;letter-spacing:5px;color:#f1e4cc}.shop-art small{font-size:10px;letter-spacing:4px;color:#d5c3a8}.watch{transition:transform .2s,box-shadow .2s}.watch:hover{transform:translateY(-4px);box-shadow:0 15px 35px #18282218}.watch .photo{object-fit:contain;background:#f5f3ee}.category-strip{scrollbar-width:thin}.searchrow{background:#fffdf9;padding:14px;border-radius:12px;border:1px solid #e6e0d6}.category-strip button.active{background:#213b3b;color:#fff;border-color:#213b3b}@media(max-width:700px){.shop-hero{grid-template-columns:1fr}.shop-art{min-height:110px}.shop-art span{font-size:33px}.shop-hero>div:first-child{padding:28px 23px}}
+
+/* Cadastro adaptável e consistente */
+#watchForm label[hidden]{display:none!important}
+#categoryStrip{scrollbar-width:thin}
+#watchForm input:focus-visible,#watchForm select:focus-visible,#watchForm textarea:focus-visible{outline:2px solid #b9965a;outline-offset:2px}
+
+/* ATELIER 8 — mobile-first retail experience */
+:root{--bg:#f7f7f5;--paper:#fff;--ink:#171b1a;--muted:#67716d;--line:#e6e9e5;--accent:#17695d;--soft:#eaf4ef;--gold:#b68b50}
+body{background:#f7f7f5;color:var(--ink)}
+.side{background:#fff;color:#152a25;border-right:1px solid #e8ebe8}
+.brand{border-color:#e8ebe8}.brand h1{color:#143f37;letter-spacing:-1.5px}.brand small,.side .foot{color:#68746f}.side .eyebrow{color:#17695d}
+.nav button{color:#34453e;font-weight:600}.nav button:hover{background:#f0f5f1}.nav button.active{background:#e7f4ee;color:#125d4f}
+.main{padding:30px clamp(20px,4vw,62px) 100px}.top{border-bottom:0;align-items:center}.top .eyebrow{font-size:12px;letter-spacing:1px}.top .sub{color:#66726d}
+.title{font-family:Inter,system-ui,sans-serif;font-size:clamp(32px,4vw,52px);font-weight:750;letter-spacing:-1.9px}
+.intro{font-size:15px;color:#6d7772;line-height:1.6}
+.btn{border-radius:13px;font-weight:650}.btn.primary{background:#17695d;border-color:#17695d;color:white}.btn.primary:hover{background:#105347}
+.shop-hero{background:linear-gradient(125deg,#123f38,#217467);min-height:240px;border-radius:24px;box-shadow:0 14px 35px #123f3818}
+.shop-hero h3{font-family:Inter,system-ui,sans-serif;font-weight:760;letter-spacing:-1.6px;font-size:clamp(28px,3.5vw,48px)}
+.shop-hero em{color:#c6f2d7;font-style:normal}.shop-kicker{color:#c3e6d8}.shop-art{background:radial-gradient(circle at 50% 45%,#76b7a87c,transparent 60%)}
+.shop-hero .hero-btn{background:#fff;color:#14564c;border:0;padding:14px 21px;border-radius:12px;font-weight:750}
+.stats{margin:24px 0}.stat{border-radius:17px;border:1px solid #e5eae5;box-shadow:none}.stat:before{background:#b4d5c3}.stat strong{color:#164f45}
+.category-strip{padding:10px 0 20px;gap:10px}.category-strip button{background:#fff;border:1px solid #dfe7e0;border-radius:13px;font-weight:650;padding:12px 18px}.category-strip button.active{background:#17695d;border-color:#17695d;color:white}
+.searchrow{background:#fff;border:1px solid #e6eae6;border-radius:18px;padding:15px;gap:10px;margin-bottom:18px}
+input,select,textarea{background:#fff;border:1px solid #dce4de;border-radius:12px;min-height:48px}
+.grid{grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+.watch{border-radius:18px;border:1px solid #e5e9e5;overflow:hidden;box-shadow:none;transition:transform .2s,box-shadow .2s}.watch:hover{transform:translateY(-3px);box-shadow:0 12px 26px #102b1c15}
+.photo{height:255px;background:#f1f3ef}.photo img{object-fit:contain;padding:10px}.watch-body{padding:17px}.watch h3{font-size:17px;letter-spacing:-.3px}
+.panel{border:1px solid #e4e9e4;border-radius:20px;background:white;box-shadow:none}
+.upload{background:#f6faf7;border:2px dashed #b4d4c1;border-radius:16px}
+#modeloField{background:#f4f8f4;border-color:#dce7df}
+.mobile-nav{background:white;border-top:1px solid #e1e8e2;box-shadow:0 -5px 25px #1b302010}.mobile-nav button{color:#60736a}.mobile-nav button.active{color:#17695d}
+@media(max-width:800px){.main{padding:18px 14px 105px}.top{gap:8px}.top .sub{font-size:12px}.top .btn{padding:11px;font-size:12px}.shop-hero{grid-template-columns:1fr;min-height:0;margin:18px 0}.shop-hero>div:first-child{padding:26px 22px}.shop-art{display:none}.stats{gap:7px}.stat{padding:14px 10px!important}.stat strong{font-size:27px}.category-strip button{padding:10px 14px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.photo{height:190px}.watch-body{padding:11px}.watch h3{font-size:15px}.searchrow{padding:10px}.title{font-size:34px}.watch-actions{flex-wrap:wrap}}
+@media(max-width:390px){.photo{height:155px}.top .sub{display:none}}
+
+:root{color-scheme:light}
+html[data-theme="dark"]{color-scheme:dark;--bg:#111817;--paper:#1b2623;--ink:#f1f5f1;--muted:#afbeb6;--line:#34463e;--accent:#85c9aa;--soft:#233b32;--gold:#e0b981}
+html[data-theme="dark"] body,html[data-theme="dark"] .main{background:#111817;color:var(--ink)}
+html[data-theme="dark"] .side,html[data-theme="dark"] .panel,html[data-theme="dark"] .watch,html[data-theme="dark"] .stat,html[data-theme="dark"] .searchrow,html[data-theme="dark"] .mobile-nav,html[data-theme="dark"] .category-strip button,html[data-theme="dark"] .btn:not(.primary):not(.hero-btn){background:#1b2623!important;color:#e9f1ec;border-color:#34463e}
+html[data-theme="dark"] input,html[data-theme="dark"] select,html[data-theme="dark"] textarea{background:#202e29;color:#f2f5f2;border-color:#44594e}
+html[data-theme="dark"] label,html[data-theme="dark"] .nav button,html[data-theme="dark"] .watch h3,html[data-theme="dark"] .brand h1,html[data-theme="dark"] .stat strong{color:#edf4ef}
+html[data-theme="dark"] .nav button.active,html[data-theme="dark"] .category-strip button.active{background:#315c4c!important;color:#fff!important}
+html[data-theme="dark"] .upload,html[data-theme="dark"] #modeloField,html[data-theme="dark"] .notice{background:#24372e!important;color:#d2e6d8;border-color:#45634f}
+html[data-theme="dark"] .photo{background:#26332e}
+html[data-theme="dark"] .chip{background:#30483a;color:#d9e8df}
+.top-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.theme-toggle{min-width:112px}
+.portfolio-summary{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 22px;font-size:12px;color:var(--ink)}
+.portfolio-summary .sum-box{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--paper);min-width:110px}
+.portfolio-summary strong{display:block;font-size:19px;margin-bottom:4px}
+.portfolio-summary .sum-desc{flex-basis:100%;line-height:1.55;color:var(--muted)}
+
+/* Ajuste Otimizado para Mobile do Topo */
+@media(max-width:800px){
+  .top{flex-wrap:wrap;gap:12px}.top-actions{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .top-actions .btn.primary{grid-column:span 2}
+  .sync-badge{grid-column:span 2;justify-content:center}
+  .theme-toggle{min-width:0}
+  .portfolio-summary .sum-box{min-width:85px}
+}
+@media(min-width:801px){.app{max-width:1680px}.main{padding-left:clamp(28px,4vw,74px);padding-right:clamp(28px,4vw,74px)}}
+
+.catalog-masthead{display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #173d33;padding-bottom:10px;font-size:10px;letter-spacing:2px;font-weight:800;color:#173d33;margin-bottom:14px}
+.catalog-lede{font-size:12px;color:#67726b;margin:0 0 18px;display:none}
+.catalog-category{font-size:10px;text-transform:uppercase;letter-spacing:1.4px;font-weight:800;color:#277260;margin-bottom:7px}
+.catalog-details{display:grid;grid-template-columns:90px minmax(0,1fr);gap:5px 10px;font-size:11px;line-height:1.35;margin:11px 0 0}
+.catalog-details dt{color:#68756d;font-weight:650}.catalog-details dd{margin:0;color:#25362d;overflow-wrap:anywhere}
+.catalog-subtitle{font-size:10px;letter-spacing:.4px;font-weight:800;margin-top:12px;color:#315b4d}
+.catalog-copy{font-size:11px;line-height:1.5;color:#38473e;white-space:pre-wrap;overflow-wrap:anywhere;margin:5px 0}
+.port-card .photo{height:230px;background:#f7f8f6}
+.port-card .photo img{object-fit:contain!important;object-position:center!important;width:100%;height:100%;padding:9px}
+.port-card .info{min-width:0}
+
+.category-questionnaire{background:var(--soft);border:1px solid var(--line);padding:23px;border-radius:18px;margin:22px 0}
+.category-questionnaire h3{font-size:20px;margin:8px 0}.category-questionnaire .formgrid{margin-top:18px}
+.category-questionnaire label{font-weight:650}.category-questionnaire input,.category-questionnaire select{margin-top:8px}
+html[data-theme="dark"] .category-questionnaire{background:#21382e;border-color:#496250}
+@media(max-width:800px){.category-questionnaire{padding:17px}}
+
+.view-overlay[hidden]{display:none!important}.view-overlay{position:fixed;inset:0;z-index:9999;background:#091a15c9;display:flex;align-items:center;justify-content:center;padding:18px;backdrop-filter:blur(6px)}
+.view-dialog{background:var(--paper);color:var(--ink);width:min(610px,100%);padding:30px;border-radius:24px;box-shadow:0 25px 80px #0005}
+.view-dialog h2{font-size:clamp(23px,3vw,34px);letter-spacing:-.7px;margin:12px 0}
+.view-dialog p{color:var(--muted);line-height:1.5}
+.view-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:23px}
+.view-options button{display:flex;flex-direction:column;gap:9px;align-items:flex-start;text-align:left;background:var(--soft);color:var(--ink);border:1px solid var(--line);border-radius:15px;padding:17px 13px;min-height:145px}
+.view-options button:hover,.view-options button:focus-visible{border-color:var(--accent);outline:2px solid var(--accent)}
+.view-options small{font-size:11px;line-height:1.5;color:var(--muted)}.view-icon{font-size:30px;color:var(--accent)}
+html[data-view="mobile"] body{background:var(--bg)}
+html[data-view="mobile"] .app{display:block!important;max-width:480px!important;margin:0 auto!important;min-height:100vh!important;border-left:1px solid var(--line);border-right:1px solid var(--line)}
+html[data-view="mobile"] .side{display:none!important}
+html[data-view="mobile"] .mobile-nav{display:flex!important;position:fixed!important;bottom:0!important;left:50%!important;transform:translateX(-50%)!important;width:min(480px,100%)!important;z-index:100}
+html[data-view="mobile"] .main{padding:18px 14px 110px!important;width:100%!important}
+html[data-view="mobile"] .top{flex-wrap:wrap!important}
+html[data-view="mobile"] .top-actions{width:100%!important;display:grid!important;grid-template-columns:1fr 1fr!important;gap:8px!important}
+html[data-view="mobile"] .top-actions .btn.primary{grid-column:span 2!important}
+html[data-view="mobile"] .sync-badge{grid-column:span 2!important;justify-content:center!important}
+html[data-view="mobile"] .shop-hero{grid-template-columns:1fr!important}
+html[data-view="mobile"] .shop-art{display:none!important}
+html[data-view="mobile"] .grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+html[data-view="mobile"] .photo{height:175px!important}
+html[data-view="mobile"] .title{font-size:34px!important}
+html[data-view="desktop"] body{overflow-x:auto}
+html[data-view="desktop"] .app{display:grid!important;grid-template-columns:246px minmax(0,1fr)!important;min-width:960px!important;max-width:1680px!important}
+html[data-view="desktop"] .side{display:flex!important}
+html[data-view="desktop"] .mobile-nav{display:none!important}
+html[data-view="desktop"] .main{padding:35px 40px 90px!important}
+html[data-view="desktop"] .shop-hero{grid-template-columns:1.3fr 1fr!important}
+html[data-view="desktop"] .shop-art{display:block!important}
+html[data-view="desktop"] .grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:17px!important}
+html[data-view="desktop"] .photo{height:250px!important}
+html[data-view="desktop"] .top{flex-wrap:nowrap!important}
+html[data-view="desktop"] .top-actions{width:auto!important;display:flex!important;flex-wrap:nowrap!important}
+@media(max-width:560px){.view-options{grid-template-columns:1fr}.view-options button{min-height:0;display:grid;grid-template-columns:40px 1fr;align-items:center}.view-options small{grid-column:2}.view-icon{grid-row:span 2}.view-dialog{padding:23px}}
+.view-options button[aria-pressed="true"]{border:2px solid var(--accent);background:var(--soft)}
+.top-actions .view-toggle,.top-actions .theme-toggle{white-space:nowrap}
+html[data-theme="dark"] .view-dialog{background:#1b2623;color:#f1f5f1}
+html[data-theme="dark"] .view-options button{background:#233b32;color:#f1f5f1;border-color:#45634e}
+html[data-theme="dark"] .view-dialog p,html[data-theme="dark"] .view-options small{color:#b5c8bc}
+html[data-theme="dark"] .view-options button[aria-pressed="true"]{border-color:#85c9aa}
+
+.dash-panel{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:22px;margin:23px 0 26px}
+.dash-heading{display:flex;justify-content:space-between;align-items:start;gap:14px}.dash-heading h3{font-size:24px;letter-spacing:-.7px;margin:7px 0}.dash-heading p{color:var(--muted);font-size:13px;margin:0}
+.dash-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:19px 0}
+.dash-kpi{background:var(--soft);padding:16px;border-radius:13px;min-width:0}
+.dash-kpi strong{display:block;font-size:28px;line-height:1.2;color:var(--ink)}
+.dash-kpi span{display:block;font-size:11px;color:var(--muted);margin-top:5px}
+.dash-charts{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.dash-chart{border:1px solid var(--line);padding:17px;border-radius:16px;min-width:0}
+.dash-chart h4{font-size:15px;margin:0 0 15px}.dash-filter-label{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.dash-filter-label select{min-height:35px;padding:5px 10px;max-width:190px}
+.dash-bars{display:flex;flex-direction:column;gap:9px;max-height:320px;overflow:auto}
+.dash-bar{display:grid;grid-template-columns:minmax(80px,1fr) minmax(60px,2fr) 35px;align-items:center;gap:9px;width:100%;border:1px solid transparent;background:transparent;border-radius:9px;padding:8px 6px;color:var(--ink);text-align:left;cursor:pointer;font:inherit}
+.dash-bar:hover,.dash-bar:focus-visible{background:var(--soft);border-color:var(--line)}
+.dash-bar.is-active{background:var(--soft);border-color:var(--accent)}
+.dash-bar-name{font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dash-track{display:block;width:100%;height:13px;border-radius:30px;background:var(--line);overflow:hidden;position:relative}
+.dash-fill{display:block;height:100%;background:linear-gradient(90deg,#638e76,#b19768);border-radius:30px;min-width:0;transition:width .25s ease}
+.dash-count{font-weight:750;text-align:right;font-size:13px}
+.dash-foot{margin-top:15px;color:var(--muted);font-size:12px}
+html[data-theme="dark"] .dash-panel,html[data-theme="dark"] .dash-chart{background:#1b2623;border-color:#34463e}
+html[data-theme="dark"] .dash-kpi,html[data-theme="dark"] .dash-bar:hover{background:#253b31}
+@media(max-width:800px){.dash-panel{padding:15px}.dash-charts{grid-template-columns:1fr}.dash-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.dash-heading h3{font-size:21px}.dash-bar{grid-template-columns:minmax(70px,1fr) minmax(50px,1.5fr) 30px}}
+html[data-view="mobile"] .dash-charts{grid-template-columns:1fr!important}
+html[data-view="mobile"] .dash-kpis{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+
+/* ATELIER 15 — editorial illustrated UI */
+.illustration-gallery{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:10px;margin:20px 0 24px}
+.illustration-tile{min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:17px 6px;background:linear-gradient(145deg,#fdfaf3,#eae5d8);border:1px solid #dfd8c7;border-radius:15px;color:#304b3c;box-shadow:0 6px 18px #2b352509}
+.illustration-tile svg{width:44px;height:44px;stroke:#5c745d}.illustration-tile span{font-size:11px;font-weight:650;text-align:center}
+.pdf-filter-panel{background:var(--soft);border:1px solid var(--line);border-radius:15px;padding:18px;margin:15px 0 18px}.pdf-filter-panel p{font-size:13px;margin:8px 0 14px}
+.pdf-filter-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px}.pdf-filter-grid label{font-size:12px;font-weight:650}.pdf-filter-grid select{margin-top:7px;width:100%}
+.pdf-report-cover{display:flex;align-items:center;gap:17px;padding:23px 20px;margin:12px 0 24px;background:linear-gradient(110deg,#173b2d,#355f48);color:#f7f1e5;border-radius:16px;position:relative;overflow:hidden}
+.pdf-cover-mark{font:italic 53px Georgia,serif;border:1px solid #d9bc80;color:#e3c78e;border-radius:10px;width:72px;height:72px;display:grid;place-items:center;flex-shrink:0}
+.pdf-cover-eyebrow{font-size:9px;letter-spacing:2px;color:#d9cba9}.pdf-cover-title{font:38px Georgia,serif;letter-spacing:4px}.pdf-cover-subtitle{font:italic 14px Georgia,serif;color:#e6d8bb;margin-top:3px}
+.pdf-cover-art{display:flex;margin-left:auto;gap:5px}.pdf-cover-art .illustration-tile{width:58px;height:64px;padding:5px;background:#ffffff14;color:#e8d9ae;border-color:#ffffff20;box-shadow:none}.pdf-cover-art .illustration-tile svg{width:28px;height:28px;stroke:#e6c68a}.pdf-cover-art .illustration-tile span{font-size:8px}
+.pdf-applied-filter{font-size:12px;color:var(--muted);border-left:3px solid var(--gold);padding-left:10px;margin:8px 0 17px}
+.photo.photo-illustration{background:linear-gradient(145deg,#f6f1e7,#e4ddcf);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:#718271}
+.photo-illustration svg{width:38%;max-width:100px;height:90px;stroke:#7d927f}.photo-illustration small{font-size:9px;color:#66766a;text-align:center;padding:0 8px}
+html[data-theme="dark"] .illustration-tile{background:linear-gradient(145deg,#263e33,#1e3028);border-color:#45634e;color:#d8d0b9}
+html[data-theme="dark"] .illustration-tile svg{stroke:#c4b18a}
+@media(max-width:1000px){.illustration-gallery{grid-template-columns:repeat(4,minmax(0,1fr))}.pdf-cover-art{display:none}}
+@media(max-width:540px){.illustration-gallery{grid-template-columns:repeat(4,minmax(0,1fr));gap:5px}.illustration-tile{padding:12px 3px}.illustration-tile svg{width:31px;height:31px}.illustration-tile span{font-size:9px}.pdf-filter-grid{grid-template-columns:1fr}.pdf-report-cover{padding:16px}.pdf-cover-title{font-size:29px}}
+
+.pdf-multi-field{border:1px solid var(--line);border-radius:14px;padding:14px;min-width:0}.pdf-multi-field legend{font-weight:700;padding:0 5px}.pdf-selection-count{font-size:11px;font-weight:400;color:var(--muted)}.pdf-multi-actions{display:flex;gap:12px;margin-bottom:10px}.pdf-multi-actions button{background:none;border:none;text-decoration:underline;color:var(--accent);font-size:12px;cursor:pointer;padding:2px}.pdf-check-options{max-height:220px;overflow-y:auto;display:grid;gap:5px}.pdf-check-item{display:flex!important;align-items:center;gap:9px;padding:7px 9px;border-radius:8px;background:var(--soft);font-size:12px;font-weight:500!important;cursor:pointer}.pdf-check-item input{width:16px!important;height:16px!important;min-height:0!important;flex-shrink:0;accent-color:var(--accent);margin:0!important}.pdf-check-item span{line-height:1.4}
+</style><style>
+/* Closet da Raquel — cadastro redesenhado */
+#cadastro .entry-panel,#cadastro .entry-footer{border:1px solid var(--line);border-radius:22px;padding:26px;background:var(--paper);margin-bottom:18px}
+#cadastro .entry-panel h3{font-size:clamp(22px,2.5vw,29px);line-height:1.15;letter-spacing:-.7px;margin:11px 0 8px}
+#cadastro .entry-panel>.muted{margin-bottom:21px;font-size:13px;line-height:1.65}
+#cadastro .entry-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
+#cadastro .entry-grid>label:first-child,#cadastro .entry-grid>label:nth-child(2){grid-column:span 1}
+#cadastro .entry-grid input,#cadastro .entry-grid select{width:100%}
+#cadastro .entry-advanced{border:1px solid var(--line);border-radius:14px;padding:0 16px;margin-top:18px;background:var(--soft)}
+#cadastro .entry-advanced summary{cursor:pointer;padding:17px 2px;font-weight:700;color:var(--ink);list-style:none;display:flex;justify-content:space-between;align-items:center}
+#cadastro .entry-advanced summary:after{content:'+';font-size:21px;font-weight:400}
+#cadastro .entry-advanced[open] summary:after{content:'−'}
+#cadastro .entry-advanced .formgrid{padding:5px 0 19px}
+#cadastro .category-questionnaire{margin-top:22px;margin-bottom:0}
+#cadastro .entry-footer>label{display:block;margin:12px 0 20px}
+#cadastro .entry-footer .toolbar{display:flex;gap:12px;flex-wrap:wrap}
+#cadastro .entry-footer button[type=submit]{min-width:190px}
+#cadastro .upload{border-radius:18px}
+html[data-theme=dark] #cadastro .entry-panel,html[data-theme=dark] #cadastro .entry-footer{background:#1b2623;border-color:#34463e}
+html[data-theme=dark] #cadastro .entry-advanced{background:#253b31;border-color:#45634e}
+@media(max-width:680px){#cadastro .entry-panel,#cadastro .entry-footer{padding:18px}#cadastro .entry-grid{grid-template-columns:1fr}#cadastro .entry-footer button[type=submit]{width:100%}}
+html[data-view=mobile] #cadastro .entry-grid{grid-template-columns:1fr!important}
+
+.dash-visual-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:14px;margin:0 0 15px}
+.dash-visual-card{border:1px solid var(--line);border-radius:17px;padding:19px;min-width:0;background:var(--paper)}
+.dash-visual-card h4{font-size:16px;margin:0 0 5px}.dash-visual-help{font-size:12px;color:var(--muted);margin:0 0 18px}
+.dash-donut-wrap{display:flex;align-items:center;gap:22px;min-height:190px}
+.dash-donut{flex:0 0 190px;width:190px;height:190px;display:grid;place-items:center}
+.dash-donut svg{width:100%;height:100%;overflow:visible}
+.dash-legend{display:flex;flex-direction:column;gap:5px;flex:1;min-width:0;max-height:230px;overflow:auto}
+.dash-legend button{display:flex;align-items:center;gap:8px;background:transparent;border:1px solid transparent;border-radius:8px;color:var(--ink);padding:7px;text-align:left;cursor:pointer;font-size:12px}
+.dash-legend button:hover,.dash-legend button:focus-visible,.dash-legend button[aria-pressed="true"]{background:var(--soft);border-color:var(--line)}
+.dash-legend .dash-dot{width:11px;height:11px;border-radius:3px;flex-shrink:0}
+.dash-legend .dash-legend-name{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.dash-legend .dash-legend-num{font-weight:750}
+.dash-photo-visual{display:flex;align-items:center;justify-content:center;gap:23px;min-height:190px}
+.dash-photo-ring{width:158px;height:158px;border-radius:50%;display:grid;place-items:center;flex-shrink:0;background:conic-gradient(#b98c48 0%,var(--line) 0%)}
+.dash-photo-ring>div{width:116px;height:116px;border-radius:50%;background:var(--paper);display:flex;align-items:center;justify-content:center;flex-direction:column}
+.dash-photo-ring strong{font-size:27px;color:var(--ink)}.dash-photo-ring small,.dash-photo-info span,.dash-photo-info small{font-size:12px;color:var(--muted)}
+.dash-photo-info{display:flex;flex-direction:column;gap:6px}.dash-photo-info strong{font-size:19px;color:var(--ink)}
+html[data-theme="dark"] .dash-visual-card{background:#1b2623;border-color:#34463e}
+html[data-theme="dark"] .dash-photo-ring>div{background:#1b2623}
+@media(max-width:950px){.dash-visual-grid{grid-template-columns:1fr}.dash-donut-wrap{gap:14px}.dash-donut{flex-basis:155px;width:155px;height:155px}}
+@media(max-width:480px){.dash-donut-wrap{flex-direction:column}.dash-legend{width:100%}.dash-photo-visual{gap:12px}.dash-photo-ring{width:128px;height:128px}.dash-photo-ring>div{width:94px;height:94px}}
+html[data-view="mobile"] .dash-visual-grid{grid-template-columns:1fr!important}
+html[data-view="mobile"] .dash-donut-wrap{flex-direction:column!important}
+html[data-view="mobile"] .dash-legend{width:100%}
+
+/* v24: um painel, um conjunto de filtros e duas visualizações complementares */
+.stats[hidden],.category-strip[hidden],.illustration-gallery[hidden]{display:none!important}
+.dash-panel{padding:26px;margin:22px 0 20px}
+.dash-panel .searchrow{display:flex;flex-wrap:wrap;gap:9px;margin:9px 0 19px}
+.dash-panel .searchrow input{flex:2 1 220px;min-width:160px}
+.dash-panel .searchrow select{flex:1 1 140px;min-width:120px}
+.dash-filter-title{font-size:11px;font-weight:800;letter-spacing:1.5px;color:var(--muted);margin-top:20px}
+.dash-visual-grid{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr)}
+.dash-charts{grid-template-columns:1fr;margin-top:15px}
+.dash-chart{padding:19px}
+.dash-bars{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px 15px;max-height:none}
+.dash-bar{grid-template-columns:minmax(70px,1fr) minmax(70px,2fr) 32px}
+.active-filter-chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:12px}
+.active-filter-chips:empty{display:none}
+.active-chip{background:var(--soft);color:var(--ink);border:1px solid var(--accent);border-radius:25px;padding:7px 11px;cursor:pointer;font-size:12px}
+.active-chip:hover{filter:brightness(.94)}
+.dash-visual-card{min-width:0}
+.dash-legend button[aria-pressed="true"]{border:1px solid var(--accent);border-radius:9px;background:var(--soft)}
+@media(max-width:850px){.dash-visual-grid{grid-template-columns:1fr}.dash-bars{grid-template-columns:1fr}}
+html[data-view="mobile"] .dash-bars{grid-template-columns:1fr!important}
+html[data-view="mobile"] .dash-panel .searchrow{display:flex!important;flex-direction:column!important}
+html[data-view="mobile"] .dash-panel .searchrow>*{width:100%!important;flex:auto!important}
+
+/* GitHub Sync & Status Badge Styling */
+.sync-badge{display:inline-flex;align-items:center;gap:7px;background:var(--soft);border:1px solid var(--line);padding:7px 12px;border-radius:20px;font-size:12px;font-weight:600;color:var(--ink);cursor:pointer;transition:all 0.2s ease}
+.sync-badge:hover{border-color:var(--accent)}
+.sync-dot{width:9px;height:9px;border-radius:50%;background:#a3a8a0;display:inline-block;flex-shrink:0}
+.sync-dot.online{background:#45a049;box-shadow:0 0 8px #45a049aa}
+.sync-dot.syncing{background:#b19768;animation:pulseSync 1s infinite alternate}
+.sync-dot.offline{background:#ca5252}
+.sync-dot.disconnected{background:#a3a8a0}
+@keyframes pulseSync{from{opacity:0.4}to{opacity:1}}
+.github-card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:24px;margin-bottom:20px}
+.github-status-box{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:var(--soft);border-radius:14px;border:1px solid var(--line);margin:16px 0}
+.github-status-info{display:flex;align-items:center;gap:12px}
+
+/* Regra global e estrita para geração de PDF limpo com fundo branco */
+@media print {
+  @page { size: A4 portrait; margin: 15mm 13mm 17mm; }
+  html, html[data-theme="dark"], body, .app, .main, section, .panel, .port-card, .portfolio-summary .sum-box {
+    color-scheme: light !important;
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #171b1a !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .side, .mobile-nav, .top, .top-actions, .hideprint, .stats, .toast,
+  .dash-panel, .dash-visual-grid, .dash-filter-title, .active-filter-chips,
+  .searchrow, .category-strip, .illustration-gallery, .view-overlay,
+  .pdf-filter-panel, #cadastro .entry-advanced, .view-toggle, .theme-toggle {
+    display: none !important;
+  }
+  .app { display: block !important; }
+  .main { padding: 0 !important; }
+  section { display: none !important; }
+  #portfolio { display: block !important; }
+  .panel { border: 0 !important; padding: 0 !important; box-shadow: none !important; margin: 0 !important; }
+  .print-head { display: block !important; font: 700 25px Inter,system-ui,sans-serif !important; letter-spacing: -.7px; margin: 0 0 8px !important; color: #171b1a !important; }
+  .catalog-masthead, .catalog-lede { display: flex !important; }
+  .catalog-lede { display: block !important; }
+  .pdf-report-cover { background: #173b2d !important; color: #ffffff !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; break-inside: avoid; }
+  .portfolio-summary { display: flex !important; color: #1d2821 !important; gap: 8px; margin: 12px 0 19px !important; break-after: avoid; }
+  .portfolio-summary .sum-box { border: 1px solid #d9dfd9 !important; background: #ffffff !important; padding: 8px 11px !important; min-width: 90px !important; }
+  .portfolio-summary .sum-box strong { font-size: 17px; }
+  .portfolio-summary .sum-desc { font-size: 10px; line-height: 1.5; color: #4e5952 !important; }
+  .port-grid { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 12px !important; align-items: start; }
+  .port-card { display: block !important; border: 1px solid #dfe6df !important; border-radius: 8px !important; break-inside: avoid-page !important; page-break-inside: avoid !important; overflow: hidden; background: #ffffff !important; box-shadow: none !important; }
+  .port-card .photo { height: 170px !important; background: #f7f8f6 !important; display: flex; align-items: center; justify-content: center; overflow: hidden; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .port-card .photo img { object-fit: contain !important; object-position: center !important; padding: 8px !important; max-height: 100%; max-width: 100%; }
+  .port-card .info { padding: 11px !important; overflow-wrap: anywhere; }
+  .port-card h3 { font: 700 14px Inter,system-ui,sans-serif !important; line-height: 1.3 !important; margin: 0 0 7px !important; color: #171b1a !important; }
+  .catalog-details { grid-template-columns: 80px minmax(0,1fr); font-size: 9.5px; gap: 4px 7px; }
+  .catalog-details dt { color: #5a665f !important; }
+  .catalog-details dd { color: #171b1a !important; }
+  .catalog-copy { font-size: 9.5px; color: #25332b !important; }
+  .catalog-category { font-size: 9px; color: #17695d !important; }
+}
+</style><style>.brand h1{font-size:clamp(22px,2.2vw,29px);letter-spacing:-.6px;line-height:1.12}.pdf-cover-title{font-size:30px;letter-spacing:1px}.shop-art span{font-size:clamp(22px,3vw,42px);letter-spacing:1px}</style><style>
+/* Dashboard e categorias ilustradas — v25 */
+#dashboard{display:block!important;visibility:visible!important}
+#dashboard .dash-visual-grid,#dashboard .dash-charts,#dashboard .dash-kpis{visibility:visible!important}
+.illustration-gallery{display:grid!important;grid-template-columns:repeat(8,minmax(0,1fr));gap:11px!important;margin:15px 0 26px!important}
+.illustration-tile{cursor:pointer;min-height:123px;transition:transform .15s,box-shadow .15s,border-color .15s;outline-offset:2px}
+.illustration-tile:hover,.illustration-tile:focus-visible{transform:translateY(-3px);box-shadow:0 9px 20px #1b342322;border-color:#17695d}
+.illustration-tile.active{border:2px solid #17695d;box-shadow:0 0 0 2px #b4d5c3}
+.illustration-tile svg{height:58px!important;width:58px!important;stroke-width:1.45}
+.illustration-tile span{font-size:12px!important}
+.nav button span{display:inline-grid;place-items:center;width:25px;height:25px;font-size:23px}
+@media(max-width:1050px){.illustration-gallery{grid-template-columns:repeat(4,minmax(0,1fr))!important}}
+@media(max-width:540px){.illustration-gallery{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:6px!important}.illustration-tile{min-height:92px;padding:9px 3px!important}.illustration-tile svg{width:35px!important;height:35px!important}.illustration-tile span{font-size:10px!important}}
+@media print{.illustration-gallery{display:none!important}}
+</style><style id="visual-redesign-v26">
+/* Layout editorial inspirado na prévia aprovada; valores reais vêm do acervo. */
+:root{--bg:#f8f5ef;--paper:#fffdfa;--ink:#183328;--muted:#746f65;--line:#e5ddd1;--accent:#285734;--soft:#e9eee4;--gold:#ad8653}
+body{background:linear-gradient(135deg,#f6f0e6,#fcfaf6 50%,#f7f3eb)}
+.app{grid-template-columns:264px minmax(0,1fr)}
+.side{background:linear-gradient(#f1e5d1,#fbf8f0 40%,#f1e5d3)!important;color:#183328!important;border-right:1px solid #dfd2bc!important;padding:28px 15px}
+.brand{text-align:center;border-color:#d6c8b2!important;padding:5px 5px 27px}
+.brand-symbol{font-size:48px;line-height:1;color:#a37a42}
+.brand h1{font:normal 36px Georgia,serif!important;letter-spacing:-1px!important;color:#193e2b!important;margin:12px 0 7px}
+.brand small,.side .eyebrow,.side .foot{color:#716d60!important}
+.nav{gap:6px}.nav button{color:#243d2c!important;border-radius:12px;font-weight:650;font-size:13px}
+.nav button.active{background:#295b31!important;color:#fff!important}.nav button:hover:not(.active){background:#e7e6d9!important}
+.main{padding:25px clamp(17px,2.3vw,42px) 85px}
+.top{border-bottom:1px solid #e8dfd3;margin-bottom:23px;padding-bottom:17px}
+.top .eyebrow{font-size:13px;color:#37643c}.top .sub{font-size:12px}
+#acervo>.title{font:normal clamp(32px,3.5vw,49px) Georgia,serif!important;letter-spacing:-1.5px;margin:0 0 6px;color:#153723}
+#acervo>.intro{margin-bottom:18px;font-size:15px}
+.shop-hero[hidden]{display:none!important}
+.dash-panel{display:contents}
+.dash-heading{display:none}
+.dash-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:13px 0 18px}
+.dash-kpi{background:linear-gradient(140deg,#edf1e8,#fdf9f3);border:1px solid #e0d8c9;border-radius:12px;padding:19px 14px;min-height:103px}
+.dash-kpi strong{font:normal 36px Georgia,serif;color:#173c27}
+.dash-kpi span{font-size:12px;color:#4c5447}
+.dash-visual-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 14px}
+.dash-visual-card,.dash-chart{background:#fffdfa;border:1px solid #dfd6ca;border-radius:15px;padding:19px;box-shadow:0 4px 15px #574c3810}
+.dash-visual-card h4,.dash-chart h4{font-size:18px;color:#172f23}
+.dash-charts{margin:0 0 18px;grid-template-columns:1fr}
+.dash-bars{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px 14px}
+.dash-bar{grid-template-columns:minmax(58px,1fr) minmax(60px,2fr) 30px}
+.dash-filter-title{font-weight:800;color:#315c3d;margin:13px 0 9px}
+.dash-panel .searchrow{background:#e9efe5;border:1px solid #dce5d7;border-radius:15px;padding:12px;margin:0 0 15px}
+.dash-panel .searchrow input,.dash-panel .searchrow select{background:#fffefa}
+.dash-foot{font-size:12px;margin:6px 0 16px}
+.visual-categories{margin:24px 0}.visual-section-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}.visual-section-title h3{font:normal 27px Georgia,serif;margin:0;color:#173724}.visual-section-title span{font-size:12px;color:#6b7368}
+.visual-category-grid{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:9px}
+.visual-category{display:flex;flex-direction:column;align-items:center;gap:6px;padding:0 0 12px;border:1px solid #dfd4c4;background:#fffaf2;color:#213a2a;border-radius:12px;overflow:hidden;cursor:pointer;min-width:0}
+.visual-category:hover,.visual-category[aria-pressed=true]{outline:2px solid #346a40;outline-offset:0;transform:translateY(-2px)}
+.visual-category img{width:100%;height:104px;object-fit:cover;object-position:center}
+.visual-category strong{font-size:12px;text-align:center;padding:0 3px}.visual-category small{font-size:10px;color:#6c756b}
+#acervo>.toolbar{border-top:1px solid #e3dcd0;padding-top:15px}
+html[data-theme=dark] .side{background:#1e3028!important;color:#e8f0e8!important}html[data-theme=dark] .brand h1,html[data-theme=dark] .side .nav button{color:#eef5ee!important}
+html[data-theme=dark] .dash-kpi,html[data-theme=dark] .visual-category{background:#24362c;color:#eef5ee;border-color:#45614c}
+html[data-theme=dark] .dash-kpi strong,html[data-theme=dark] .visual-section-title h3,html[data-theme=dark] #acervo>.title{color:#eef5ee}
+html[data-theme=dark] .dash-visual-card,html[data-theme=dark] .dash-chart{background:#1b2623}
+@media(max-width:1200px){.visual-category-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.dash-bars{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:800px){.main{padding:19px 13px 110px}.dash-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.dash-visual-grid{grid-template-columns:1fr}.visual-category-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.visual-category img{height:95px}.dash-bars{grid-template-columns:1fr}.visual-section-title{align-items:flex-start;flex-direction:column}.top{margin-bottom:15px}}
+@media(max-width:420px){.visual-category-grid{gap:6px}.visual-category img{height:75px}.visual-category strong{font-size:11px}.dash-kpi strong{font-size:30px}}
+html[data-view=mobile] .visual-category-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+@media print{.visual-categories{display:none!important}}
+</style><style id="reference-layout-v27">
+.side{background:linear-gradient(165deg,#123b27,#0c2a1b 62%,#274d32)!important;color:#fff9e8!important}
+.brand{border-color:#49654a!important}.brand h1{color:#fff5d9!important}.brand-symbol{color:#e2bd79!important}
+.brand small,.side .eyebrow,.side .foot{color:#d7ddc8!important}
+.nav button{color:#f9f7e8!important}.nav button.active{background:linear-gradient(95deg,#f8ead0,#dfbf85)!important;color:#193b29!important}
+.nav button:hover:not(.active){background:#315740!important}
+.visual-category{border:1px solid #c69b57!important;background:#fffaf2!important;box-shadow:0 2px 6px #3e341018}
+.visual-category img{object-fit:contain!important;background:#fffaf2;height:118px!important;padding:8px 6px 2px}
+.visual-category strong{display:block;background:#17482d;color:white;border-radius:8px;padding:6px 3px!important;width:calc(100% - 12px);font-size:13px!important}
+.visual-category small{color:#526351!important}
+.dash-kpi{background:linear-gradient(145deg,#fffdfa,#f4eee3)!important;border-color:#d9c4a4!important}
+.dash-kpi strong{font-weight:600!important}
+.dash-visual-card,.dash-chart{border-color:#d5cbbd!important}
+.visual-section-title h3{font-size:29px!important}
+@media(max-width:800px){.visual-category img{height:90px!important}.visual-category strong{font-size:11px!important}}
+html[data-theme=dark] .visual-category{background:#23382b!important}html[data-theme=dark] .visual-category img{background:#f8efe2!important}
+</style><style id="palette-options-v33">
+/* v33 — Paletas selecionáveis, contraste reforçado, sem alterar estrutura */
+html[data-palette="esmeralda"]{--bg:#F8F9F6;--paper:#FFFFFF;--ink:#20342B;--muted:#4E6157;--line:#C9D8CE;--accent:#174C3A;--soft:#EAF2EB;--gold:#AD8653;--palette-side:#123D2F;--palette-side-text:#FFFFFF;--palette-active:#E1F0E5;--palette-active-text:#123D2F;--palette-chart:#207451}
+html[data-palette="safira"]{--bg:#F7F9FC;--paper:#FFFFFF;--ink:#1C3049;--muted:#4D5D70;--line:#CBD6E4;--accent:#194E82;--soft:#EAF1F9;--gold:#B28C54;--palette-side:#183A61;--palette-side-text:#FFFFFF;--palette-active:#DDEBFA;--palette-active-text:#183A61;--palette-chart:#2875B0}
+html[data-palette="terracota"]{--bg:#FCF8F3;--paper:#FFFFFF;--ink:#422E29;--muted:#70564D;--line:#E3D0C5;--accent:#8C4635;--soft:#F8EBE4;--gold:#A67A48;--palette-side:#69392F;--palette-side-text:#FFFFFF;--palette-active:#F6E3D8;--palette-active-text:#603126;--palette-chart:#B56545}
+html[data-palette="grafite"]{--bg:#F7F7F5;--paper:#FFFFFF;--ink:#222827;--muted:#53605C;--line:#D2DAD5;--accent:#344E46;--soft:#EDF1EE;--gold:#A27C4D;--palette-side:#25332E;--palette-side-text:#FFFFFF;--palette-active:#E0EAE4;--palette-active-text:#25332E;--palette-chart:#537C68}
+html[data-palette] body,html[data-palette] .main{background:var(--bg)!important;color:var(--ink)}
+html[data-palette] .side{background:var(--palette-side)!important;color:var(--palette-side-text)!important;border-color:var(--line)!important}
+html[data-palette] .brand h1,html[data-palette] .side .nav button{color:var(--palette-side-text)!important}
+html[data-palette] .brand small,html[data-palette] .side .eyebrow,html[data-palette] .side .foot{color:#E3EBE6!important}
+html[data-palette] .side .nav button.active{background:var(--palette-active)!important;color:var(--palette-active-text)!important}
+html[data-palette] .side .nav button:hover:not(.active){background:#FFFFFF22!important}
+html[data-palette] .panel,html[data-palette] .dash-visual-card,html[data-palette] .dash-chart,html[data-palette] .watch,html[data-palette] .searchrow,html[data-palette] .github-card{background:var(--paper)!important;border-color:var(--line)!important;color:var(--ink)}
+html[data-palette] .dash-kpi,html[data-palette] .stat{background:var(--soft)!important;border-color:var(--line)!important}
+html[data-palette] .dash-kpi strong,html[data-palette] .stat strong,html[data-palette] .dash-chart h4,html[data-palette] .dash-visual-card h4,html[data-palette] .visual-section-title h3,html[data-palette] #acervo>.title{color:var(--ink)!important}
+html[data-palette] .dash-kpi span,html[data-palette] .dash-visual-help,html[data-palette] .muted,html[data-palette] .intro,html[data-palette] .dash-foot,html[data-palette] .visual-section-title span{color:var(--muted)!important}
+html[data-palette] .dash-fill{background:var(--palette-chart)!important}
+html[data-palette] .dash-track{background:var(--line)!important}
+html[data-palette] .dash-bar-name,html[data-palette] .dash-count,html[data-palette] .dash-legend button{color:var(--ink)!important;font-size:14px}
+html[data-palette] .dash-bar.is-active,html[data-palette] .dash-legend button[aria-pressed=true]{background:var(--soft)!important;border-color:var(--accent)!important}
+html[data-palette] .visual-category{background:var(--paper)!important;color:var(--ink)!important;border-color:var(--line)!important}
+html[data-palette] .visual-category strong{color:var(--ink)!important}
+html[data-palette] .visual-category small{color:var(--muted)!important}
+html[data-palette] .btn.primary,html[data-palette] .category-strip button.active{background:var(--accent)!important;border-color:var(--accent)!important;color:#FFFFFF!important}
+html[data-palette] label,html[data-palette] .dash-filter-title{color:var(--ink)!important;font-size:13px}
+html[data-palette] input,html[data-palette] select,html[data-palette] textarea{background:var(--paper)!important;color:var(--ink)!important;border:1px solid var(--line)!important}
+html[data-palette] .mobile-nav{background:var(--palette-side)!important;border-color:var(--line)!important}
+html[data-palette] .mobile-nav button{color:#E2EDE6!important}
+html[data-palette] .mobile-nav button.active{color:#FFFFFF!important;font-weight:800}
+.palette-control{display:inline-flex;align-items:center;gap:7px;background:var(--paper);border:1px solid var(--line);padding:6px 10px;border-radius:12px;color:var(--ink);font-size:13px;font-weight:700}
+.palette-control select{width:auto!important;min-width:125px;min-height:33px!important;padding:5px 8px!important;font-size:13px!important}
+html[data-theme="dark"] .palette-control{background:#1B2623;color:#F1F5F1;border-color:#496250}
+html[data-theme="dark"] .palette-control select{background:#202E29!important;color:#F1F5F1!important}
+@media(max-width:800px){.palette-control{grid-column:span 2;justify-content:space-between}.palette-control select{flex:1}.dash-bar-name,.dash-count{font-size:13px!important}}
+@media print{.palette-control{display:none!important}}
+</style><style id="header-layout-v34">
+/* v34 — cabeçalho alinhado, hierarquia clara, sem alterar controles ou lógica */
+.top{display:grid!important;grid-template-columns:minmax(210px,1fr) minmax(0,auto)!important;align-items:center!important;gap:18px!important;padding:14px 0 20px!important;margin-bottom:24px!important;border-bottom:1px solid var(--line)!important;min-width:0}
+.top>div:first-child{min-width:0}
+.top .eyebrow{font-size:11px!important;letter-spacing:1.3px!important;font-weight:800!important;line-height:1.4}
+.top .sub{font-size:12px!important;line-height:1.55!important;margin-top:5px!important;max-width:380px;color:var(--muted)!important}
+.top .top-actions{display:grid!important;grid-template-columns:repeat(3,max-content)!important;grid-template-areas:'sync view palette' 'add theme theme'!important;align-items:center!important;justify-content:end!important;gap:8px!important;width:auto!important;min-width:0}
+.top-actions #topSyncBadge{grid-area:sync!important;justify-self:end;min-height:40px}
+.top-actions #viewToggle{grid-area:view!important}
+.top-actions .palette-control{grid-area:palette!important;min-height:40px;white-space:nowrap}
+.top-actions #themeToggle{grid-area:theme!important;justify-self:end}
+.top-actions .btn.primary{grid-area:add!important;justify-self:start}
+.top-actions .btn,.top-actions .sync-badge{font-size:12px!important;min-height:40px;padding:9px 12px!important;border-radius:11px!important}
+.top-actions .palette-control select{min-width:110px!important;max-width:130px!important}
+@media(max-width:1250px){.top{grid-template-columns:1fr!important}.top .top-actions{justify-content:start!important}.top .sub{max-width:none}}
+@media(max-width:800px){
+ .top{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:13px!important;padding:6px 0 16px!important;margin-bottom:17px!important}
+ .top .top-actions{width:100%!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-template-areas:'sync sync' 'view theme' 'palette palette' 'add add'!important;gap:8px!important}
+ .top-actions #topSyncBadge,.top-actions #viewToggle,.top-actions #themeToggle,.top-actions .palette-control,.top-actions .btn.primary{width:100%!important;min-width:0!important;justify-self:stretch!important;justify-content:center!important;grid-column:auto!important}
+ .top-actions .palette-control{justify-content:space-between!important;gap:10px}
+ .top-actions .palette-control select{min-width:0!important;max-width:none!important;flex:1!important}
+ .top-actions .btn.primary{font-weight:750!important}
+ .top .sub{font-size:12px!important}
+}
+/* Modo mobile forçado: mesmas regras, mesmo em telas largas */
+html[data-view=mobile] .top{grid-template-columns:1fr!important}
+html[data-view=mobile] .top .top-actions{width:100%!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-template-areas:'sync sync' 'view theme' 'palette palette' 'add add'!important;justify-content:stretch!important}
+html[data-view=mobile] .top-actions #topSyncBadge,html[data-view=mobile] .top-actions #viewToggle,html[data-view=mobile] .top-actions #themeToggle,html[data-view=mobile] .top-actions .palette-control,html[data-view=mobile] .top-actions .btn.primary{width:100%!important;min-width:0!important;justify-self:stretch!important;grid-column:auto!important}
+html[data-view=mobile] .top-actions .palette-control select{flex:1!important;min-width:0!important;max-width:none!important}
+/* Modo desktop forçado em tela estreita: preservar organização sem empilhar botões em uma linha */
+html[data-view=desktop] .top{grid-template-columns:1fr!important}
+html[data-view=desktop] .top .top-actions{display:grid!important;grid-template-columns:repeat(3,max-content)!important;grid-template-areas:'sync view palette' 'add theme theme'!important;justify-content:start!important;flex-wrap:initial!important}
+@media print{.top{display:none!important}}
+</style><style id="header-compact-v35">
+/* v35: cabeçalho compacto com controles visuais e estados claros */
+.top{display:flex!important;flex-wrap:wrap!important;align-items:center!important;justify-content:space-between!important;gap:12px 18px!important;padding:12px 0 18px!important}
+.top>div:first-child{flex:1 1 235px;min-width:0}
+.top .top-actions{display:flex!important;flex:0 1 auto!important;flex-wrap:wrap!important;align-items:center!important;justify-content:flex-end!important;gap:7px!important;width:auto!important;min-width:0!important}
+.top-actions #topSyncBadge,.top-actions #viewToggle,.top-actions #themeToggle,.top-actions .palette-control,.top-actions .btn.primary{grid-area:auto!important;grid-column:auto!important;justify-self:auto!important;width:auto!important;min-width:0!important;max-width:none!important;margin:0!important}
+.top-actions .btn,.top-actions .sync-badge{height:42px!important;min-height:42px!important;padding:8px 12px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:7px!important;border-radius:11px!important;white-space:nowrap!important}
+.top-actions #viewToggle,.top-actions #themeToggle{background:var(--paper)!important;color:var(--ink)!important;border:1px solid var(--line)!important}
+.top-actions #viewToggle[data-choice='mobile'],.top-actions #viewToggle[data-choice='desktop'],.top-actions #themeToggle[data-choice='dark']{border:2px solid var(--accent)!important;background:var(--soft)!important;color:var(--ink)!important;font-weight:800!important}
+.top-actions #viewToggle[data-choice='auto'],.top-actions #themeToggle[data-choice='light']{border:1px solid var(--line)!important}
+.top-actions .control-icon{font-size:18px;line-height:1;flex-shrink:0}
+.top-actions .control-text{font-size:12px;font-weight:750}
+.top-actions .palette-control{height:42px!important;min-height:42px!important;padding:4px 7px 4px 10px!important;gap:7px!important;border-radius:11px!important;display:inline-flex!important;align-items:center!important;background:var(--paper)!important;color:var(--ink)!important}
+.palette-control .palette-dot{width:16px;height:16px;flex-shrink:0;border-radius:50%;background:var(--accent);border:2px solid #FFFFFF;outline:1px solid var(--line)}
+.top-actions .palette-control select{min-width:92px!important;max-width:125px!important;width:auto!important;height:32px!important;min-height:32px!important;padding:4px 18px 4px 7px!important;border:0!important;background:transparent!important;color:var(--ink)!important;font-size:12px!important;font-weight:750!important}
+.top-actions #topSyncBadge{background:var(--paper)!important;color:var(--ink)!important;border:1px solid var(--line)!important}
+.top-actions #topSyncBadge:has(.sync-dot.online){background:#E4F3E9!important;border-color:#70B98C!important;color:#16532E!important}
+.top-actions #topSyncBadge:has(.sync-dot.offline){background:#FBE9E6!important;border-color:#D69B90!important;color:#862E25!important}
+.top-actions #topSyncBadge .sync-dot{width:11px;height:11px}
+.top-actions .btn.primary{background:var(--accent)!important;color:white!important;border-color:var(--accent)!important;font-weight:800!important}
+@media(max-width:1150px){.top{align-items:flex-start!important}.top .top-actions{justify-content:flex-start!important;width:100%!important}}
+@media(max-width:800px){.top .top-actions{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:7px!important;width:100%!important}.top-actions #topSyncBadge{grid-column:1 / -1!important;justify-content:center!important}.top-actions #viewToggle,.top-actions #themeToggle{width:100%!important}.top-actions .palette-control{grid-column:span 1!important;width:100%!important;padding:4px 6px!important}.top-actions .palette-control select{min-width:0!important;max-width:none!important;width:100%!important;font-size:11px!important;padding:4px 0!important}.top-actions .palette-label{display:none!important}.top-actions .btn.primary{grid-column:1 / -1!important;width:100%!important}.top-actions .control-text{font-size:11px!important}}
+html[data-view=mobile] .top .top-actions{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;width:100%!important;gap:7px!important;justify-content:stretch!important}
+html[data-view=mobile] .top-actions #topSyncBadge,html[data-view=mobile] .top-actions .btn.primary{grid-column:1 / -1!important;width:100%!important}
+html[data-view=mobile] .top-actions #viewToggle,html[data-view=mobile] .top-actions #themeToggle,html[data-view=mobile] .top-actions .palette-control{width:100%!important;grid-column:auto!important}
+html[data-view=mobile] .top-actions .palette-label{display:none!important}
+html[data-view=mobile] .top-actions .palette-control select{min-width:0!important;max-width:none!important;width:100%!important}
+html[data-view=desktop] .top .top-actions{display:flex!important;flex-wrap:wrap!important;justify-content:flex-start!important;grid-template-columns:none!important;width:auto!important}
+@media print{.top{display:none!important}}
+</style><style id="header-unified-v36">
+/* v36: mesmo cabeçalho compacto no desktop e celular */
+.top{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:14px!important}
+.top>div:first-child{width:100%!important}
+.top .top-actions,html[data-view=desktop] .top .top-actions,html[data-view=mobile] .top .top-actions{
+display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;
+gap:9px!important;width:100%!important;max-width:760px!important;justify-content:stretch!important;align-items:stretch!important}
+.top-actions #topSyncBadge{grid-column:1/-1!important;width:100%!important;justify-content:center!important}
+.top-actions #viewToggle,.top-actions #themeToggle,.top-actions .palette-control{grid-column:auto!important;width:100%!important;min-width:0!important;max-width:none!important;justify-content:center!important}
+.top-actions .palette-control select{min-width:0!important;width:100%!important;max-width:none!important}
+.top-actions .palette-label{display:none!important}
+.top-actions .btn.primary{grid-column:1/-1!important;width:100%!important}
+.top-actions .control-text{white-space:nowrap}
+html[data-view=desktop] .top{flex-wrap:nowrap!important}
+@media(max-width:800px){.top .top-actions{max-width:none!important}}
+</style><style id="category-illustrations-restore-v37">
+#acervo .visual-categories{display:block!important;visibility:visible!important}
+#acervo #visualCategoryCards{display:grid!important;visibility:visible!important}
+#acervo #visualCategoryCards .visual-category{display:flex!important;visibility:visible!important}
+#acervo #visualCategoryCards .visual-category img{display:block!important;visibility:visible!important;opacity:1!important;max-width:100%!important}
+</style><style id="category-palette-v38">
+/* v38: cartões ilustrativos acompanham a paleta selecionada */
+html[data-palette] #visualCategoryCards .visual-category{
+background:var(--paper)!important;border:1px solid var(--line)!important;
+box-shadow:0 2px 8px #0000000D!important}
+html[data-palette] #visualCategoryCards .visual-category img{
+background:var(--soft)!important;border-radius:10px!important}
+html[data-palette] #visualCategoryCards .visual-category strong{
+background:var(--accent)!important;color:#fff!important}
+html[data-palette] #visualCategoryCards .visual-category small{color:var(--muted)!important}
+html[data-palette] #visualCategoryCards .visual-category[aria-pressed="true"]{
+outline:2px solid var(--accent)!important;outline-offset:1px!important;background:var(--soft)!important}
+html[data-theme="dark"] #visualCategoryCards .visual-category strong{background:#426F59!important;color:#fff!important}
+html[data-theme="dark"] #visualCategoryCards .visual-category img{background:#263A30!important}
+</style><style id="palette-consistency-v39">
+/* v39: cores da paleta aplicadas de forma consistente em todos os componentes */
+html[data-palette="verde"]{--bg:#F1FAF2;--paper:#FFFFFF;--ink:#173D29;--muted:#486452;--line:#BDDCC5;--accent:#278348;--soft:#E4F5E7;--gold:#A87F43;--palette-side:#176735;--palette-side-text:#FFFFFF;--palette-active:#D6F4DF;--palette-active-text:#14562B;--palette-chart:#278348}
+html[data-palette] .palette-control .palette-dot{background:var(--accent)!important}
+html[data-palette] .dash-donut,html[data-palette] .dash-photo-ring{accent-color:var(--accent)}
+html[data-palette] .visual-category,html[data-palette] #visualCategoryCards .visual-category{border-color:var(--line)!important;background:var(--paper)!important}
+html[data-palette] #visualCategoryCards .visual-category img{background:var(--soft)!important}
+html[data-palette] #visualCategoryCards .visual-category strong{background:var(--accent)!important;color:#fff!important}
+html[data-palette] #visualCategoryCards .visual-category[aria-pressed="true"]{outline-color:var(--accent)!important}
+html[data-palette] .dash-fill,html[data-palette] .dash-chart .bar-fill{background:var(--accent)!important}
+html[data-palette] .btn.primary{background:var(--accent)!important;color:#fff!important}
+html[data-palette] .side{background:var(--palette-side)!important}
+html[data-palette] .side .nav button.active{background:var(--palette-active)!important;color:var(--palette-active-text)!important}
+html[data-palette] .top{border-bottom-color:var(--line)!important}
+html[data-theme="dark"][data-palette] .side{background:var(--palette-side)!important}
+html[data-theme="dark"][data-palette] #visualCategoryCards .visual-category strong{background:var(--accent)!important}
+html[data-theme="dark"][data-palette] #visualCategoryCards .visual-category img{background:var(--soft)!important}
+html[data-theme="dark"][data-palette] .dash-fill{background:var(--accent)!important}
+</style><style id="light-only-v40">html,html[data-theme="dark"]{color-scheme:light!important}html[data-palette] .top .top-actions{grid-template-columns:repeat(2,minmax(0,1fr))!important}html[data-palette] .top-actions #viewToggle,html[data-palette] .top-actions .palette-control{grid-column:auto!important}html[data-palette] .top-actions #topSyncBadge,html[data-palette] .top-actions .btn.primary{grid-column:1/-1!important}@media(max-width:800px){html[data-palette] .top .top-actions{grid-template-columns:repeat(2,minmax(0,1fr))!important}} </style><style id="pdf-rollback-v45">
+/* Restaura a impressão direta do portfólio, isolando-o do restante da interface. */
+@media print {
+@page{size:A4 portrait;margin:14mm}
+html,body{background:#fff!important;color:#171b1a!important}
+body>.app{display:block!important}
+.app>.side,.app>.mobile-nav,.main>.top,.main>.mobile-nav{display:none!important}
+.main{display:block!important;width:100%!important;max-width:none!important;margin:0!important;padding:0!important}
+.main>section:not(#portfolio){display:none!important}
+.main>#portfolio{display:block!important;position:static!important;visibility:visible!important;width:100%!important;max-width:none!important}
+#portfolio .hideprint,#portfolio .toolbar,#portfolio .notice,#portfolio .pdf-filter-panel{display:none!important}
+#portfolio .port-grid,#portfolio .portfolio-summary,#portfolio .pdf-report-cover{display:grid!important;visibility:visible!important}
+#portfolio .port-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+#portfolio .port-card{break-inside:avoid!important;page-break-inside:avoid!important}
+#portfolio .port-card img{max-width:100%!important;object-fit:contain!important}
+}
+</style><style id="red-palette-v47">html[data-palette="vermelho"]{--bg:#FFF8F8;--paper:#FFFFFF;--ink:#3E2228;--muted:#74535A;--line:#EAC8CD;--accent:#A52A38;--soft:#FCEDEE;--gold:#B0805B;--palette-side:#80202E;--palette-side-text:#FFFFFF;--palette-active:#FCE0E3;--palette-active-text:#78202D;--palette-chart:#C1394B}</style><style id="portfolio-palettes-v48">
+/* v48 — Portfólio integrado às seis paletas; PDF independente preservado. */
+@media screen {
+html[data-palette] #portfolio{color:var(--ink)!important}
+html[data-palette] #portfolio .panel{background:var(--paper)!important;border-color:var(--line)!important}
+html[data-palette] #portfolio .title,html[data-palette] #portfolio h3,html[data-palette] #portfolio .pdf-multi-field legend{color:var(--ink)!important}
+html[data-palette] #portfolio .intro,html[data-palette] #portfolio .muted,html[data-palette] #portfolio .portfolio-summary .sum-desc,html[data-palette] #portfolio .pdf-selection-count{color:var(--muted)!important}
+html[data-palette] #portfolio .pdf-filter-panel{background:var(--soft)!important;border-color:var(--line)!important;color:var(--ink)!important}
+html[data-palette] #portfolio .pdf-multi-field{background:var(--paper)!important;border-color:var(--line)!important}
+html[data-palette] #portfolio .pdf-check-item{background:var(--soft)!important;color:var(--ink)!important}
+html[data-palette] #portfolio .pdf-check-item:has(input:checked){background:var(--palette-active)!important;outline:1px solid var(--accent)!important}
+html[data-palette] #portfolio input[type=checkbox]{accent-color:var(--accent)!important}
+html[data-palette] #portfolio .pdf-multi-actions button{color:var(--accent)!important}
+html[data-palette] #portfolio .toolbar .btn:not(.primary){background:var(--paper)!important;color:var(--accent)!important;border-color:var(--line)!important}
+html[data-palette] #portfolio .toolbar .btn.primary{background:var(--accent)!important;border-color:var(--accent)!important;color:white!important}
+html[data-palette] #portfolio .notice{background:var(--soft)!important;color:var(--ink)!important;border:1px solid var(--line)!important}
+html[data-palette] #portfolio .pdf-report-cover{background:linear-gradient(115deg,var(--palette-side),var(--accent))!important;color:white!important}
+html[data-palette] #portfolio .pdf-cover-mark{border-color:#FFFFFF88!important;color:white!important}
+html[data-palette] #portfolio .pdf-cover-eyebrow,html[data-palette] #portfolio .pdf-cover-subtitle{color:#FFFFFFE6!important}
+html[data-palette] #portfolio .pdf-cover-art .illustration-tile{background:#FFFFFF19!important;border-color:#FFFFFF55!important;color:white!important}
+html[data-palette] #portfolio .pdf-cover-art svg{stroke:white!important}
+html[data-palette] #portfolio .pdf-cover-art span{color:white!important}
+html[data-palette] #portfolio .catalog-masthead{color:var(--accent)!important;border-color:var(--line)!important}
+html[data-palette] #portfolio .print-head,html[data-palette] #portfolio .catalog-lede,html[data-palette] #portfolio .pdf-applied-filter{color:var(--ink)!important}
+html[data-palette] #portfolio .portfolio-summary .sum-box{background:var(--soft)!important;border-color:var(--line)!important;color:var(--ink)!important}
+html[data-palette] #portfolio .portfolio-summary .sum-box strong{color:var(--accent)!important}
+html[data-palette] #portfolio .port-card{background:var(--paper)!important;border-color:var(--line)!important;box-shadow:0 3px 12px #0000000B!important}
+html[data-palette] #portfolio .port-card .photo{background:var(--soft)!important}
+html[data-palette] #portfolio .port-card .info{background:var(--paper)!important;color:var(--ink)!important}
+html[data-palette] #portfolio .port-card h3{color:var(--ink)!important}
+html[data-palette] #portfolio .catalog-category{color:var(--accent)!important}
+html[data-palette] #portfolio .port-card .chip{background:var(--soft)!important;color:var(--accent)!important}
+}
+</style><style id="pdf-filter-dropdown-v51">
+/* v51: seleção de filtros do PDF em listas suspensas compactas */
+#portfolio .pdf-filter-grid{align-items:start!important;overflow:visible!important}
+#portfolio .pdf-dropdown{position:relative;padding:0!important;min-width:0!important;border:1px solid var(--line)!important;border-radius:12px!important;background:var(--paper)!important;overflow:visible!important}
+#portfolio .pdf-dropdown>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:47px;padding:11px 14px;font-weight:700;color:var(--ink);user-select:none}
+#portfolio .pdf-dropdown>summary::-webkit-details-marker{display:none}
+#portfolio .pdf-dropdown>summary::after{content:'▾';color:var(--accent);font-size:17px;transition:transform .15s ease}
+#portfolio .pdf-dropdown[open]>summary::after{transform:rotate(180deg)}
+#portfolio .pdf-dropdown>summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:10px}
+#portfolio .pdf-dropdown-content{padding:10px 12px 12px;border-top:1px solid var(--line);background:var(--paper);border-radius:0 0 12px 12px}
+#portfolio .pdf-dropdown .pdf-selection-count{margin-left:auto;font-size:12px;font-weight:500;color:var(--accent)!important}
+#portfolio .pdf-dropdown .pdf-check-options{max-height:210px;overflow:auto}
+#portfolio .pdf-dropdown .pdf-check-item{color:var(--ink);background:var(--soft)!important}
+@media(min-width:800px){#portfolio .pdf-dropdown[open]{z-index:5;box-shadow:0 8px 20px #00000013}}
+@media(max-width:540px){#portfolio .pdf-filter-grid{grid-template-columns:1fr!important}}
+@media print{#portfolio .pdf-dropdown{display:none!important}}
+</style><style id="app-light-palette-fix-v54">
+/* v54 — tema claro definitivo: fundo da interface segue a paleta.
+   Preserva a barra lateral colorida e o PDF independente. */
+:root,html,html[data-theme="light"],html[data-theme="dark"]{color-scheme:light!important}
+html[data-palette] {background:var(--bg)!important;color:var(--ink)!important}
+html[data-palette] body{background:var(--bg)!important;background-image:none!important;color:var(--ink)!important}
+html[data-palette] .app,html[data-palette] .main,html[data-palette] main{background:var(--bg)!important;background-image:none!important;color:var(--ink)!important}
+html[data-palette] .top,html[data-palette] .top .sub{background:transparent!important;color:var(--ink)!important}
+html[data-palette] .panel,html[data-palette] .watch,html[data-palette] .port-card,
+html[data-palette] .port-card .info,html[data-palette] .searchrow,
+html[data-palette] .dash-visual-card,html[data-palette] .dash-chart,
+html[data-palette] .github-card,html[data-palette] .entry-panel,
+html[data-palette] .entry-footer,html[data-palette] .portfolio-summary .sum-box{
+background:var(--paper)!important;background-image:none!important;color:var(--ink)!important;border-color:var(--line)!important}
+html[data-palette] .stat,html[data-palette] .dash-kpi,html[data-palette] .category-questionnaire,
+html[data-palette] .notice,html[data-palette] .upload{background:var(--soft)!important;background-image:none!important;color:var(--ink)!important;border-color:var(--line)!important}
+html[data-palette] .photo,html[data-palette] .port-card .photo,
+html[data-palette] .visual-category img{background:var(--soft)!important;background-image:none!important}
+html[data-palette] .title,html[data-palette] h2,html[data-palette] h3,
+html[data-palette] .port-card h3,html[data-palette] .watch h3{color:var(--ink)!important}
+html[data-palette] .intro,html[data-palette] .muted,html[data-palette] .port-card .catalog-copy,
+html[data-palette] .catalog-details dd{color:var(--muted)!important}
+html[data-palette] input,html[data-palette] select,html[data-palette] textarea,
+html[data-palette] .btn:not(.primary):not(.hero-btn){background:var(--paper)!important;color:var(--ink)!important;border-color:var(--line)!important}
+html[data-palette] .btn.primary{background:var(--accent)!important;color:white!important}
+/* Menus laterais e inferiores mantêm o contraste da paleta escolhida. */
+html[data-palette] .side,html[data-palette] .mobile-nav{background:var(--palette-side)!important;background-image:none!important}
+html[data-palette] .side .nav button.active{background:var(--palette-active)!important;color:var(--palette-active-text)!important}
+@media print{html[data-palette] body{background:white!important}}
+</style></head><body><div class="app"><aside class="side"><div class="brand"><div class="brand-symbol">♧</div><div class="eyebrow">Coleção pessoal</div><h1>Closet da Raquel</h1><small>Moda, acessórios &amp; coleção</small></div><div class="nav" id="desktopNav"><button class="active" data-tab="acervo"><span>▥</span> Dashboard</button><button data-tab="cadastro"><span>＋</span> Adicionar peça</button><button data-tab="portfolio"><span>▤</span> Portfólio</button><button data-tab="github"><span>☁</span> Sincronização GitHub</button><button data-tab="backup"><span>⇅</span> Dados &amp; backup</button></div><div class="foot">CLOSET DA RAQUEL 26.0<br/>Uma coleção com história.<br/>Organizada do seu jeito.</div></aside><main class="main"><div class="top"><div><div class="eyebrow">Private collection · Jewelry &amp; Watches</div><div class="sub">Relógios, anéis, joias, pulseiras, colares e tênis em um só lugar</div></div><div class="top-actions"><button aria-label="Status GitHub" class="sync-badge" id="topSyncBadge" type="button" data-tab="github"><span class="sync-dot disconnected" id="topSyncDot"></span><span id="topSyncText">GitHub Desconectado</span></button><button aria-label="Escolher visualização" class="btn view-toggle" id="viewToggle" type="button">▣ Visualização</button><label class="palette-control" for="paletteSelect">◉ Paleta <select id="paletteSelect" aria-label="Escolher paleta de cores"><option value="esmeralda">Esmeralda</option><option value="verde">Verde</option><option value="safira">Safira</option><option value="terracota">Terracota</option><option value="grafite">Grafite</option><option value="vermelho">Vermelho</option></select></label><button class="btn primary" data-tab="cadastro">＋ Adicionar ao closet</button></div></div>
+<section id="acervo"><h2 class="title">Dashboard do Acervo</h2><p class="intro">Visão geral do seu closet com gráficos interativos e filtros inteligentes.</p><div class="shop-hero" hidden><div><span class="shop-kicker">SEU GUARDA-ROUPA DIGITAL</span><h3>Tudo o que você tem.<br/><em>Em um só lugar.</em></h3><p>Fotografe, organize e encontre suas peças como em uma loja online.</p><button class="btn hero-btn" id="heroAdd" type="button">+ Adicionar ao closet</button></div><div class="shop-art"><span>Closet da Raquel</span><small>CURATED BY YOU</small></div></div><div class="stats" hidden aria-hidden="true"><div class="stat"><small>PEÇAS NO ACERVO</small><strong id="statTotal">0</strong><small>Itens catalogados</small></div><div class="stat"><small>COM FOTOGRAFIA</small><strong id="statFotos">0</strong><small>Peças fotografadas</small></div><div class="stat"><small>NO PORTFÓLIO</small><strong id="statSelected">0</strong><small>Peças selecionadas</small></div></div><section aria-labelledby="dashTitle" class="dash-panel" id="dashboard">
+<div class="dash-heading"><div><div class="eyebrow">SEU ACERVO EM NÚMEROS</div><h3 id="dashTitle">Distribuição e características</h3><p>Selecione uma categoria no gráfico ou um atributo nas barras para explorar as peças.</p></div><button class="btn sm" id="dashReset" type="button">Limpar filtros</button></div>
+<div aria-live="polite" class="dash-kpis" id="dashKpis"></div><div id="activeFilterChips" class="active-filter-chips" aria-live="polite"></div>
+<div class="dash-filter-title">BUSCAR E FILTRAR</div><div class="searchrow"><input aria-label="Pesquisar peças do acervo" id="search" placeholder="⌕  Busque por nome, marca, cor, estilo..."/><select id="filterCategoria"><option value="">Todas as categorias</option><option>Relógios</option><option>Anéis</option><option>Joias</option><option>Pulseiras</option><option>Colares</option><option>Tênis</option><option>Sapatos</option><option>Roupas</option></select><select id="filterTipoRoupa"><option value="">Todos os tipos de roupa</option></select><select id="filterCor"><option value="">Todas as cores</option></select><select id="filterEstilo"><option value="">Todos os estilos</option></select><select data-no-alpha="true" id="sort"><option value="recent">Mais recentes</option><option value="name">Nome A–Z</option><option value="brand">Marca A–Z</option></select></div><div class="dash-visual-grid">
+<div class="dash-visual-card"><h4>Distribuição da coleção</h4><p class="dash-visual-help">Clique na legenda para filtrar por categoria.</p><div class="dash-donut-wrap"><div class="dash-donut" id="dashDonut" role="img" aria-label="Distribuição das peças por categoria"></div><div class="dash-legend" id="dashDonutLegend"></div></div></div>
+<div class="dash-visual-card"><h4>Fotografias do acervo</h4><p class="dash-visual-help">Peças com foto em relação ao acervo filtrado.</p><div class="dash-photo-visual"><div id="dashPhotoRing" class="dash-photo-ring"><div><strong id="dashPhotoPercent">0%</strong><small>com foto</small></div></div><div class="dash-photo-info"><strong id="dashPhotoCount">0 de 0</strong><span>peças com fotografia</span><small id="dashPhotoMissing">0 sem fotografia</small></div></div></div>
+</div>
+<div class="dash-charts">
+
+<div class="dash-chart"><h4>Explorar características</h4><label class="dash-filter-label" for="dashBreakdown">Agrupar por <select id="dashBreakdown"><option value="tipoRoupa">Tipo de roupa</option><option value="subtipoSapato">Tipo de sapato</option><option value="marca">Marca</option><option value="cor">Cor</option><option value="estilo">Estilo</option><option value="material">Material</option></select></label><div class="dash-bars" id="dashDetailChart"></div></div>
+</div><div class="dash-foot" id="dashFoot"></div>
+</section><section class="visual-categories" aria-label="Categorias do closet"><div class="visual-section-title"><h3>Categorias do Closet</h3><span>Selecione uma categoria para filtrar o acervo</span></div><div id="visualCategoryCards" class="visual-category-grid"></div></section><div class="category-strip" id="categoryStrip" hidden aria-hidden="true"><button class="active" data-cat="" type="button">Toda a coleção</button><button data-cat="Relógios" type="button">Relógios</button><button data-cat="Anéis" type="button">Anéis</button><button data-cat="Joias" type="button">Joias</button><button data-cat="Pulseiras" type="button">Pulseiras</button><button data-cat="Colares" type="button">Colares</button><button data-cat="Tênis" type="button">Tênis</button><button data-cat="Roupas" type="button">Roupas</button></div><div class="toolbar" style="justify-content:space-between;margin-bottom:17px"><div class="muted" id="resultCount"></div><button class="btn sm" id="selectVisible">Selecionar exibidos</button></div><div class="grid" id="gallery"></div></section>
+<section hidden="" id="cadastro"><h2 class="title" id="formTitle">Adicionar ao closet</h2><p class="intro">Um cadastro simples: selecione a categoria, complete as informações pertinentes e adicione a fotografia. Apenas categoria e nome são obrigatórios.</p><form id="watchForm"><div class="panel entry-panel"><div class="eyebrow">01 / Dados da peça</div><h3>O que vamos guardar no seu closet?</h3><p class="muted">Escolha a categoria e informe o nome. Os demais campos são opcionais e se adaptam à peça.</p><div class="formgrid entry-grid"><label>Categoria *<select id="categoria" required=""><option value="Relógios">Relógios</option><option value="Anéis">Anéis</option><option value="Joias">Joias</option><option value="Pulseiras">Pulseiras</option><option value="Colares">Colares</option><option>Tênis</option><option>Sapatos</option><option>Roupas</option></select></label><label>Nome da peça *<input id="nome" placeholder="Ex.: Relógio dourado ou tênis branco" required=""/></label><label>Marca<input id="marca" placeholder="Ex.: Casio, Orient, Adidas, Nike"/></label><label id="modeloField">Modelo do relógio<input id="modelo" placeholder="Ex.: Vintage A168, referência ou nome comercial"/></label><label>Cor principal<input id="cor" placeholder="Ex.: Dourado"/></label></div><div aria-live="polite" class="category-questionnaire" id="categoryQuestionnaire"></div><details class="entry-advanced"><summary>Mais características da peça (opcional)</summary><div class="formgrid"><label id="pulseiraCorField">Cor da pulseira ou detalhe<input id="pulseiraCor" placeholder="Ex.: Prata"/></label><label id="formatoField">Formato / desenho<select id="formato"><option value="">Selecione</option><option>Redondo</option><option>Retangular</option><option>Quadrado</option><option>Oval</option><option>Orgânico</option><option>Outro</option></select></label><label id="materialField">Material principal<select id="material"><option value="">Selecione</option><option>Metal</option><option>Ouro</option><option>Prata</option><option>Aço</option><option>Pedras</option><option>Pérolas</option><option>Couro</option><option>Silicone</option><option>Tecido</option><option>Cerâmica</option><option>Camurça</option><option>Sintético</option><option>Canvas</option><option>Outro</option></select></label><label id="estiloField">Estilo<select id="estilo"><option value="">Selecione</option><option>Clássico</option><option>Elegante</option><option>Casual</option><option>Esportivo</option><option>Fashion</option><option>Vintage</option><option>Outro</option></select></label><label hidden="" id="roupaTipoField">Tipo de roupa<select id="tipoRoupa"><option value="">Selecione</option><option>Calça</option><option>Bermuda</option><option>Vestido</option><option>Saia</option><option>Camisa</option><option>Camiseta</option><option>Blazer</option><option>Casaco</option><option>Tricô</option><option>Macacão</option><option>Moletom</option><option>Colete</option><option>Conjunto</option><option>Outra roupa</option></select></label><label hidden="" id="roupaTamanhoField">Tamanho da roupa<input id="tamanhoRoupa" placeholder="Ex.: P, M, G, 40"/></label><label hidden="" id="tenisSizeField">Numeração do tênis<input id="numeracao" placeholder="Ex.: 37"/></label><label id="relogioTipoField">Tipo de relógio<select id="tipo"><option value="">Selecione</option><option>Analógico</option><option>Digital</option><option>Smartwatch</option></select></label></div></details></div><div class="panel"><div class="eyebrow">02 / Fotografia</div><div class="upload" id="dropzone"><div class="icon">▧</div><strong>Fotografia da peça</strong><p>Use a câmera do celular ou selecione uma foto da galeria.<br/>Também é possível arrastar uma imagem para esta área.</p><div class="toolbar" style="justify-content:center"><button class="btn primary" id="takePhoto" type="button">◎ Tirar foto</button><button class="btn" id="attachPhoto" type="button">↥ Anexar imagem</button></div><input accept="image/*" capture="environment" class="hidden" id="cameraInput" type="file"/><input accept="image/*,.heic,.heif" class="hidden" id="fileInput" type="file"/><img alt="Prévia da fotografia" class="preview hidden" id="preview"/><button class="btn sm hidden" id="removePhoto" type="button">Remover foto</button><div class="hidden" id="cameraArea"><div class="camera"><video autoplay="" id="video" muted="" playsinline=""></video></div><div class="toolbar" style="justify-content:center"><button class="btn primary" id="capture" type="button">Capturar</button><button class="btn" id="closeCamera" type="button">Cancelar</button></div></div></div><div class="notice">A câmera pode abrir diretamente no celular. Em alguns navegadores, a captura ao vivo exige HTTPS; nesse caso, use a opção de câmera do dispositivo.</div></div><div class="panel entry-footer"><div class="eyebrow">03 / Finalizar cadastro</div><label>Observações<textarea id="obs" placeholder="Uma lembrança, detalhe especial ou informação que queira registrar..."></textarea></label><div class="toolbar"><button class="btn primary" type="submit">Salvar no acervo</button><button class="btn" id="resetForm" type="button">Limpar</button></div><div aria-hidden="true" class="panel" hidden="" style="display:none!important"><div class="eyebrow">04 / Pesquisa e identificação</div><h3>Descubra a história da peça</h3><p class="muted">Pesquise na web por marca, modelo e referência ou utilize a foto no Google Lens. Confira os resultados antes de aplicar sugestões. Nenhum dado é alterado sem sua confirmação.</p><div class="toolbar" style="flex-wrap:wrap"><button class="btn primary" id="webSearch" type="button">⌕ Pesquisar dados na web</button><button class="btn" id="lensSearch" type="button">◎ Pesquisar pela fotografia</button><button class="btn" id="copySearch" type="button">Copiar termos da pesquisa</button></div><div class="notice" id="researchNotice">Pesquisa assistida: os resultados são abertos em uma nova aba. O reconhecimento automático e a leitura de resultados exigem integração com um serviço de IA e pesquisa em servidor, ainda não configurado.</div><div class="formgrid" style="margin-top:20px"><label>Fabricante<input id="fabricante" placeholder="Empresa fabricante"/></label><label>Referência / código do produto<input id="referencia" placeholder="Código gravado na peça"/></label><label>Ano de fabricação (se conhecido)<input id="anoFabricacao" inputmode="numeric" placeholder="Ex.: 2018 ou estimado"/></label><label>Ano de compra (informado por você)<input id="anoCompra" inputmode="numeric" placeholder="Ex.: 2022"/></label><label>Local de compra<input id="localCompra" placeholder="Loja, cidade ou site"/></label></div><label>Descrição sugerida / confirmada<textarea id="descricao" placeholder="Detalhes do modelo e características verificadas"></textarea></label><label>Fontes da pesquisa<textarea id="fontes" placeholder="Cole aqui links e referências consultadas"></textarea></label><div class="toolbar"><button class="btn" id="suggestDescription" type="button">Sugerir descrição com dados existentes</button><button class="btn" id="reviewSuggestions" type="button">Revisar e aplicar sugestão</button></div><div class="notice" hidden="" id="suggestionBox"></div></div></div></form></section>
+<section hidden="" id="portfolio"><h2 class="title hideprint">Seu portfólio.</h2><p class="intro hideprint">Crie uma apresentação elegante com peças de todas as categorias ou apenas suas favoritas.</p><div class="panel"><div class="hideprint"><label>Título do portfólio<input id="portfolioTitle" value="Closet da Raquel"/></label><div class="pdf-filter-panel"><div class="eyebrow">CURADORIA DO RELATÓRIO</div><p class="muted">Escolha uma categoria e, quando disponível, uma subcategoria. O PDF incluirá apenas as peças correspondentes.</p><div class="pdf-filter-grid"><details class="pdf-multi-field pdf-dropdown"><summary>Categorias <span class="pdf-selection-count" id="pdfCatSelected">Todas</span></summary><div class="pdf-dropdown-content"><div class="pdf-multi-actions"><button id="pdfAllCategories" type="button">Selecionar todas</button><button id="pdfNoCategories" type="button">Limpar</button></div><div class="pdf-check-options" id="pdfCategories"></div></div></details><details class="pdf-multi-field pdf-dropdown"><summary>Subcategorias <span class="pdf-selection-count" id="pdfSubSelected">Todas</span></summary><div class="pdf-dropdown-content"><div class="pdf-multi-actions"><button id="pdfAllSubcategories" type="button">Selecionar todas</button><button id="pdfNoSubcategories" type="button">Limpar</button></div><div class="pdf-check-options" id="pdfSubcategories"></div></div></details></div><div aria-live="polite" class="muted" id="pdfFilterCount"></div></div><div class="toolbar" style="margin-bottom:20px"><button class="btn" id="selectAll">Selecionar todos</button><button class="btn" id="clearAll">Limpar seleção</button><button class="btn" id="printAll">PDF completo do acervo</button><button class="btn primary" id="printPortfolio">↧ PDF das selecionadas</button></div><div class="notice">Para gerar o PDF, escolha “Salvar como PDF” na janela de impressão do navegador. As imagens mantêm suas proporções originais.</div></div><div class="pdf-report-cover"><div class="pdf-cover-mark">A</div><div><div class="pdf-cover-eyebrow">COLEÇÃO PRIVADA • INVENTÁRIO ILUSTRADO</div><div class="pdf-cover-title">Closet da Raquel</div><div class="pdf-cover-subtitle">Meu acervo, minha história.</div></div><div class="pdf-cover-art"><div class="illustration-tile"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" viewbox="0 0 24 24"><path d="M12 3l3 3 4 1 2 5-4 2-2-2v10H9V12l-2 2-4-2 2-5 4-1z"></path></svg><span>Roupas</span></div><div class="illustration-tile"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" viewbox="0 0 24 24"><path d="M3 16c3 0 5-2 6-6l3 2 2 3 7 2v4H3z"></path></svg><span>Sapatos</span></div><div class="illustration-tile"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" viewbox="0 0 24 24"><path d="M2 17l5-6 5 4 8 2 2 3H2z M7 14l2-2 M10 16l2-2"></path></svg><span>Tênis</span></div><div class="illustration-tile"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" viewbox="0 0 24 24"><path d="M9 2h6l1 4H8z M8 18h8l-1 4H9z M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10z M12 9v3l2 1"></path></svg><span>Relógios</span></div></div></div><div class="catalog-masthead"><span>CLOSET DA RAQUEL / COLEÇÃO PRIVADA</span><span id="catalogDate"></span></div><h2 class="print-head" id="printTitle">Closet da Raquel</h2><p class="catalog-lede">Inventário fotográfico e descritivo dos pertences cadastrados.</p><p class="pdf-applied-filter" id="pdfAppliedFilter"></p><div class="portfolio-summary" id="portfolioSummary"></div><div class="port-grid" id="portfolioGrid"></div></div></section>
+
+<!-- SEÇÃO: SINCRONIZAÇÃO GITHUB -->
+<section hidden="" id="github"><h2 class="title">Sincronização Online GitHub</h2><p class="intro">Persista automaticamente todo o acervo no repositório público <strong>rcpmoraes/closet-da-raquel</strong> para acessar de qualquer dispositivo.</p>
+<div class="github-card">
+  <div class="eyebrow">REPOSITÓRIO CONECTADO</div>
+  <h3 style="margin:8px 0 16px;">rcpmoraes / closet-da-raquel</h3>
+  <p class="muted">Os dados e fotos do acervo são gravados no arquivo <code>data/acervo.json</code> na nuvem do GitHub Pages.</p>
+  
+  <div class="github-status-box">
+    <div class="github-status-info">
+      <span class="sync-dot disconnected" id="panelSyncDot"></span>
+      <div>
+        <strong id="panelSyncStatusText">Status: Não Configurado</strong>
+        <div class="muted" id="panelSyncDetails" style="font-size:12px;">Insira seu Personal Access Token para habilitar a nuvem.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="formgrid" style="margin-top:20px;">
+    <label style="grid-column: span 2;">GitHub Personal Access Token (PAT) *
+      <input type="password" id="ghTokenInput" placeholder="Cole seu novo token GitHub (ghp_ ou github_pat_)" autocomplete="off" />
+      <small class="muted" style="display:block;margin-top:5px;">O token exige permissão de acesso a repositórios (<code>repo</code> ou <code>contents:write</code>). Ele fica armazenado localmente apenas no seu navegador.</small>
+    </label>
+  </div>
+
+  <div class="toolbar" style="margin-top:20px;">
+    <button class="btn primary" id="saveGhTokenBtn" type="button">Salvar &amp; Conectar Token</button>
+    <button class="btn danger" id="removeGhTokenBtn" type="button">Remover Token</button>
+  </div>
+</div>
+
+<div class="panel">
+  <div class="eyebrow">OPERAÇÕES MANUAIS DE SINCRONIZAÇÃO</div>
+  <h3 style="margin:8px 0 16px;">Enviar e Baixar dados</h3>
+  <p class="muted">A sincronização ocorre automaticamente ao adicionar, editar ou excluir peças. Caso queira forçar a sincronização manual:</p>
+
+  <div class="toolbar" style="margin-top:20px;">
+    <button class="btn primary" id="pushToGithubBtn" type="button">☁ Salvar no GitHub agora (Push)</button>
+    <button class="btn" id="pullFromGithubBtn" type="button">↧ Carregar do GitHub agora (Pull)</button>
+  </div>
+  <div class="notice" style="margin-top:16px;">
+    Ao carregar do GitHub, o acervo no dispositivo atual será atualizado com os dados presentes no repositório remoto.
+  </div>
+</div>
+</section>
+
+<section hidden="" id="backup"><h2 class="title">Sua coleção, protegida.</h2><p class="intro">Exporte seus dados e imagens para recuperar o acervo quando necessário.</p><div class="panel"><h3>Backup completo</h3><p class="muted">O arquivo JSON inclui os dados e as fotografias. Guarde uma cópia fora deste dispositivo.</p><div class="toolbar"><button class="btn primary" id="export">↧ Exportar backup</button><button class="btn" id="importButton">↥ Restaurar backup</button><input accept=".json,application/json" class="hidden" id="importInput" type="file"/></div><div class="notice">O acervo é salvo neste navegador e pode ser sincronizado com o GitHub quando a conexão estiver configurada. Mantenha backups JSON regulares.</div></div></section></main></div><div class="mobile-nav" id="mobileNav"><button class="active" data-tab="acervo"><b>▥</b>Dashboard</button><button data-tab="cadastro"><b>＋</b>Adicionar</button><button data-tab="portfolio"><b>▤</b>Portfólio</button><button data-tab="github"><b>☁</b>Nuvem</button><button data-tab="backup"><b>⇅</b>Backup</button></div><div class="toast hidden" id="toast" role="status"></div>
+<div aria-labelledby="viewTitle" aria-modal="true" class="view-overlay" hidden="" id="viewChooser" role="dialog">
+<div class="view-dialog">
+<div class="eyebrow">ATELIER / BOAS-VINDAS</div><h2 id="viewTitle">Como deseja visualizar seu closet?</h2>
+<p>Escolha a apresentação. Você pode mudar depois pelo botão “Visualização”.</p>
+<div class="view-options">
+<button data-view-choice="mobile" type="button"><span class="view-icon">▯</span><strong>Celular</strong><small>Vitrine compacta e navegação inferior</small></button>
+<button data-view-choice="desktop" type="button"><span class="view-icon">▤</span><strong>Desktop</strong><small>Galeria ampla e menu lateral</small></button>
+<button data-view-choice="auto" type="button"><span class="view-icon">◫</span><strong>Automático</strong><small>Adapta-se ao tamanho da tela</small></button>
+</div></div></div><script>
+/* Controles de aparência independentes do banco de dados e do restante do app. */
+(function(){
+'use strict';
+const root=document.documentElement;
+const chooser=document.getElementById('viewChooser');
+const modeButton=document.getElementById('viewToggle');
+
+const safeGet=(key)=>{try{return localStorage.getItem(key)}catch(e){return null}};
+const safeSet=(key,value)=>{try{localStorage.setItem(key,value)}catch(e){}};
+function applyMode(mode){
+ const m=['mobile','desktop','auto'].includes(mode)?mode:'auto';
+ root.setAttribute('data-view',m);
+ modeButton.textContent=({mobile:'▯ Celular',desktop:'▤ Desktop',auto:'◫ Automático'})[m];
+ modeButton.setAttribute('aria-label','Modo de exibição atual: '+({mobile:'Celular',desktop:'Desktop',auto:'Automático'})[m]+'. Alterar visualização');
+ document.querySelectorAll('[data-view-choice]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.viewChoice===m)));
+ chooser.hidden=true;safeSet('atelier-view-mode',m);
+}
+function applyTheme(theme){
+ const t='light';
+ root.setAttribute('data-theme',t);
+ safeSet('atelier-theme',t);
+}
+modeButton.addEventListener('click',()=>{chooser.hidden=false;});
+document.querySelectorAll('[data-view-choice]').forEach(button=>button.addEventListener('click',()=>applyMode(button.dataset.viewChoice)));
+chooser.addEventListener('click',e=>{if(e.target===chooser)chooser.hidden=true});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!chooser.hidden)chooser.hidden=true});
+
+const savedMode=safeGet('atelier-view-mode');
+applyMode(savedMode||'auto');
+if(!savedMode)chooser.hidden=false;
+applyTheme('light');
+})();
+</script><script>
+'use strict';const atelierCollator=new Intl.Collator('pt-BR',{sensitivity:'base',numeric:true});let dashExtraFilter=null;const $=id=>document.getElementById(id);const fields=['categoria','nome','marca','cor','pulseiraCor','formato','material','estilo','tipo','obs','modelo','numeracao','fabricante','referencia','anoFabricacao','anoCompra','localCompra','descricao','fontes','tipoRoupa','tamanhoRoupa'];let db,items=[],selected=new Set(),editing=null,currentPhoto='',stream=null;const DB='atelier-watch-collection',STORE='watches';
+
+// GitHub Sync Module Configuration
+const GH_OWNER = 'rcpmoraes';
+const GH_REPO = 'closet-da-raquel';
+const GH_PATH = 'data/acervo.json';
+let ghToken = localStorage.getItem('gh_pat_token') || '';
+let currentFileSha = null;
+let ghWriteConfirmed = false;
+
+function updateSyncUI(state, msg) {
+  const topDot = $('topSyncDot'), topText = $('topSyncText');
+  const panelDot = $('panelSyncDot'), panelText = $('panelSyncStatusText'), panelDetails = $('panelSyncDetails');
+  
+  topDot.className = 'sync-dot ' + state;
+  panelDot.className = 'sync-dot ' + state;
+  
+  if(state === 'online') {
+    topText.textContent = '✓ GitHub';
+    panelText.textContent = 'Status: Conectado ao GitHub';
+    panelDetails.textContent = msg || 'Sincronizado com rcpmoraes/closet-da-raquel';
+  } else if(state === 'syncing') {
+    topText.textContent = '↻ Sincronizando...';
+    panelText.textContent = 'Status: Sincronizando...';
+    panelDetails.textContent = msg || 'Transferindo dados com a nuvem do GitHub...';
+  } else if(state === 'offline') {
+    topText.textContent = '! Offline';
+    panelText.textContent = 'Status: Erro na conexão';
+    panelDetails.textContent = msg || 'Verifique sua conexão ou token do GitHub.';
+  } else {
+    topText.textContent = 'GitHub Desconectado';
+    panelText.textContent = 'Status: Não Configurado';
+    panelDetails.textContent = 'Insira seu Personal Access Token para habilitar a nuvem.';
+  }
+}
+
+// Utilitários de codificação Base64 com suporte total a UTF-8
+function utf8ToBase64(str) {
+  return window.btoa(unescape(encodeURIComponent(str)));
+}
+
+function base64ToUtf8(str) {
+  return decodeURIComponent(escape(window.atob(str)));
+}
+
+async function fetchFromGithub() {
+  if (!ghToken) return false;
+  updateSyncUI('syncing', 'Buscando acervo remoto no GitHub...');
+  try {
+    const res = await fetch(`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_PATH}`, {
+      headers: {
+        'Authorization': `token ${ghToken}`,
+        'Accept': 'application/vnd.github.v3+json'
+      }
+    });
+
+    if (res.status === 404) {
+      throw new Error('Arquivo data/acervo.json não encontrado ou sem acesso. Verifique o repositório e as permissões do token antes de enviar.');
+    }
+
+    if (!res.ok) {
+      throw new Error(`Erro na API do GitHub (${res.status})`);
+    }
+
+    const data = await res.json();
+    currentFileSha = data.sha;
+    
+    // Decodifica JSON remoto com suporte a UTF-8
+    const contentUtf8 = base64ToUtf8(data.content.replace(/\n/g, ''));
+    const parsedData = JSON.parse(contentUtf8);
+    const remoteItems = Array.isArray(parsedData) ? parsedData : parsedData.items;
+    if (!Array.isArray(remoteItems) || !remoteItems.every(x => x && typeof x.id === 'string' && typeof x.nome === 'string')) {
+      throw new Error('Arquivo remoto inválido: acervo local preservado.');
+    }
+    // Atualiza o IndexedDB com os dados vindos do GitHub
+    await new Promise((resolve, reject) => {
+      let t = db.transaction(STORE, 'readwrite'), s = t.objectStore(STORE);
+      s.clear();
+      remoteItems.forEach(item => s.put(item));
+      t.oncomplete = resolve;
+      t.onerror = () => reject(t.error);
+    });
+
+    await refresh();
+    updateSyncUI('online', `Sincronizado com sucesso (${remoteItems.length} peças).`);
+    return true;
+  } catch (err) {
+    console.error('Erro ao baixar do GitHub:', err);
+    updateSyncUI('offline', err.message);
+    return false;
+  }
+}
+
+async function pushToGithub(auto = false) {
+  if (!ghToken) {
+    if (!auto) toast('Configure um Personal Access Token para sincronizar com o GitHub.');
+    return false;
+  }
+
+  updateSyncUI('syncing', 'Enviando alterações para o GitHub...');
+  try {
+    if (!currentFileSha) {
+      const getRes = await fetch(`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_PATH}`, {
+        headers: {
+          'Authorization': `token ${ghToken}`,
+          'Accept': 'application/vnd.github.v3+json'
+        }
+      });
+      if (getRes.ok) {
+        const getData = await getRes.json();
+        currentFileSha = getData.sha;
+      } else if (getRes.status !== 404) {
+        throw new Error('Não foi possível verificar o arquivo remoto ('+getRes.status+'). Confira o acesso ao repositório.');
+      }
+    }
+
+    const allItems = await txn('readonly', s => s.getAll());
+    const payloadContent = utf8ToBase64(JSON.stringify(allItems, null, 2));
+
+    const bodyData = {
+      message: `Atualização de acervo via Closet da Raquel v24 (${allItems.length} peças)`,
+      content: payloadContent
+    };
+
+    if (currentFileSha) {
+      bodyData.sha = currentFileSha;
+    }
+
+    const putRes = await fetch(`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_PATH}`, {
+      method: 'PUT',
+      headers: {
+        'Authorization': `token ${ghToken}`,
+        'Content-Type': 'application/json',
+        'Accept': 'application/vnd.github.v3+json'
+      },
+      body: JSON.stringify(bodyData)
+    });
+
+    if (!putRes.ok) {
+      const errJson = await putRes.json().catch(() => ({}));
+      throw new Error(putRes.status===403 ? 'Permissão de gravação negada. No token fine-grained, habilite Contents: Read and write para este repositório.' : putRes.status===409 ? 'O acervo remoto mudou. Atualize o estado da conexão antes de enviar novamente.' : (errJson.message || `Erro no upload (${putRes.status})`));
+    }
+
+    const putResult = await putRes.json();
+    currentFileSha = putResult.content.sha;
+    ghWriteConfirmed = true;
+    updateSyncUI('online', `Salvo na nuvem do GitHub! (${allItems.length} peças)`);
+    if (!auto) toast('Acervo salvo no GitHub com sucesso!');
+    return true;
+  } catch (err) {
+    console.error('Erro ao enviar para o GitHub:', err);
+    updateSyncUI('offline', err.message);
+    if (!auto) toast('Erro ao salvar no GitHub: ' + err.message);
+    return false;
+  }
+}
+
+function toast(msg){$('toast').textContent=msg;$('toast').classList.remove('hidden');clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('toast').classList.add('hidden'),4200)}function openDB(){return new Promise((resolve,reject)=>{let r=indexedDB.open(DB,1);r.onupgradeneeded=()=>r.result.createObjectStore(STORE,{keyPath:'id'});r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)})}function txn(mode,fn){return new Promise((resolve,reject)=>{let t=db.transaction(STORE,mode),s=t.objectStore(STORE),r=fn(s);r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);t.onerror=()=>reject(t.error)})}async function refresh(){items=await txn('readonly',s=>s.getAll());render()}async function save(item){await txn('readwrite',s=>s.put(item));await refresh();if(ghToken && ghWriteConfirmed) pushToGithub(true);}async function remove(id){await txn('readwrite',s=>s.delete(id));selected.delete(id);await refresh();if(ghToken && ghWriteConfirmed) pushToGithub(true);}function go(tab){stopCamera();document.querySelectorAll('main section').forEach(s=>s.hidden=s.id!==tab);document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));if(tab==='portfolio')renderPortfolio();if(tab==='acervo')render();window.scrollTo({top:0,behavior:'smooth'})}document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.tab==='cadastro')resetForm();go(b.dataset.tab)}));
+$('heroAdd').addEventListener('click',()=>{resetForm();go('cadastro')});function el(tag,cls,text){let x=document.createElement(tag);if(cls)x.className=cls;if(text!==undefined)x.textContent=text;return x}function setOptions(id,key,all){let s=$(id),v=s.value;s.replaceChildren(new Option(all,''));[...new Set(items.map(x=>x[key]).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'pt-BR')).forEach(v=>s.add(new Option(v,v)));s.value=v}function filtered(){let q=$('search').value.toLocaleLowerCase('pt-BR').trim();let out=items.filter(x=>(!$('filterCategoria').value||(x.categoria||'Relógios')===$('filterCategoria').value)&&(!$('filterTipoRoupa').value||x.tipoRoupa===$('filterTipoRoupa').value)&&(!$('filterCor').value||x.cor===$('filterCor').value)&&(!$('filterEstilo').value||x.estilo===$('filterEstilo').value)&&((fields.some(k=>String(x[k]||'').toLocaleLowerCase('pt-BR').includes(q))||Object.values(x.detalhesCategoria||{}).some(v=>String(v).toLocaleLowerCase('pt-BR').includes(q)))||(!x.categoria&&'relógios'.includes(q))));if(dashExtraFilter)out=out.filter(x=>((dashExtraFilter.key==='subtipoSapato'?x.detalhesCategoria?.subtipoSapato:x[dashExtraFilter.key])||'Não informado')===dashExtraFilter.value);let sort=$('sort').value;out.sort((a,b)=>sort==='name'?a.nome.localeCompare(b.nome,'pt-BR'):sort==='brand'?(a.marca||'').localeCompare(b.marca||'','pt-BR'):String(b.created||b.id).localeCompare(String(a.created||a.id)));return out}function photoNode(x){let p=el('div','photo');if(x.foto){let i=el('img');i.src=x.foto;i.alt='Fotografia de '+x.nome;i.loading='lazy';p.append(i)}else {let svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox','0 0 24 24');svg.setAttribute('fill','none');svg.setAttribute('stroke','currentColor');svg.setAttribute('stroke-width','1.1');let path=document.createElementNS('http://www.w3.org/2000/svg','path');path.setAttribute('d',categoryIconPaths[x.categoria]||categoryIconPaths['Roupas']);svg.append(path);p.classList.add('photo-illustration');p.append(svg,el('small','','Ilustração • sem fotografia cadastrada'))}return p}function render(){$('statTotal').textContent=items.length;$('statFotos').textContent=items.filter(x=>x.foto).length;$('statSelected').textContent=selected.size;setOptions('filterTipoRoupa','tipoRoupa','Todos os tipos de roupa');setOptions('filterCor','cor','Todas as cores');setOptions('filterEstilo','estilo','Todos os estilos');let list=filtered();renderDashboard();$('resultCount').textContent=`${list.length} peça${list.length===1?'':'s'} encontrada${list.length===1?'':'s'}`;let g=$('gallery');g.replaceChildren();if(!list.length){let e=el('div','empty-state');e.style.gridColumn='1/-1';e.append(el('div','symbol','◷'),el('h3','',items.length?'Nenhuma peça encontrada':'Seu acervo começa aqui'),el('p','',items.length?'Tente outra busca ou ajuste os filtros.':'Cadastre sua primeira peça com uma foto e seus detalhes.'));let b=el('button','btn primary','＋ Adicionar peça');b.onclick=()=>{resetForm();go('cadastro')};e.append(b);g.append(e)}list.forEach(x=>{let card=el('article','watch');card.append(photoNode(x));let body=el('div','watch-body');body.append(el('h3','',x.nome),el('div','muted',[x.categoria||'Relógios',x.marca,x.modelo,x.numeracao&&`nº ${x.numeracao}`,x.tipoRoupa,x.tamanhoRoupa&&`Tam. ${x.tamanhoRoupa}`,x.detalhesCategoria?.subtipoSapato,x.cor].filter(Boolean).join(' · ')||'Peça da coleção'));if(x.estilo)body.append(el('span','chip',x.estilo));if(x.formato)body.append(el('span','chip',x.formato));let actions=el('div','watch-actions');let lab=el('label');let check=el('input');check.type='checkbox';check.checked=selected.has(x.id);check.onchange=()=>{check.checked?selected.add(x.id):selected.delete(x.id);$('statSelected').textContent=selected.size};lab.append(check,document.createTextNode(' Portfólio'));actions.append(lab);let buttons=el('div','toolbar');let edit=el('button','btn sm','Editar');edit.onclick=()=>editItem(x);let del=el('button','btn sm danger','Excluir');del.onclick=async()=>{if(confirm('Excluir esta peça do acervo?'))try{await remove(x.id);toast('Peça excluída.')}catch(e){toast('Não foi possível excluir.')}};buttons.append(edit,del);actions.append(buttons);body.append(actions);card.append(body);g.append(card)})}['search','filterCategoria','filterTipoRoupa','filterCor','filterEstilo','sort'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',render));document.querySelectorAll('[data-cat]').forEach(b=>b.onclick=()=>{$('filterCategoria').value=b.dataset.cat;document.querySelectorAll('[data-cat]').forEach(c=>c.classList.toggle('active',c===b));render()});$('filterCategoria').addEventListener('change',()=>document.querySelectorAll('[data-cat]').forEach(c=>c.classList.toggle('active',c.dataset.cat===$('filterCategoria').value)));$('selectVisible').onclick=()=>{filtered().forEach(x=>selected.add(x.id));render();toast('Peças exibidas selecionadas para o portfólio.')};function resetForm(){editing=null;currentPhoto='';$('suggestionBox').hidden=true;delete $('suggestionBox').dataset.suggestion;$('watchForm').reset();updateModeloLabel();$('preview').classList.add('hidden');$('removePhoto').classList.add('hidden');$('preview').removeAttribute('src');$('formTitle').textContent='Adicionar ao closet';$('cameraInput').value='';$('fileInput').value='';stopCamera()}const categorySchema={
+'Relógios':[['movimento','Movimento','select',['','Quartzo','Automático','Manual','Digital','Smartwatch','Não sei']],['mostrador','Cor do mostrador','text'],['pulseiraMaterial','Material da pulseira','select',['','Aço','Couro','Silicone','Tecido','Metal','Outro']],['diametro','Tamanho da caixa (mm)','text'],['resistencia','Resistência à água','text'],['estado','Estado de conservação','select',['','Novo','Ótimo','Bom','Com marcas de uso']]],
+'Sapatos':[['subtipoSapato','Tipo de sapato','select',['','Scarpin','Sapatilha','Mocassim','Loafer','Oxford','Brogue','Sandália','Rasteirinha','Papete','Tamanco','Mule','Peep toe','Anabela','Espadrille','Bota de cano curto','Bota de cano médio','Bota de cano longo','Bota over the knee','Coturno','Sapato social','Outro']],['saltoAltura','Altura do salto (cm)','text'],['saltoTipo','Tipo de salto','select',['','Sem salto','Bloco','Fino','Agulha','Kitten heel','Plataforma','Anabela','Outro']],['bico','Formato do bico','select',['','Fino','Redondo','Quadrado','Aberto','Outro']],['fechamento','Fechamento','select',['','Sem fecho','Fivela','Tira','Zíper','Cadarço','Outro']],['ocasiao','Ocasião de uso','select',['','Trabalho','Casual','Festa','Social','Viagem','Versátil']],['estado','Estado de conservação','select',['','Novo','Ótimo','Bom','Com marcas de uso']]],
+'Tênis':[['uso','Finalidade','select',['','Casual','Caminhada','Corrida','Treino','Moda']],['cano','Altura do cano','select',['','Baixo','Médio','Alto']],['fechamento','Fechamento','select',['','Cadarço','Velcro','Slip-on','Outro']],['solado','Tipo / cor do solado','text'],['estado','Estado de conservação','select',['','Novo','Ótimo','Bom','Com marcas de uso']]],
+'Roupas':[['comprimento','Comprimento','select',['','Curto','Midi','Longo','Regular','Alongado']],['manga','Tipo de manga','select',['','Sem manga','Curta','3/4','Longa']],['modelagem','Modelagem','select',['','Reta','Ampla','Ajustada','Pantalona','Evasê','Outra']],['estampa','Estampa','select',['','Lisa','Listrada','Poá','Floral','Xadrez','Estampada']],['ocasiao','Ocasião','select',['','Trabalho','Casual','Festa','Viagem','Versátil']]],
+'Anéis':[['aro','Tamanho do aro','text'],['pedra','Pedra / detalhe','text'],['banho','Metal ou banho','text'],['significado','Significado / história','text']],
+'Pulseiras':[['fecho','Tipo de fecho','text'],['comprimento','Comprimento (cm)','text'],['pedra','Pedras / detalhes','text'],['banho','Metal ou banho','text']],
+'Colares':[['comprimento','Comprimento (cm)','text'],['pingente','Pingente / medalha','text'],['fecho','Tipo de fecho','text'],['banho','Metal ou banho','text']],
+'Joias':[['subtipo','Tipo de joia','select',['','Brinco','Broche','Pingente','Conjunto','Outra']],['pedra','Pedra / detalhe','text'],['banho','Metal ou banho','text'],['certificado','Certificado / autenticidade','text']]
+};
+let currentDetails={};
+function renderCategoryQuestions(values={}){
+ const cat=$('categoria').value,holder=$('categoryQuestionnaire');holder.replaceChildren();
+ let head=el('div','eyebrow','03 / Perguntas para '+cat);
+ let title=el('h3','','Detalhes de '+cat.toLowerCase());
+ let intro=el('p','muted','Preencha apenas o que souber. Estes campos são específicos desta categoria.');
+ let grid=el('div','formgrid');
+ (categorySchema[cat]||[]).forEach(([key,label,kind,opts])=>{
+  let wrap=el('label','',label);let control=document.createElement(kind==='select'?'select':'input');
+  control.dataset.detail=key;control.setAttribute('aria-label',label);
+  if(kind==='select'){[...opts].sort((a,b)=>!a?-1:!b?1:atelierAlphabetical(a,b)).forEach(v=>{let o=document.createElement('option');o.value=v;o.textContent=v||'Selecione';control.append(o)})}
+  else{control.type='text';control.placeholder='Opcional'}
+  control.value=values[key]||'';wrap.append(control);grid.append(wrap);
+ });
+ holder.append(head,title,intro,grid);
+}
+function updateModeloLabel(){
+ let c=$('categoria').value,w=c==='Relógios',t=c==='Tênis',sap=c==='Sapatos',r=c==='Roupas';
+ $('tenisSizeField').hidden=!(t||sap);$('tenisSizeField').firstChild.textContent=sap?'Numeração do sapato':'Numeração do tênis';$('relogioTipoField').hidden=!w;
+ $('pulseiraCorField').hidden=!(w||t||['Pulseiras','Joias'].includes(c));
+ $('formatoField').hidden=!(w||['Anéis','Joias','Colares','Pulseiras'].includes(c));
+ $('roupaTipoField').hidden=!r;$('roupaTamanhoField').hidden=!r;
+ $('modeloField').firstChild.textContent=w?'Modelo do relógio':t?'Modelo do tênis':sap?'Modelo do sapato':r?'Modelo / referência da roupa':'Modelo / coleção da peça';
+ $('modelo').placeholder=w?'Ex.: Casio Vintage A168':t?'Ex.: Samba, Air Force 1':sap?'Ex.: Scarpin, mocassim, bota':r?'Ex.: Pantalona, linha ou referência':'Ex.: Nome da coleção ou modelo';
+ $('nome').placeholder=w?'Ex.: Relógio dourado':t?'Ex.: Tênis branco':sap?'Ex.: Scarpin preto':r?'Ex.: Vestido midi azul':'Ex.: Peça da coleção';
+ renderCategoryQuestions();
+}
+$('categoria').addEventListener('change',updateModeloLabel);updateModeloLabel();$('resetForm').onclick=resetForm;function editItem(x){resetForm();editing=x.id;currentPhoto=x.foto||'';fields.forEach(k=>$(k).value=x[k]||(k==='categoria'?'Relógios':''));if(currentPhoto)showPhoto(currentPhoto);$('formTitle').textContent='Editar peça.';updateModeloLabel();renderCategoryQuestions(x.detalhesCategoria||{});go('cadastro')}function showPhoto(data){currentPhoto=data;$('preview').src=data;$('preview').classList.remove('hidden');$('removePhoto').classList.remove('hidden')}function compressImage(file){return new Promise((resolve,reject)=>{if(!file.type.startsWith('image/')&&!/\.(heic|heif)$/i.test(file.name)){reject(Error('Selecione um arquivo de imagem.'));return}let url=URL.createObjectURL(file),img=new Image();img.onload=()=>{try{let max=1500,scale=Math.min(1,max/Math.max(img.naturalWidth,img.naturalHeight)),c=document.createElement('canvas');c.width=Math.max(1,Math.round(img.naturalWidth*scale));c.height=Math.max(1,Math.round(img.naturalHeight*scale));c.getContext('2d').drawImage(img,0,0,c.width,c.height);let data=c.toDataURL('image/jpeg',.84);URL.revokeObjectURL(url);resolve(data)}catch(e){URL.revokeObjectURL(url);reject(e)}};img.onerror=()=>{URL.revokeObjectURL(url);reject(Error('Este formato de imagem não foi reconhecido. Tente JPG ou PNG.'))};img.src=url})}async function processFile(file){if(!file)return;try{let data=await compressImage(file);showPhoto(data);toast('Imagem adicionada com sucesso.')}catch(e){toast(e.message)}}$('attachPhoto').onclick=()=>$('fileInput').click();$('fileInput').onchange=e=>{processFile(e.target.files[0]);e.target.value=''};$('cameraInput').onchange=e=>{processFile(e.target.files[0]);e.target.value=''};$('removePhoto').onclick=()=>{currentPhoto='';$('preview').classList.add('hidden');$('removePhoto').classList.add('hidden')};function stopCamera(){if(stream){stream.getTracks().forEach(t=>t.stop());stream=null}$('cameraArea').classList.add('hidden')};$('takePhoto').onclick=async()=>{if(navigator.mediaDevices?.getUserMedia&&window.isSecureContext){try{stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:'environment'}},audio:false});$('video').srcObject=stream;$('cameraArea').classList.remove('hidden');return}catch(e){}}$('cameraInput').click()};$('capture').onclick=()=>{if(!stream)return;let v=$('video'),c=document.createElement('canvas'),scale=Math.min(1,1500/Math.max(v.videoWidth,v.videoHeight));c.width=Math.max(1,Math.round(v.videoWidth*scale));c.height=Math.max(1,Math.round(v.videoHeight*scale));c.getContext('2d').drawImage(v,0,0,c.width,c.height);showPhoto(c.toDataURL('image/jpeg',.84));stopCamera();toast('Fotografia capturada.')};$('closeCamera').onclick=stopCamera;let zone=$('dropzone');zone.addEventListener('dragover',e=>{e.preventDefault();zone.classList.add('drag')});zone.addEventListener('dragleave',()=>zone.classList.remove('drag'));zone.addEventListener('drop',e=>{e.preventDefault();zone.classList.remove('drag');processFile(e.dataTransfer.files[0])});$('watchForm').onsubmit=async e=>{e.preventDefault();let old=items.find(x=>x.id===editing);let item={id:editing||('w-'+Date.now()+'-'+Math.random().toString(36).slice(2)),created:old?.created||new Date().toISOString(),foto:currentPhoto};fields.forEach(k=>item[k]=$(k).value.trim());item.detalhesCategoria={};document.querySelectorAll('[data-detail]').forEach(n=>{if(n.value.trim())item.detalhesCategoria[n.dataset.detail]=n.value.trim()});if(!item.nome){toast('Informe o nome da peça.');return}if(item.anoCompra&&!/^(19|20)\d{2}$/.test(item.anoCompra)){toast('Informe o ano de compra com quatro dígitos ou deixe vazio.');return}if(item.anoFabricacao&&!/^(19|20)\d{2}$/.test(item.anoFabricacao)){toast('Informe o ano de fabricação com quatro dígitos ou deixe vazio.');return}try{await save(item);resetForm();go('acervo');toast('Peça salva no acervo.')}catch(err){toast('Falha ao salvar. Verifique o espaço disponível no navegador.')}};function renderPortfolio(){$('printTitle').textContent=$('portfolioTitle').value||'Meu acervo pessoal';let g=$('portfolioGrid');g.replaceChildren();let list=items.filter(x=>selected.has(x.id)).filter(matchesPdfFilter);$('pdfAppliedFilter').textContent=pdfFilterDescription();$('pdfFilterCount').textContent=list.length+' peça(s) no relatório, entre '+selected.size+' selecionada(s).';if(!list.length){let p=el('p','muted','Nenhuma peça selecionada. Selecione peças no acervo ou clique em “Selecionar todos”.');g.append(p)}updatePortfolioSummary(list);list.forEach(x=>{let card=el('article','port-card');card.append(photoNode(x));let info=el('div','info');info.append(el('div','catalog-category',x.categoria||'Relógios'),el('h3','',x.nome));
+let detail=el('dl','catalog-details');
+const detailFields=[['Marca',x.marca],['Modelo',x.modelo],['Tipo de roupa',x.tipoRoupa],['Tamanho',x.tamanhoRoupa],['Numeração',x.numeracao],['Cor',x.cor],['Material',x.material],['Estilo',x.estilo],['Formato',x.formato],['Referência',x.referencia],['Tipo',x.tipo],['Ano de fabricação',x.anoFabricacao],['Ano de compra',x.anoCompra]];
+detailFields.forEach(([label,value])=>{if(value!==undefined&&value!==null&&String(value).trim()){detail.append(el('dt','',label),el('dd','',String(value)))}});Object.entries(x.detalhesCategoria||{}).forEach(([key,value])=>{const def=(categorySchema[x.categoria]||[]).find(row=>row[0]===key);if(def&&value){detail.append(el('dt','',def[1]),el('dd','',String(value)))}});if(detail.children.length)info.append(detail);
+if(x.descricao){info.append(el('div','catalog-subtitle','Descrição'),el('p','catalog-copy',x.descricao))}
+if(x.obs){info.append(el('div','catalog-subtitle','Observações'),el('p','catalog-copy',x.obs))}
+card.append(info);g.append(card)})}$('portfolioTitle').oninput=renderPortfolio;$('selectAll').onclick=()=>{items.forEach(x=>selected.add(x.id));renderPortfolio();toast('Toda a coleção foi selecionada.')};$('clearAll').onclick=()=>{selected.clear();renderPortfolio();toast('Seleção limpa.')};$('printPortfolio').onclick=()=>{renderPortfolio();if(!items.some(x=>selected.has(x.id)&&matchesPdfFilter(x))){toast('Nenhuma peça corresponde aos filtros do PDF.');return}window.print()};function download(data,name,type){let blob=new Blob([data],{type}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),3000)}$('export').onclick=()=>download(JSON.stringify({version:3,exportedAt:new Date().toISOString(),items},null,2),'atelier-acervo-backup-'+new Date().toISOString().slice(0,10)+'.json','application/json');$('importButton').onclick=()=>$('importInput').click();$('importInput').onchange=async e=>{let f=e.target.files[0];if(!f)return;try{let obj=JSON.parse(await f.text());if(!Array.isArray(obj.items)||obj.items.length>10000||!obj.items.every(x=>x&&typeof x.id==='string'&&typeof x.nome==='string'&&x.id.length<150&&x.nome.length<500))throw Error('Backup inválido.');if(!confirm(`Restaurar ${obj.items.length} peça(s)? O acervo atual será substituído.`))return;await new Promise((resolve,reject)=>{let t=db.transaction(STORE,'readwrite'),s=t.objectStore(STORE);s.clear();obj.items.forEach(x=>s.put(x));t.oncomplete=resolve;t.onerror=()=>reject(t.error)});selected.clear();await refresh();go('acervo');toast('Backup restaurado com sucesso.'); if(ghToken && ghWriteConfirmed) pushToGithub(true);}catch(err){toast('Erro na importação: '+err.message)}finally{e.target.value=''}};
+function researchQuery(){return [document.getElementById('marca').value,document.getElementById('modelo').value,document.getElementById('referencia').value,document.getElementById('fabricante').value,document.getElementById('cor').value,document.getElementById('categoria').value,'identificação características referência especificações'].filter(Boolean).join(' ')}
+$('webSearch').onclick=()=>{let q=researchQuery();window.open('https://www.google.com/search?q='+encodeURIComponent(q),'_blank','noopener,noreferrer');toast('Pesquisa aberta. Confira as fontes antes de atualizar o cadastro.')};
+$('lensSearch').onclick=()=>{window.open('https://lens.google.com/','_blank','noopener,noreferrer');toast('No Google Lens, envie a foto da peça para pesquisar imagens semelhantes.')};
+$('copySearch').onclick=async()=>{let q=researchQuery();try{await navigator.clipboard.writeText(q);toast('Termos copiados.')}catch(e){prompt('Copie os termos:',q)}};
+$('suggestDescription').onclick=()=>{let parts=[$('categoria').value==='Relógios'?'Relógio':$('categoria').value==='Tênis'?'Tênis':$('categoria').value==='Roupas'?'Roupa':'Peça de joalheria', $('marca').value&&'da marca '+$('marca').value,$('modelo').value&&'modelo '+$('modelo').value,$('formato').value&&'formato '+$('formato').value,$('cor').value&&'em '+$('cor').value,$('material').value&&'material informado: '+$('material').value].filter(Boolean);let suggestion=parts.join(', ')+'.';$('suggestionBox').hidden=false;$('suggestionBox').textContent='Descrição proposta com base apenas nos campos preenchidos (não verificada na web): '+suggestion;$('suggestionBox').dataset.suggestion=suggestion;toast('Revise a descrição proposta antes de aplicar.')};
+$('reviewSuggestions').onclick=()=>{let suggestion=$('suggestionBox').dataset.suggestion;if(!suggestion){toast('Primeiro gere uma descrição sugerida.');return}if(confirm('Aplicar esta descrição ao cadastro? Ela foi composta apenas com os dados informados, sem validação externa.')){$('descricao').value=suggestion;toast('Descrição aplicada. Salve a peça para confirmar.')}};
+
+// Eventos da Aba GitHub
+$('saveGhTokenBtn').onclick = async () => {
+  const token = ($('ghTokenInput').value || ghToken).replace(/\s+/g, '').trim();
+  if (!/^(ghp_|github_pat_)[A-Za-z0-9_]+$/.test(token)) {
+    toast('Token inválido. Cole o token completo, sem espaços. Use um token novo e não o compartilhe.');
+    return;
+  }
+  const btn=$('saveGhTokenBtn');btn.disabled=true;
+  updateSyncUI('syncing','Validando token e acesso ao repositório, sem alterar seu acervo...');
+  try {
+    const headers={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'};
+    const userRes=await fetch('https://api.github.com/user',{headers});
+    if(!userRes.ok)throw new Error(userRes.status===401?'Token inválido ou revogado.':'Falha ao validar token ('+userRes.status+').');
+    const repoRes=await fetch('https://api.github.com/repos/'+GH_OWNER+'/'+GH_REPO,{headers});
+    if(!repoRes.ok)throw new Error(repoRes.status===404?'Repositório inacessível. Autorize rcpmoraes/closet-da-raquel no token.':'Acesso ao repositório negado ('+repoRes.status+').');
+    const repo=await repoRes.json();
+    const contentRes=await fetch('https://api.github.com/repos/'+GH_OWNER+'/'+GH_REPO+'/contents/'+GH_PATH,{headers});
+    if(contentRes.status===200){const file=await contentRes.json();currentFileSha=file.sha;}
+    else if(contentRes.status===404){currentFileSha=null;}
+    else throw new Error('Sem acesso ao arquivo do acervo ('+contentRes.status+').');
+    ghToken=token;
+    ghWriteConfirmed=false;
+    localStorage.setItem('gh_pat_token',token);
+    updateSyncUI('online','Token validado para leitura. '+(currentFileSha?'Arquivo remoto encontrado.':'Arquivo remoto ainda não existe.')+' Para gravar, o token precisa de Contents: Read and write.');
+    toast('Conexão validada. Nenhum cadastro foi substituído.');
+    $('ghTokenInput').value='';
+  } catch(err){
+    updateSyncUI('offline',err.message);
+    toast(err.message);
+  } finally{btn.disabled=false;}
+};
+$('removeGhTokenBtn').onclick = () => {
+  ghToken = '';
+  ghWriteConfirmed = false;
+  localStorage.removeItem('gh_pat_token');
+  $('ghTokenInput').value = '';
+  updateSyncUI('disconnected');
+  toast('Token removido.');
+};
+
+$('pushToGithubBtn').onclick = () => pushToGithub(false);
+$('pullFromGithubBtn').onclick = () => fetchFromGithub();
+
+async function init(){try{db=await openDB();let legacy=JSON.parse(localStorage.getItem('acervo-relogios-v1')||'[]');let existing=await txn('readonly',s=>s.getAll());if(!existing.length&&Array.isArray(legacy)&&legacy.length){for(let x of legacy)await txn('readwrite',s=>s.put(x));toast('Coleção anterior recuperada.')}await refresh(); if(ghToken) { updateSyncUI('disconnected','Token encontrado neste navegador. Clique em Salvar & Conectar Token para revalidar, sem precisar colá-lo novamente.'); } else { updateSyncUI('disconnected'); }}catch(e){toast('Armazenamento indisponível. Abra no navegador normal e habilite o armazenamento local.')}}init();
+
+
+function updatePortfolioSummary(list){
+ const target=document.getElementById('portfolioSummary');target.replaceChildren();document.getElementById('catalogDate').textContent=new Date().toLocaleDateString('pt-BR');
+ const total=items.length,withPhotos=list.filter(x=>!!x.foto).length;
+ const cats={};list.forEach(x=>{const c=x.categoria||'Relógios';cats[c]=(cats[c]||0)+1});
+ const mk=(n,t)=>{let box=document.createElement('div');box.className='sum-box';let b=document.createElement('strong');b.textContent=n;box.append(b,document.createTextNode(t));target.append(box)};
+ mk(list.length,'Peças neste PDF');mk(Object.keys(cats).length,'Categorias');mk(withPhotos,'Com fotografia');
+ let d=document.createElement('div');d.className='sum-desc';
+ d.textContent='Resumo por categoria: '+(Object.entries(cats).sort((a,b)=>b[1]-a[1]).map(([k,n])=>k+': '+n).join(' • ')||'Nenhuma peça')+'. Acervo total cadastrado: '+total+' peça(s). Gerado em '+new Date().toLocaleDateString('pt-BR')+'.';
+ target.append(d);
+}
+document.getElementById('printAll').addEventListener('click',()=>{
+ if(!items.length){toast('Cadastre ao menos uma peça para gerar o PDF.');return}
+ selected.clear();items.forEach(x=>selected.add(x.id));renderPortfolio();if(!items.some(matchesPdfFilter)){toast('Nenhuma peça corresponde aos filtros do PDF.');return}window.print()
+});
+
+
+
+
+function dashGroup(rows,key){const groups=new Map();rows.forEach(x=>{let v=key==='categoria'?(x.categoria||'Relógios'):(key==='subtipoSapato'?(x.detalhesCategoria?.subtipoSapato||'Não informado'):(x[key]||'Não informado'));groups.set(v,(groups.get(v)||0)+1)});return [...groups].sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0],'pt-BR'))}
+function dashBarChart(target,groups,max,click,active){
+ target.replaceChildren();if(!groups.length){target.append(el('p','muted','Nenhum dado para os filtros atuais.'));return}
+ groups.forEach(([name,count])=>{const btn=el('button','dash-bar'+(active===name?' is-active':''));btn.type='button';btn.setAttribute('aria-label',name+': '+count+' peças');const label=el('span','dash-bar-name',name),track=el('span','dash-track'),fill=el('span','dash-fill'),n=el('span','dash-count',String(count));fill.style.width=(max?Math.max(4,count/max*100):0)+'%';track.append(fill);btn.append(label,track,n);btn.onclick=()=>click(name);target.append(btn)})
+}
+
+const DASH_COLORS=['#326a58','#bb9252','#7a98a2','#8b729f','#d39b82','#71926b','#b8a9ca','#688e8b','#c2b66c','#9b7774'];
+function renderVisualCharts(rows){
+ const grouped=dashGroup(items,'categoria'),total=items.length,svgNS='http://www.w3.org/2000/svg';
+ const target=$('dashDonut'),legend=$('dashDonutLegend');target.replaceChildren();legend.replaceChildren();
+ const svg=document.createElementNS(svgNS,'svg');svg.setAttribute('viewBox','0 0 220 220');svg.setAttribute('aria-hidden','true');
+ const ring=(color,dash,offset)=>{let c=document.createElementNS(svgNS,'circle');c.setAttribute('cx','110');c.setAttribute('cy','110');c.setAttribute('r','79');c.setAttribute('fill','none');c.setAttribute('stroke',color);c.setAttribute('stroke-width','29');c.setAttribute('stroke-dasharray',dash);c.setAttribute('stroke-dashoffset',offset);c.setAttribute('transform','rotate(-90 110 110)');svg.append(c)};
+ const perimeter=2*Math.PI*79;ring('var(--line)',perimeter+' 0',0);let progress=0;
+ grouped.forEach(([name,count],i)=>{const color=DASH_COLORS[i%DASH_COLORS.length],length=count/total*perimeter;ring(color,Math.max(0,length-1)+' '+perimeter,-progress);progress+=length;
+ const b=document.createElement('button');b.type='button';b.setAttribute('aria-pressed',String($('filterCategoria').value===name));b.setAttribute('aria-label','Filtrar '+name+': '+count+' peças');
+ const dot=el('span','dash-dot');dot.style.background=color;b.append(dot,el('span','dash-legend-name',name),el('span','dash-legend-num',String(count)));
+ b.addEventListener('click',()=>{const select=$('filterCategoria');select.value=select.value===name?'':name;dashExtraFilter=null;render()});legend.append(b)});
+ const center=document.createElementNS(svgNS,'text');center.setAttribute('x','110');center.setAttribute('y','107');center.setAttribute('text-anchor','middle');center.setAttribute('font-size','34');center.setAttribute('font-weight','700');center.setAttribute('fill','currentColor');center.textContent=String(total);svg.append(center);
+ const label=document.createElementNS(svgNS,'text');label.setAttribute('x','110');label.setAttribute('y','129');label.setAttribute('text-anchor','middle');label.setAttribute('font-size','12');label.setAttribute('fill','currentColor');label.textContent=total===1?'peça':'peças';svg.append(label);target.append(svg);
+ if(!total)legend.append(el('p','muted','Cadastre peças para visualizar a distribuição.'));
+ const photos=rows.filter(x=>!!x.foto).length,photoTotal=rows.length,pct=photoTotal?Math.round(photos/photoTotal*100):0;
+ $('dashPhotoRing').style.background='conic-gradient(#b98c48 '+pct+'%, var(--line) '+pct+'%)';
+ $('dashPhotoPercent').textContent=pct+'%';$('dashPhotoCount').textContent=photos+' de '+photoTotal;$('dashPhotoMissing').textContent=(photoTotal-photos)+' sem fotografia';
+}
+
+function renderDashboard(){
+ const rows=filtered(),total=items.length,photos=rows.filter(x=>!!x.foto).length;
+ renderVisualCharts(rows);
+ const unique=(key)=>new Set(rows.map(x=>x[key]).filter(Boolean)).size;
+ const stats=[['Peças exibidas',rows.length],['Categorias no acervo',new Set(items.map(x=>x.categoria||'Relógios')).size],['Com fotografia',photos],['Marcas exibidas',unique('marca')]];
+ const kpis=$('dashKpis');kpis.replaceChildren();stats.forEach(([name,value])=>{const box=el('div','dash-kpi');box.append(el('strong','',String(value)),el('span','',name));kpis.append(box)});
+ const cats=dashGroup(rows,'categoria'),catMax=Math.max(1,...cats.map(x=>x[1]));
+
+ const key=$('dashBreakdown').value;
+ const detailRows=rows.filter(x=>(key!=='tipoRoupa'||(x.categoria||'Relógios')==='Roupas')&&(key!=='subtipoSapato'||x.categoria==='Sapatos'));
+ const details=dashGroup(detailRows,key),max=Math.max(1,...details.map(x=>x[1]));
+ dashBarChart($('dashDetailChart'),details,max,(name)=>{
+  if(['cor','estilo'].includes(key)){const select=$(key==='cor'?'filterCor':'filterEstilo');select.value=select.value===name?'':name;dashExtraFilter=null}
+  else dashExtraFilter=(dashExtraFilter&&dashExtraFilter.key===key&&dashExtraFilter.value===name)?null:{key,value:name};
+  render()
+ },dashExtraFilter?.key===key?dashExtraFilter.value:(['cor','estilo'].includes(key)?$(key==='cor'?'filterCor':'filterEstilo').value:''));
+ renderFilterChips();$('dashFoot').textContent='Exibindo '+rows.length+' de '+total+' peças cadastradas. '+(total?Math.round(photos/Math.max(rows.length,1)*100)+'% das peças filtradas têm foto.':'Cadastre sua primeira peça para começar.')+(dashExtraFilter?' Filtro adicional: '+dashExtraFilter.value+'.':'');
+}
+function renderFilterChips(){
+ const root=$('activeFilterChips');root.replaceChildren();
+ const filters=[['filterCategoria','Categoria'],['filterTipoRoupa','Tipo'],['filterCor','Cor'],['filterEstilo','Estilo']];
+ filters.forEach(([id,label])=>{const value=$(id).value;if(!value)return;const b=el('button','active-chip',label+': '+value+' ×');b.type='button';b.title='Remover filtro '+label;b.onclick=()=>{$(id).value='';render()};root.append(b)});
+ if(dashExtraFilter){const b=el('button','active-chip','Detalhe: '+dashExtraFilter.value+' ×');b.type='button';b.onclick=()=>{dashExtraFilter=null;render()};root.append(b)}
+}
+$('dashBreakdown').addEventListener('change',()=>{dashExtraFilter=null;renderDashboard()});
+$('dashReset').addEventListener('click',()=>{$('search').value='';['filterCategoria','filterTipoRoupa','filterCor','filterEstilo'].forEach(id=>$(id).value='');dashExtraFilter=null;render()});
+
+const categoryIconPaths={"Roupas": "M12 3l3 3 4 1 2 5-4 2-2-2v10H9V12l-2 2-4-2 2-5 4-1z", "Sapatos": "M3 16c3 0 5-2 6-6l3 2 2 3 7 2v4H3z", "Tênis": "M2 17l5-6 5 4 8 2 2 3H2z M7 14l2-2 M10 16l2-2", "Relógios": "M9 2h6l1 4H8z M8 18h8l-1 4H9z M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10z M12 9v3l2 1", "Anéis": "M12 10a6 6 0 1 0 0 12 6 6 0 0 0 0-12z M9 8l3-5 3 5-3 3z", "Joias": "M12 3l8 7-8 11-8-11z M4 10h16 M9 3l-2 7 5 11 5-11-2-7", "Pulseiras": "M6 6c-5 5-5 11 0 13s7 2 12-3 4-11 0-13-7-2-12 3z", "Colares": "M3 4c1 9 4 13 9 14 5-1 8-5 9-14 M12 18l-3-4 3-3 3 3z"};
+const pdfSubcategoryMap={Roupas:{key:'tipoRoupa',label:'Tipo de roupa'},Sapatos:{key:'subtipoSapato',label:'Tipo de sapato'},Joias:{key:'subtipo',label:'Tipo de joia'},Relógios:{key:'movimento',label:'Movimento'},Tênis:{key:'uso',label:'Finalidade'}};
+function pdfSubcategoryValue(x){const m=pdfSubcategoryMap[x.categoria];return m?(x.detalhesCategoria?.[m.key]||x[m.key]||'Não informado'):'Sem subcategoria'}
+const pdfSelectedCategories=new Set(),pdfSelectedSubcategories=new Set();
+let pdfCategoryTouched=false,pdfSubcategoryTouched=false;
+function pdfSubKey(x){return (x.categoria||'Relógios')+'::'+pdfSubcategoryValue(x)}
+function matchesPdfFilter(x){return (!pdfCategoryTouched||pdfSelectedCategories.has(x.categoria||'Relógios'))&&(!pdfSubcategoryTouched||pdfSelectedSubcategories.has(pdfSubKey(x)))}
+function pdfFilterDescription(){const categories=pdfCategoryTouched?[...pdfSelectedCategories].sort(atelierAlphabetical):['Todas as categorias'];const subs=pdfSubcategoryTouched?[...pdfSelectedSubcategories].sort(atelierAlphabetical).map(x=>x.replace('::',' / ')):['Todas as subcategorias'];return 'Categorias: '+(categories.join(', ')||'Nenhuma')+' | Subcategorias: '+(subs.join(', ')||'Nenhuma')}
+function pdfCheckbox(target,label,value,checked,onChange){const wrap=document.createElement('label');wrap.className='pdf-check-item';const input=document.createElement('input');input.type='checkbox';input.value=value;input.checked=checked;input.addEventListener('change',()=>onChange(input.checked));const span=document.createElement('span');span.textContent=label;wrap.append(input,span);target.append(wrap)}
+function setupPdfFilters(){
+ const cats=[...new Set(['Roupas','Sapatos','Tênis','Relógios','Joias','Anéis','Pulseiras','Colares',...items.map(x=>x.categoria||'Relógios')])].sort(atelierAlphabetical);
+ const catBox=$('pdfCategories');catBox.replaceChildren();
+ cats.forEach(cat=>pdfCheckbox(catBox,cat,cat,!pdfCategoryTouched||pdfSelectedCategories.has(cat),on=>{
+  pdfCategoryTouched=true;if(on)pdfSelectedCategories.add(cat);else pdfSelectedCategories.delete(cat);
+  updatePdfSubcategories();setupPdfFilters();renderPortfolio();
+ }));
+ $('pdfCatSelected').textContent=pdfCategoryTouched?pdfSelectedCategories.size+' selecionada(s)':'Todas';
+ updatePdfSubcategories();
+}
+function updatePdfSubcategories(){
+ const relevant=items.filter(x=>!pdfCategoryTouched||pdfSelectedCategories.has(x.categoria||'Relógios'));
+ const values=[...new Map(relevant.map(x=>[pdfSubKey(x),{key:pdfSubKey(x),label:(x.categoria||'Relógios')+' — '+pdfSubcategoryValue(x)}])).values()].sort((a,b)=>a.label.localeCompare(b.label,'pt-BR'));
+ const box=$('pdfSubcategories');box.replaceChildren();
+ if(!values.length){box.append(el('p','muted','Nenhuma subcategoria cadastrada nas categorias escolhidas.'))}
+ values.forEach(v=>pdfCheckbox(box,v.label,v.key,!pdfSubcategoryTouched||pdfSelectedSubcategories.has(v.key),on=>{
+  pdfSubcategoryTouched=true;if(on)pdfSelectedSubcategories.add(v.key);else pdfSelectedSubcategories.delete(v.key);
+  updatePdfSubcategories();renderPortfolio();
+ }));
+ $('pdfSubSelected').textContent=pdfSubcategoryTouched?values.filter(v=>pdfSelectedSubcategories.has(v.key)).length+' selecionada(s)':'Todas';
+}
+$('pdfAllCategories').addEventListener('click',()=>{pdfCategoryTouched=false;pdfSelectedCategories.clear();setupPdfFilters();renderPortfolio()});
+$('pdfNoCategories').addEventListener('click',()=>{pdfCategoryTouched=true;pdfSelectedCategories.clear();setupPdfFilters();renderPortfolio()});
+$('pdfAllSubcategories').addEventListener('click',()=>{pdfSubcategoryTouched=false;pdfSelectedSubcategories.clear();updatePdfSubcategories();renderPortfolio()});
+$('pdfNoSubcategories').addEventListener('click',()=>{pdfSubcategoryTouched=true;pdfSelectedSubcategories.clear();updatePdfSubcategories();renderPortfolio()});
+const originalRenderPortfolio=renderPortfolio;
+// Populate category choices whenever the portfolio opens or changes.
+const originalGo=go;
+go=function(tab){originalGo(tab);if(tab==='portfolio')setupPdfFilters()};
+
+// Ordenação alfabética pt-BR para listas estáticas e dinâmicas, mantendo opções genéricas no topo.
+
+function atelierAlphabetical(a,b){return atelierCollator.compare(String(a),String(b))}
+function atelierSortSelect(select){
+ if(!select||select.dataset.noAlpha==='true')return;
+ const options=[...select.options];if(options.length<2)return;
+ const initial=options.filter(o=>o.value==='' || o.disabled || o.dataset.pin==='true');
+ const rest=options.filter(o=>!initial.includes(o)).sort((a,b)=>atelierAlphabetical(a.textContent.trim(),b.textContent.trim()));
+ const value=select.value;select.replaceChildren(...initial,...rest);select.value=value;
+}
+function atelierSortAllSelects(){
+ document.querySelectorAll('select').forEach(atelierSortSelect);
+ const strip=document.getElementById('categoryStrip');if(strip){
+ const buttons=[...strip.querySelectorAll('button[data-cat]')];
+ const pinned=buttons.filter(b=>!b.dataset.cat);const rest=buttons.filter(b=>b.dataset.cat).sort((a,b)=>atelierAlphabetical(a.textContent.trim(),b.textContent.trim()));
+ strip.replaceChildren(...pinned,...rest);
+ }
+}
+// Reorganiza opções inseridas por outros componentes sem disparar eventos ou alterar valores.
+const atelierSelectObserver=new MutationObserver(records=>{
+ const selects=new Set();for(const r of records){if(r.target instanceof HTMLSelectElement)selects.add(r.target)}
+ if(!selects.size)return;
+ atelierSelectObserver.disconnect();selects.forEach(atelierSortSelect);
+ atelierSelectObserver.observe(document.body,{childList:true,subtree:true});
+});
+atelierSortAllSelects();
+atelierSelectObserver.observe(document.body,{childList:true,subtree:true});
+</script><script>
+// Categoria ilustrada: cartões filtram o dashboard, gráficos e a galeria simultaneamente.
+(function(){
+ const root=document.querySelector('#acervo .illustration-gallery');
+ if(!root)return;
+ root.querySelectorAll('.illustration-tile').forEach(tile=>{
+  const name=tile.querySelector('span')?.textContent.trim();
+  tile.setAttribute('role','button');tile.setAttribute('tabindex','0');tile.setAttribute('aria-label','Filtrar categoria '+name);
+  const activate=()=>{const f=document.getElementById('filterCategoria');if(!f)return;f.value=f.value===name?'':name;f.dispatchEvent(new Event('change',{bubbles:true}));};
+  tile.addEventListener('click',activate);
+  tile.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();activate();}});
+ });
+ const f=document.getElementById('filterCategoria');if(f){
+  const update=()=>root.querySelectorAll('.illustration-tile').forEach(tile=>{const on=tile.querySelector('span')?.textContent.trim()===f.value;tile.classList.toggle('active',on);tile.setAttribute('aria-pressed',String(on));});
+  f.addEventListener('change',update);update();
+ }
+})();
+
+// v26: cards ilustrados integrados ao mesmo filtro de categoria dos gráficos.
+const visualCats=[['Roupas','roupas'],['Sapatos','sapatos'],['Tênis','tenis'],['Relógios','relogios'],['Anéis','aneis'],['Joias','joias'],['Pulseiras','pulseiras'],['Colares','colares']];
+const embeddedCategoryImages={"roupas":"data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20128%20128%22%20role%3D%22img%22%20aria-label%3D%22roupas%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22bg%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23fffaf1%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23f1e7d8%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22128%22%20height%3D%22128%22%20rx%3D%2215%22%20fill%3D%22url%28%23bg%29%22%2F%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23ad7d28%22%20stroke-width%3D%223.3%22%20stroke-linejoin%3D%22round%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M43%2024%2054%2015h20l11%209%2019%2017-13%2018-12-9v53H49V50l-12%209-13-18z%22%2F%3E%3Cpath%20d%3D%22M54%2015q10%2021%2020%200M64%2036v67M49%2050l-6-5M79%2050l6-5%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E","sapatos":"data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20128%20128%22%20role%3D%22img%22%20aria-label%3D%22sapatos%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22bg%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23fffaf1%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23f1e7d8%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22128%22%20height%3D%22128%22%20rx%3D%2215%22%20fill%3D%22url%28%23bg%29%22%2F%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23ad7d28%22%20stroke-width%3D%223.3%22%20stroke-linejoin%3D%22round%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M18%2083q15-3%2028-20l14-25%2013%207-7%2025q13%2010%2032%2013%2010%203%2010%2013H19q-8-5-1-13z%22%2F%3E%3Cpath%20d%3D%22M55%2048l11%206M48%2059l11%206M23%2095h84%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E","tenis":"data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20128%20128%22%20role%3D%22img%22%20aria-label%3D%22tenis%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22bg%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23fffaf1%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23f1e7d8%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22128%22%20height%3D%22128%22%20rx%3D%2215%22%20fill%3D%22url%28%23bg%29%22%2F%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23ad7d28%22%20stroke-width%3D%223.3%22%20stroke-linejoin%3D%22round%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M17%2068q18%208%2028-25l18%205%206%2016q12%2013%2030%2015%2012%203%2012%2016H15q-5-15%202-27z%22%2F%3E%3Cpath%20d%3D%22M18%2085h91M51%2058l18%207M47%2066l19%207M42%2074l17%207M24%2091h79%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E","relogios":"data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20128%20128%22%20role%3D%22img%22%20aria-label%3D%22relogios%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22bg%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23fffaf1%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23f1e7d8%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22128%22%20height%3D%22128%22%20rx%3D%2215%22%20fill%3D%22url%28%23bg%29%22%2F%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23ad7d28%22%20stroke-width%3D%223.3%22%20stroke-linejoin%3D%22round%22%20stroke-linecap%3D%22round%22%3E%3Crect%20x%3D%2248%22%20y%3D%227%22%20width%3D%2232%22%20height%3D%2226%22%20rx%3D%226%22%2F%3E%3Crect%20x%3D%2248%22%20y%3D%2295%22%20width%3D%2232%22%20height%3D%2226%22%20rx%3D%226%22%2F%3E%3Ccircle%20cx%3D%2264%22%20cy%3D%2264%22%20r%3D%2236%22%2F%3E%3Ccircle%20cx%3D%2264%22%20cy%3D%2264%22%20r%3D%2227%22%2F%3E%3Cpath%20d%3D%22M64%2045v20l14%2010M64%2037v4M64%2087v4M37%2064h4M87%2064h4%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E","aneis":"data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20128%20128%22%20role%3D%22img%22%20aria-label%3D%22aneis%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22bg%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23fffaf1%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23f1e7d8%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22128%22%20height%3D%22128%22%20rx%3D%2215%22%20fill%3D%22url%28%23bg%29%22%2F%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23ad7d28%22%20stroke-width%3D%223.3%22%20stroke-linejoin%3D%22round%22%20stroke-linecap%3D%22round%22%3E%3Cellipse%20cx%3D%2264%22%20cy%3D%2283%22%20rx%3D%2230%22%20ry%3D%2224%22%2F%3E%3Cpath%20d%3D%22m50%2053-7-15%2021-18%2021%2018-7%2015zM43%2038h42M64%2020l-8%2018%208%2015%208-15z%22%2F%3E%3Cpath%20d%3D%22M43%2056q21%2013%2042%200%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E","joias":"data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20128%20128%22%20role%3D%22img%22%20aria-label%3D%22joias%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22bg%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23fffaf1%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23f1e7d8%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22128%22%20height%3D%22128%22%20rx%3D%2215%22%20fill%3D%22url%28%23bg%29%22%2F%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23ad7d28%22%20stroke-width%3D%223.3%22%20stroke-linejoin%3D%22round%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22m36%2028%2013-12%2015%2012%2015-12%2013%2012-6%2018-22%2022-22-22zM36%2028h56M49%2016l7%2012-14%2018M79%2016l-7%2012%2014%2018M56%2028l8%2040%208-40%22%2F%3E%3Cpath%20d%3D%22M42%2083q22%2017%2044%200M53%2093l11%2016%2011-16%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E","pulseiras":"data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20128%20128%22%20role%3D%22img%22%20aria-label%3D%22pulseiras%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22bg%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23fffaf1%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23f1e7d8%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22128%22%20height%3D%22128%22%20rx%3D%2215%22%20fill%3D%22url%28%23bg%29%22%2F%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23ad7d28%22%20stroke-width%3D%223.3%22%20stroke-linejoin%3D%22round%22%20stroke-linecap%3D%22round%22%3E%3Cellipse%20cx%3D%2264%22%20cy%3D%2264%22%20rx%3D%2239%22%20ry%3D%2227%22%20transform%3D%22rotate%28-20%2064%2064%29%22%2F%3E%3Cellipse%20cx%3D%2264%22%20cy%3D%2264%22%20rx%3D%2228%22%20ry%3D%2217%22%20transform%3D%22rotate%28-20%2064%2064%29%22%2F%3E%3Ccircle%20cx%3D%2235%22%20cy%3D%2248%22%20r%3D%228%22%2F%3E%3Ccircle%20cx%3D%2249%22%20cy%3D%2237%22%20r%3D%228%22%2F%3E%3Ccircle%20cx%3D%2267%22%20cy%3D%2234%22%20r%3D%228%22%2F%3E%3Ccircle%20cx%3D%2286%22%20cy%3D%2242%22%20r%3D%228%22%2F%3E%3Ccircle%20cx%3D%2298%22%20cy%3D%2256%22%20r%3D%228%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E","colares":"data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20128%20128%22%20role%3D%22img%22%20aria-label%3D%22colares%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22bg%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23fffaf1%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23f1e7d8%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22128%22%20height%3D%22128%22%20rx%3D%2215%22%20fill%3D%22url%28%23bg%29%22%2F%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23ad7d28%22%20stroke-width%3D%223.3%22%20stroke-linejoin%3D%22round%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M24%2021q-4%2052%2040%2068%2044-16%2040-68M35%2021q-3%2040%2029%2052%2032-12%2029-52%22%2F%3E%3Cpath%20d%3D%22M64%2089c-21-15-18-27-8-29%205-1%208%202%208%205%200-3%203-6%208-5%2010%202%2013%2014-8%2029z%22%2F%3E%3Ccircle%20cx%3D%2224%22%20cy%3D%2221%22%20r%3D%224%22%2F%3E%3Ccircle%20cx%3D%22104%22%20cy%3D%2221%22%20r%3D%224%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"};
+function renderVisualCategories(){
+ const root=document.getElementById('visualCategoryCards');if(!root)return;
+ const active=document.getElementById('filterCategoria').value;
+ root.replaceChildren();
+ for(const [cat,file] of visualCats){
+  const count=items.filter(x=>(x.categoria||'Relógios')===cat).length;
+  const b=document.createElement('button');b.type='button';b.className='visual-category';b.setAttribute('aria-pressed',String(active===cat));b.setAttribute('aria-label','Filtrar '+cat+', '+count+' peças');
+  const im=document.createElement('img');im.src=embeddedCategoryImages[file];im.alt='Imagem ilustrativa de '+cat;im.loading='lazy';
+  const name=document.createElement('strong');name.textContent=cat;
+  const qty=document.createElement('small');qty.textContent=count+' '+(count===1?'peça':'peças');
+  b.append(im,name,qty);b.addEventListener('click',()=>{document.getElementById('filterCategoria').value=active===cat?'':cat;dashExtraFilter=null;render();document.getElementById('dashboard').scrollIntoView({behavior:'smooth',block:'start'})});root.append(b)
+ }
+}
+const originalRenderDashboard=renderDashboard;
+renderDashboard=function(){originalRenderDashboard();renderVisualCategories()};
+// Garante ilustrações no carregamento inicial, mesmo quando o dashboard
+// já foi desenhado antes da instalação do complemento.
+renderVisualCategories();
+window.addEventListener('pageshow',renderVisualCategories);
+
+</script>
+<script id="palette-options-script-v33">
+(function(){
+ const root=document.documentElement, select=document.getElementById('paletteSelect');
+ if(!select)return;
+ const palettes=['esmeralda','verde','safira','terracota','grafite','vermelho'];
+ let current='esmeralda';
+ try{const saved=localStorage.getItem('closet-palette');if(palettes.includes(saved))current=saved}catch(e){}
+ function update(){
+   root.setAttribute('data-palette',current);
+   select.value=current;
+ }
+ select.addEventListener('change',()=>{
+   if(!palettes.includes(select.value))return;
+   current=select.value;
+   try{localStorage.setItem('closet-palette',current)}catch(e){}
+   update();
+ });
+ const observer=new MutationObserver(update);
+ observer.observe(root,{attributes:true,attributeFilter:['data-theme']});
+ update();
+})();
+</script>
+
+<script id="header-indicators-v35">
+(function(){
+ const root=document.documentElement;
+ const view=document.getElementById('viewToggle');
+
+ const pal=document.querySelector('.palette-control');
+ const select=document.getElementById('paletteSelect');
+ const sync=document.getElementById('topSyncBadge');
+ if(!view||!pal||!select)return;
+ // Reutilizar os botões e eventos originais: só mudamos sua apresentação.
+ view.innerHTML='<span class="control-icon" aria-hidden="true">▣</span><span class="control-text">Auto</span>';
+
+ pal.insertAdjacentHTML('afterbegin','<span class="palette-dot" aria-hidden="true"></span><span class="palette-label">Cor</span>');
+ function refresh(){
+   const v=root.getAttribute('data-view')||'auto';
+
+   const vl={auto:['▣','Auto'],mobile:['▯','Celular'],desktop:['▤','Desktop']}[v]||['▣','Auto'];
+
+   view.querySelector('.control-icon').textContent=vl[0];view.querySelector('.control-text').textContent=vl[1];view.dataset.choice=v;
+
+   view.title='Visualização selecionada: '+vl[1];
+   view.setAttribute('aria-label',view.title+'; clique para alterar');
+   const name=select.options[select.selectedIndex]?.text||'Esmeralda';
+   pal.title='Paleta selecionada: '+name;
+   pal.querySelector('.palette-dot').style.background={esmeralda:'#174C3A',verde:'#278348',safira:'#194E82',terracota:'#8C4635',grafite:'#344E46'}[select.value]||'#174C3A';
+ }
+ new MutationObserver(refresh).observe(root,{attributes:true,attributeFilter:['data-view','data-theme','data-palette']});
+ select.addEventListener('change',refresh);
+ view.addEventListener('click',()=>queueMicrotask(refresh));
+
+ if(sync){sync.title='Ver status e configuração da sincronização GitHub';}
+ refresh();
+})();
+</script>
+
+<script id="category-palette-images-v38">
+(function(){
+ const colors={
+  esmeralda:['#EAF2EB','#D3E5D8','#174C3A'],
+  verde:['#E8F7E9','#BFE9C7','#278348'],
+  safira:['#EAF1F9','#CEDFF1','#194E82'],
+  terracota:['#F8EBE4','#EED5C7','#8C4635'],
+  grafite:['#EDF1EE','#D9E3DC','#344E46'],
+  vermelho:['#FCEDEE','#F5D1D4','#A52A38'],
+  dark:['#263A30','#344C3F','#A8D2B3']
+ };
+ const cache={};
+ function palette(){return document.documentElement.getAttribute('data-palette')||'esmeralda'}
+ function updateImages(){
+  if(typeof embeddedCategoryImages==='undefined')return;
+  const c=colors[palette()]||colors.esmeralda;
+  const key=c.join('|');
+  if(!cache[key]){
+   cache[key]={};
+   for(const [id,url] of Object.entries(embeddedCategoryImages)){
+    // Cores fazem parte do SVG, portanto precisam mudar no próprio arquivo de imagem.
+    const svg=decodeURIComponent(url.slice(url.indexOf(',')+1))
+     .replaceAll('#fffaf1',c[0]).replaceAll('#f1e7d8',c[1]).replaceAll('#ad7d28',c[2]);
+    cache[key][id]='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
+   }
+  }
+  const cards=document.querySelectorAll('#visualCategoryCards .visual-category');
+  cards.forEach((card,i)=>{
+   const id=typeof visualCats!=='undefined'&&visualCats[i]?.[1];
+   const img=card.querySelector('img');
+   if(img&&id&&cache[key][id]&&img.src!==cache[key][id])img.src=cache[key][id];
+  });
+ }
+ const root=document.documentElement;
+ new MutationObserver(updateImages).observe(root,{attributes:true,attributeFilter:['data-palette','data-theme']});
+ const target=document.getElementById('visualCategoryCards');
+ if(target)new MutationObserver(updateImages).observe(target,{childList:true});
+ updateImages();
+ window.addEventListener('pageshow',updateImages);
+})();
+</script>
+<script id="standalone-catalog-v46">
+(function(){
+'use strict';
+const $id=id=>document.getElementById(id);
+function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function shortText(x){
+ const source=String(x.descricao||x.obs||'').trim();
+ if(source)return source.length>220?source.slice(0,217)+'…':source;
+ return [['Marca',x.marca],['Modelo',x.modelo],['Cor',x.cor],['Material',x.material],['Estilo',x.estilo]].filter(([,v])=>v).map(([k,v])=>k+': '+v).join(' · ')||'Sem descrição cadastrada.';
+}
+function report(mode){
+ if(typeof items==='undefined'||!items.length){toast('Nenhuma peça cadastrada.');return;}
+ const data=items.filter(x=>(mode==='all'||selected.has(x.id))&&matchesPdfFilter(x));
+ if(!data.length){toast('Nenhuma peça corresponde à seleção e aos filtros.');return;}
+ const groups=new Map();
+ for(const x of data){const cat=x.categoria||'Sem categoria';if(!groups.has(cat))groups.set(cat,[]);groups.get(cat).push(x);}
+ const categories=[...groups.entries()].sort((a,b)=>a[0].localeCompare(b[0],'pt-BR'));
+ const total=data.length, photographed=data.filter(x=>!!x.foto).length;
+ const title=$id('portfolioTitle')?.value?.trim()||'Closet da Raquel';
+ const selectedPalette=document.documentElement.getAttribute('data-palette')||'esmeralda';
+ const reportColors={
+ esmeralda:['#174C3A','#EAF2EB','#34845B'],verde:['#278348','#E4F5E7','#38A45E'],
+ safira:['#194E82','#EAF1F9','#3479B5'],terracota:['#8C4635','#F8EBE4','#B56545'],
+ grafite:['#344E46','#EDF1EE','#537C68'],vermelho:['#A52A38','#FCEDEE','#C1394B']};
+ const pc=reportColors[selectedPalette]||reportColors.esmeralda;
+ const reportColorStyle=`:root{color-scheme:light!important;--accent:${pc[0]};--bar:${pc[2]}}
+ html,body,.report,.cover,.category,.piece,.cards,.chart,.summary,.metric,.photo,.track,.tools{
+  color-scheme:light!important;background-color:#ffffff!important;background-image:none!important;color:#25352b!important;
+ }
+ .tools button{background:var(--accent)!important;color:#ffffff!important}
+ .cover h1,.metric strong,.cat-head h2{color:var(--accent)!important}
+ .cover,.cat-head{border-color:var(--accent)!important}
+ .metric,.piece{border-color:#dce5dd!important}
+ .track{background:#edf0ed!important}
+ .fill{background:var(--bar)!important}
+ .kicker,.description,.piece dt,.piece dd,.cover p,.metric span,.cat-head span,.footer,.no-photo{color:#526058!important}
+ @media print{
+  html,body,.report,.cover,.category,.piece,.cards,.chart,.summary,.metric,.photo,.tools{
+   background:#ffffff!important;background-image:none!important;color:#25352b!important;
+  }
+  .tools{display:none!important}
+  .track{background:#edf0ed!important}
+  .fill{background:var(--bar)!important}
+  html,body,.report,.metric,.piece,.photo,.track,.fill{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+ }`;
+ const filterText=typeof pdfFilterDescription==='function'?pdfFilterDescription():'';
+ const bars=categories.map(([cat,list])=>`<div class="bar"><span>${esc(cat)}</span><div class="track"><div class="fill" style="width:${(list.length/total*100).toFixed(2)}%"></div></div><b>${list.length}</b></div>`).join('');
+ const sections=categories.map(([cat,list])=>`<section class="category"><header class="cat-head"><h2>${esc(cat)}</h2><span>${list.length} ${list.length===1?'peça':'peças'}</span></header><div class="cards">${list.map(x=>{
+ const photo=x.foto&&/^data:image\/(jpeg|png|webp|gif);base64,/i.test(x.foto)?`<img src="${x.foto}" alt="${esc(x.nome)}">`:'<span class="no-photo">Sem fotografia cadastrada</span>';
+ const details=[['Marca',x.marca],['Modelo',x.modelo],['Tipo',x.tipoRoupa||x.tipo],['Tamanho',x.tamanhoRoupa||x.numeracao],['Cor',x.cor],['Material',x.material],['Estilo',x.estilo],['Referência',x.referencia],...Object.entries(x.detalhesCategoria||{}).map(([key,val])=>[key.replace(/([A-Z])/g,' $1'),val])].filter(([,v])=>v!==null&&v!==undefined&&String(v).trim());
+ return `<article class="piece"><div class="photo">${photo}</div><div class="piece-content"><h3>${esc(x.nome)}</h3><p class="description">${esc(shortText(x))}</p>${details.length?`<dl>${details.map(([k,v])=>`<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>`:''}</div></article>`;
+ }).join('')}</div></section>`).join('');
+ const doc=`<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>${esc(title)} — Relatório</title><style>
+ *{box-sizing:border-box}body{font-family:Arial,Helvetica,sans-serif;margin:0;color:#25352b;background:#fff;line-height:1.4}.tools{position:sticky;top:0;display:flex;align-items:center;gap:12px;padding:12px 22px;background:#fff;border-bottom:1px solid #ddd;z-index:5}.tools button{background:#174c3a;color:#fff;border:0;border-radius:8px;padding:11px 18px;font-weight:700;cursor:pointer}.tools span{font-size:13px;color:#55645b}.report{max-width:900px;margin:22px auto;padding:34px 42px;background:#fff;box-shadow:0 5px 22px #0001}.cover{border-bottom:4px solid #174c3a;padding:15px 0 24px}.kicker{letter-spacing:2px;font-size:11px;color:#53715d;text-transform:uppercase}.cover h1{font-size:32px;margin:8px 0;color:#174c3a}.cover p{font-size:12px;color:#526058}.summary{display:flex;gap:12px;margin:22px 0}.metric{flex:1;padding:14px;border:1px solid #d8e3da;background:#f5f9f5;border-radius:8px}.metric strong{display:block;font-size:24px;color:#174c3a}.metric span{font-size:11px}.chart{margin:24px 0 32px}.chart h2{font-size:17px}.bar{display:grid;grid-template-columns:145px 1fr 36px;align-items:center;gap:12px;margin:10px 0;font-size:12px}.bar b{text-align:right}.track{height:16px;border-radius:8px;background:#e7eee8;overflow:hidden}.fill{height:100%;background:#34845b}.category{break-before:page;margin-top:30px}.cat-head{display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid #174c3a;margin-bottom:16px}.cat-head h2{font-size:22px;margin:0 0 9px}.cat-head span{font-size:12px;color:#53655b}.cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}.piece{border:1px solid #dce5dd;border-radius:8px;overflow:hidden;break-inside:avoid-page;background:#fff}.photo{height:190px;display:flex;align-items:center;justify-content:center;background:#f6f8f5}.photo img{width:100%;height:100%;object-fit:contain}.no-photo{font-size:12px;color:#8b978e}.piece-content{padding:12px}.piece h3{font-size:15px;margin:0 0 6px}.description{font-size:11px;color:#536359;margin:0 0 9px}.piece dl{display:grid;grid-template-columns:75px 1fr;gap:3px 8px;font-size:10px;margin:0}.piece dt{color:#68756b}.piece dd{margin:0;overflow-wrap:anywhere}.footer{font-size:10px;color:#758178;margin-top:26px;border-top:1px solid #dce5dd;padding-top:10px}
+ @page{size:A4;margin:13mm}@media print{body{background:white!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.tools{display:none!important}.report{max-width:none;margin:0;padding:0;box-shadow:none}.category{break-before:page}.piece{break-inside:avoid-page}.cover{break-after:avoid}.cards{gap:10px}.photo{height:165px}}@media(max-width:600px){.report{padding:20px;margin:0}.cards{grid-template-columns:1fr}.summary{flex-wrap:wrap}.bar{grid-template-columns:100px 1fr 30px}}
+ ${reportColorStyle}
+ </style></head><body><div class="tools"><button id="printReport" type="button">Salvar / Imprimir PDF</button><span>Relatório independente do site · escolha “Salvar como PDF”</span></div><main class="report"><div class="cover"><div class="kicker">Inventário ilustrado • coleção pessoal</div><h1>${esc(title)}</h1><p>Gerado em ${esc(new Date().toLocaleDateString('pt-BR'))}</p><p>${esc(filterText)}</p></div><div class="summary"><div class="metric"><strong>${total}</strong><span>Peças filtradas</span></div><div class="metric"><strong>${categories.length}</strong><span>Categorias</span></div><div class="metric"><strong>${photographed}</strong><span>Com fotografia</span></div></div><div class="chart"><h2>Quantidades por categoria</h2>${bars}</div>${sections}<div class="footer">Closet da Raquel · Relatório gerado a partir dos registros cadastrados</div></main><script>document.getElementById('printReport').addEventListener('click',async()=>{await Promise.all(Array.from(document.images).map(img=>img.complete?Promise.resolve():new Promise(r=>{img.onload=r;img.onerror=r;setTimeout(r,5000)})));window.print()});<\/script></body></html>`;
+ // Abre imediatamente durante o clique: evita bloqueio de pop-up assíncrono.
+ const win=window.open('','_blank');
+ if(!win){toast('Permita a abertura de uma nova aba para visualizar o relatório PDF.');return;}
+ win.document.open();win.document.write(doc);win.document.close();
+}
+function attach(){
+ const chosen=$id('printPortfolio'),all=$id('printAll');
+ if(chosen){chosen.onclick=e=>{e.preventDefault();report('selected');};}
+ if(all){const fresh=all.cloneNode(true);all.replaceWith(fresh);fresh.addEventListener('click',e=>{e.preventDefault();report('all');});}
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',attach);else attach();
+})();
+</script></body></html>
