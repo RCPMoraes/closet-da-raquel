@@ -390,7 +390,124 @@ html[data-view=mobile] .visual-category-grid{grid-template-columns:repeat(4,minm
 .visual-section-title h3{font-size:29px!important}
 @media(max-width:800px){.visual-category img{height:90px!important}.visual-category strong{font-size:11px!important}}
 html[data-theme=dark] .visual-category{background:#23382b!important}html[data-theme=dark] .visual-category img{background:#f8efe2!important}
-</style></head><body><div class="app"><aside class="side"><div class="brand"><div class="brand-symbol">♧</div><div class="eyebrow">Coleção pessoal</div><h1>Closet da Raquel</h1><small>Moda, acessórios &amp; coleção</small></div><div class="nav" id="desktopNav"><button class="active" data-tab="acervo"><span>▥</span> Dashboard</button><button data-tab="cadastro"><span>＋</span> Adicionar peça</button><button data-tab="portfolio"><span>▤</span> Portfólio</button><button data-tab="github"><span>☁</span> Sincronização GitHub</button><button data-tab="backup"><span>⇅</span> Dados &amp; backup</button></div><div class="foot">CLOSET DA RAQUEL 26.0<br/>Uma coleção com história.<br/>Organizada do seu jeito.</div></aside><main class="main"><div class="top"><div><div class="eyebrow">Private collection · Jewelry &amp; Watches</div><div class="sub">Relógios, anéis, joias, pulseiras, colares e tênis em um só lugar</div></div><div class="top-actions"><button aria-label="Status GitHub" class="sync-badge" id="topSyncBadge" type="button" data-tab="github"><span class="sync-dot disconnected" id="topSyncDot"></span><span id="topSyncText">GitHub Desconectado</span></button><button aria-label="Escolher visualização" class="btn view-toggle" id="viewToggle" type="button">▣ Visualização</button><button aria-label="Alternar tema" class="btn theme-toggle" id="themeToggle" type="button">☾ Escuro</button><button class="btn primary" data-tab="cadastro">＋ Adicionar ao closet</button></div></div>
+</style><style id="palette-options-v33">
+/* v33 — Paletas selecionáveis, contraste reforçado, sem alterar estrutura */
+html[data-palette="esmeralda"]{--bg:#F8F9F6;--paper:#FFFFFF;--ink:#20342B;--muted:#4E6157;--line:#C9D8CE;--accent:#174C3A;--soft:#EAF2EB;--gold:#AD8653;--palette-side:#123D2F;--palette-side-text:#FFFFFF;--palette-active:#E1F0E5;--palette-active-text:#123D2F;--palette-chart:#207451}
+html[data-palette="safira"]{--bg:#F7F9FC;--paper:#FFFFFF;--ink:#1C3049;--muted:#4D5D70;--line:#CBD6E4;--accent:#194E82;--soft:#EAF1F9;--gold:#B28C54;--palette-side:#183A61;--palette-side-text:#FFFFFF;--palette-active:#DDEBFA;--palette-active-text:#183A61;--palette-chart:#2875B0}
+html[data-palette="terracota"]{--bg:#FCF8F3;--paper:#FFFFFF;--ink:#422E29;--muted:#70564D;--line:#E3D0C5;--accent:#8C4635;--soft:#F8EBE4;--gold:#A67A48;--palette-side:#69392F;--palette-side-text:#FFFFFF;--palette-active:#F6E3D8;--palette-active-text:#603126;--palette-chart:#B56545}
+html[data-palette="grafite"]{--bg:#F7F7F5;--paper:#FFFFFF;--ink:#222827;--muted:#53605C;--line:#D2DAD5;--accent:#344E46;--soft:#EDF1EE;--gold:#A27C4D;--palette-side:#25332E;--palette-side-text:#FFFFFF;--palette-active:#E0EAE4;--palette-active-text:#25332E;--palette-chart:#537C68}
+html[data-palette] body,html[data-palette] .main{background:var(--bg)!important;color:var(--ink)}
+html[data-palette] .side{background:var(--palette-side)!important;color:var(--palette-side-text)!important;border-color:var(--line)!important}
+html[data-palette] .brand h1,html[data-palette] .side .nav button{color:var(--palette-side-text)!important}
+html[data-palette] .brand small,html[data-palette] .side .eyebrow,html[data-palette] .side .foot{color:#E3EBE6!important}
+html[data-palette] .side .nav button.active{background:var(--palette-active)!important;color:var(--palette-active-text)!important}
+html[data-palette] .side .nav button:hover:not(.active){background:#FFFFFF22!important}
+html[data-palette] .panel,html[data-palette] .dash-visual-card,html[data-palette] .dash-chart,html[data-palette] .watch,html[data-palette] .searchrow,html[data-palette] .github-card{background:var(--paper)!important;border-color:var(--line)!important;color:var(--ink)}
+html[data-palette] .dash-kpi,html[data-palette] .stat{background:var(--soft)!important;border-color:var(--line)!important}
+html[data-palette] .dash-kpi strong,html[data-palette] .stat strong,html[data-palette] .dash-chart h4,html[data-palette] .dash-visual-card h4,html[data-palette] .visual-section-title h3,html[data-palette] #acervo>.title{color:var(--ink)!important}
+html[data-palette] .dash-kpi span,html[data-palette] .dash-visual-help,html[data-palette] .muted,html[data-palette] .intro,html[data-palette] .dash-foot,html[data-palette] .visual-section-title span{color:var(--muted)!important}
+html[data-palette] .dash-fill{background:var(--palette-chart)!important}
+html[data-palette] .dash-track{background:var(--line)!important}
+html[data-palette] .dash-bar-name,html[data-palette] .dash-count,html[data-palette] .dash-legend button{color:var(--ink)!important;font-size:14px}
+html[data-palette] .dash-bar.is-active,html[data-palette] .dash-legend button[aria-pressed=true]{background:var(--soft)!important;border-color:var(--accent)!important}
+html[data-palette] .visual-category{background:var(--paper)!important;color:var(--ink)!important;border-color:var(--line)!important}
+html[data-palette] .visual-category strong{color:var(--ink)!important}
+html[data-palette] .visual-category small{color:var(--muted)!important}
+html[data-palette] .btn.primary,html[data-palette] .category-strip button.active{background:var(--accent)!important;border-color:var(--accent)!important;color:#FFFFFF!important}
+html[data-palette] label,html[data-palette] .dash-filter-title{color:var(--ink)!important;font-size:13px}
+html[data-palette] input,html[data-palette] select,html[data-palette] textarea{background:var(--paper)!important;color:var(--ink)!important;border:1px solid var(--line)!important}
+html[data-palette] .mobile-nav{background:var(--palette-side)!important;border-color:var(--line)!important}
+html[data-palette] .mobile-nav button{color:#E2EDE6!important}
+html[data-palette] .mobile-nav button.active{color:#FFFFFF!important;font-weight:800}
+.palette-control{display:inline-flex;align-items:center;gap:7px;background:var(--paper);border:1px solid var(--line);padding:6px 10px;border-radius:12px;color:var(--ink);font-size:13px;font-weight:700}
+.palette-control select{width:auto!important;min-width:125px;min-height:33px!important;padding:5px 8px!important;font-size:13px!important}
+html[data-theme="dark"] .palette-control{background:#1B2623;color:#F1F5F1;border-color:#496250}
+html[data-theme="dark"] .palette-control select{background:#202E29!important;color:#F1F5F1!important}
+@media(max-width:800px){.palette-control{grid-column:span 2;justify-content:space-between}.palette-control select{flex:1}.dash-bar-name,.dash-count{font-size:13px!important}}
+@media print{.palette-control{display:none!important}}
+</style><style id="header-layout-v34">
+/* v34 — cabeçalho alinhado, hierarquia clara, sem alterar controles ou lógica */
+.top{display:grid!important;grid-template-columns:minmax(210px,1fr) minmax(0,auto)!important;align-items:center!important;gap:18px!important;padding:14px 0 20px!important;margin-bottom:24px!important;border-bottom:1px solid var(--line)!important;min-width:0}
+.top>div:first-child{min-width:0}
+.top .eyebrow{font-size:11px!important;letter-spacing:1.3px!important;font-weight:800!important;line-height:1.4}
+.top .sub{font-size:12px!important;line-height:1.55!important;margin-top:5px!important;max-width:380px;color:var(--muted)!important}
+.top .top-actions{display:grid!important;grid-template-columns:repeat(3,max-content)!important;grid-template-areas:'sync view palette' 'add theme theme'!important;align-items:center!important;justify-content:end!important;gap:8px!important;width:auto!important;min-width:0}
+.top-actions #topSyncBadge{grid-area:sync!important;justify-self:end;min-height:40px}
+.top-actions #viewToggle{grid-area:view!important}
+.top-actions .palette-control{grid-area:palette!important;min-height:40px;white-space:nowrap}
+.top-actions #themeToggle{grid-area:theme!important;justify-self:end}
+.top-actions .btn.primary{grid-area:add!important;justify-self:start}
+.top-actions .btn,.top-actions .sync-badge{font-size:12px!important;min-height:40px;padding:9px 12px!important;border-radius:11px!important}
+.top-actions .palette-control select{min-width:110px!important;max-width:130px!important}
+@media(max-width:1250px){.top{grid-template-columns:1fr!important}.top .top-actions{justify-content:start!important}.top .sub{max-width:none}}
+@media(max-width:800px){
+ .top{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:13px!important;padding:6px 0 16px!important;margin-bottom:17px!important}
+ .top .top-actions{width:100%!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-template-areas:'sync sync' 'view theme' 'palette palette' 'add add'!important;gap:8px!important}
+ .top-actions #topSyncBadge,.top-actions #viewToggle,.top-actions #themeToggle,.top-actions .palette-control,.top-actions .btn.primary{width:100%!important;min-width:0!important;justify-self:stretch!important;justify-content:center!important;grid-column:auto!important}
+ .top-actions .palette-control{justify-content:space-between!important;gap:10px}
+ .top-actions .palette-control select{min-width:0!important;max-width:none!important;flex:1!important}
+ .top-actions .btn.primary{font-weight:750!important}
+ .top .sub{font-size:12px!important}
+}
+/* Modo mobile forçado: mesmas regras, mesmo em telas largas */
+html[data-view=mobile] .top{grid-template-columns:1fr!important}
+html[data-view=mobile] .top .top-actions{width:100%!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-template-areas:'sync sync' 'view theme' 'palette palette' 'add add'!important;justify-content:stretch!important}
+html[data-view=mobile] .top-actions #topSyncBadge,html[data-view=mobile] .top-actions #viewToggle,html[data-view=mobile] .top-actions #themeToggle,html[data-view=mobile] .top-actions .palette-control,html[data-view=mobile] .top-actions .btn.primary{width:100%!important;min-width:0!important;justify-self:stretch!important;grid-column:auto!important}
+html[data-view=mobile] .top-actions .palette-control select{flex:1!important;min-width:0!important;max-width:none!important}
+/* Modo desktop forçado em tela estreita: preservar organização sem empilhar botões em uma linha */
+html[data-view=desktop] .top{grid-template-columns:1fr!important}
+html[data-view=desktop] .top .top-actions{display:grid!important;grid-template-columns:repeat(3,max-content)!important;grid-template-areas:'sync view palette' 'add theme theme'!important;justify-content:start!important;flex-wrap:initial!important}
+@media print{.top{display:none!important}}
+</style><style id="header-compact-v35">
+/* v35: cabeçalho compacto com controles visuais e estados claros */
+.top{display:flex!important;flex-wrap:wrap!important;align-items:center!important;justify-content:space-between!important;gap:12px 18px!important;padding:12px 0 18px!important}
+.top>div:first-child{flex:1 1 235px;min-width:0}
+.top .top-actions{display:flex!important;flex:0 1 auto!important;flex-wrap:wrap!important;align-items:center!important;justify-content:flex-end!important;gap:7px!important;width:auto!important;min-width:0!important}
+.top-actions #topSyncBadge,.top-actions #viewToggle,.top-actions #themeToggle,.top-actions .palette-control,.top-actions .btn.primary{grid-area:auto!important;grid-column:auto!important;justify-self:auto!important;width:auto!important;min-width:0!important;max-width:none!important;margin:0!important}
+.top-actions .btn,.top-actions .sync-badge{height:42px!important;min-height:42px!important;padding:8px 12px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:7px!important;border-radius:11px!important;white-space:nowrap!important}
+.top-actions #viewToggle,.top-actions #themeToggle{background:var(--paper)!important;color:var(--ink)!important;border:1px solid var(--line)!important}
+.top-actions #viewToggle[data-choice='mobile'],.top-actions #viewToggle[data-choice='desktop'],.top-actions #themeToggle[data-choice='dark']{border:2px solid var(--accent)!important;background:var(--soft)!important;color:var(--ink)!important;font-weight:800!important}
+.top-actions #viewToggle[data-choice='auto'],.top-actions #themeToggle[data-choice='light']{border:1px solid var(--line)!important}
+.top-actions .control-icon{font-size:18px;line-height:1;flex-shrink:0}
+.top-actions .control-text{font-size:12px;font-weight:750}
+.top-actions .palette-control{height:42px!important;min-height:42px!important;padding:4px 7px 4px 10px!important;gap:7px!important;border-radius:11px!important;display:inline-flex!important;align-items:center!important;background:var(--paper)!important;color:var(--ink)!important}
+.palette-control .palette-dot{width:16px;height:16px;flex-shrink:0;border-radius:50%;background:var(--accent);border:2px solid #FFFFFF;outline:1px solid var(--line)}
+.top-actions .palette-control select{min-width:92px!important;max-width:125px!important;width:auto!important;height:32px!important;min-height:32px!important;padding:4px 18px 4px 7px!important;border:0!important;background:transparent!important;color:var(--ink)!important;font-size:12px!important;font-weight:750!important}
+.top-actions #topSyncBadge{background:var(--paper)!important;color:var(--ink)!important;border:1px solid var(--line)!important}
+.top-actions #topSyncBadge:has(.sync-dot.online){background:#E4F3E9!important;border-color:#70B98C!important;color:#16532E!important}
+.top-actions #topSyncBadge:has(.sync-dot.offline){background:#FBE9E6!important;border-color:#D69B90!important;color:#862E25!important}
+.top-actions #topSyncBadge .sync-dot{width:11px;height:11px}
+.top-actions .btn.primary{background:var(--accent)!important;color:white!important;border-color:var(--accent)!important;font-weight:800!important}
+@media(max-width:1150px){.top{align-items:flex-start!important}.top .top-actions{justify-content:flex-start!important;width:100%!important}}
+@media(max-width:800px){.top .top-actions{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:7px!important;width:100%!important}.top-actions #topSyncBadge{grid-column:1 / -1!important;justify-content:center!important}.top-actions #viewToggle,.top-actions #themeToggle{width:100%!important}.top-actions .palette-control{grid-column:span 1!important;width:100%!important;padding:4px 6px!important}.top-actions .palette-control select{min-width:0!important;max-width:none!important;width:100%!important;font-size:11px!important;padding:4px 0!important}.top-actions .palette-label{display:none!important}.top-actions .btn.primary{grid-column:1 / -1!important;width:100%!important}.top-actions .control-text{font-size:11px!important}}
+html[data-view=mobile] .top .top-actions{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;width:100%!important;gap:7px!important;justify-content:stretch!important}
+html[data-view=mobile] .top-actions #topSyncBadge,html[data-view=mobile] .top-actions .btn.primary{grid-column:1 / -1!important;width:100%!important}
+html[data-view=mobile] .top-actions #viewToggle,html[data-view=mobile] .top-actions #themeToggle,html[data-view=mobile] .top-actions .palette-control{width:100%!important;grid-column:auto!important}
+html[data-view=mobile] .top-actions .palette-label{display:none!important}
+html[data-view=mobile] .top-actions .palette-control select{min-width:0!important;max-width:none!important;width:100%!important}
+html[data-view=desktop] .top .top-actions{display:flex!important;flex-wrap:wrap!important;justify-content:flex-start!important;grid-template-columns:none!important;width:auto!important}
+@media print{.top{display:none!important}}
+</style><style id="header-unified-v36">
+/* v36: mesmo cabeçalho compacto no desktop e celular */
+.top{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:14px!important}
+.top>div:first-child{width:100%!important}
+.top .top-actions,html[data-view=desktop] .top .top-actions,html[data-view=mobile] .top .top-actions{
+display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;
+gap:9px!important;width:100%!important;max-width:760px!important;justify-content:stretch!important;align-items:stretch!important}
+.top-actions #topSyncBadge{grid-column:1/-1!important;width:100%!important;justify-content:center!important}
+.top-actions #viewToggle,.top-actions #themeToggle,.top-actions .palette-control{grid-column:auto!important;width:100%!important;min-width:0!important;max-width:none!important;justify-content:center!important}
+.top-actions .palette-control select{min-width:0!important;width:100%!important;max-width:none!important}
+.top-actions .palette-label{display:none!important}
+.top-actions .btn.primary{grid-column:1/-1!important;width:100%!important}
+.top-actions .control-text{white-space:nowrap}
+html[data-view=desktop] .top{flex-wrap:nowrap!important}
+@media(max-width:800px){.top .top-actions{max-width:none!important}}
+</style><style id="category-illustrations-restore-v37">
+#acervo .visual-categories{display:block!important;visibility:visible!important}
+#acervo #visualCategoryCards{display:grid!important;visibility:visible!important}
+#acervo #visualCategoryCards .visual-category{display:flex!important;visibility:visible!important}
+#acervo #visualCategoryCards .visual-category img{display:block!important;visibility:visible!important;opacity:1!important;max-width:100%!important}
+</style></head><body><div class="app"><aside class="side"><div class="brand"><div class="brand-symbol">♧</div><div class="eyebrow">Coleção pessoal</div><h1>Closet da Raquel</h1><small>Moda, acessórios &amp; coleção</small></div><div class="nav" id="desktopNav"><button class="active" data-tab="acervo"><span>▥</span> Dashboard</button><button data-tab="cadastro"><span>＋</span> Adicionar peça</button><button data-tab="portfolio"><span>▤</span> Portfólio</button><button data-tab="github"><span>☁</span> Sincronização GitHub</button><button data-tab="backup"><span>⇅</span> Dados &amp; backup</button></div><div class="foot">CLOSET DA RAQUEL 26.0<br/>Uma coleção com história.<br/>Organizada do seu jeito.</div></aside><main class="main"><div class="top"><div><div class="eyebrow">Private collection · Jewelry &amp; Watches</div><div class="sub">Relógios, anéis, joias, pulseiras, colares e tênis em um só lugar</div></div><div class="top-actions"><button aria-label="Status GitHub" class="sync-badge" id="topSyncBadge" type="button" data-tab="github"><span class="sync-dot disconnected" id="topSyncDot"></span><span id="topSyncText">GitHub Desconectado</span></button><button aria-label="Escolher visualização" class="btn view-toggle" id="viewToggle" type="button">▣ Visualização</button><label class="palette-control" for="paletteSelect">◉ Paleta <select id="paletteSelect" aria-label="Escolher paleta de cores"><option value="esmeralda">Esmeralda</option><option value="safira">Safira</option><option value="terracota">Terracota</option><option value="grafite">Grafite</option></select></label><button aria-label="Alternar tema" class="btn theme-toggle" id="themeToggle" type="button">☾ Escuro</button><button class="btn primary" data-tab="cadastro">＋ Adicionar ao closet</button></div></div>
 <section id="acervo"><h2 class="title">Dashboard do Acervo</h2><p class="intro">Visão geral do seu closet com gráficos interativos e filtros inteligentes.</p><div class="shop-hero" hidden><div><span class="shop-kicker">SEU GUARDA-ROUPA DIGITAL</span><h3>Tudo o que você tem.<br/><em>Em um só lugar.</em></h3><p>Fotografe, organize e encontre suas peças como em uma loja online.</p><button class="btn hero-btn" id="heroAdd" type="button">+ Adicionar ao closet</button></div><div class="shop-art"><span>Closet da Raquel</span><small>CURATED BY YOU</small></div></div><div class="stats" hidden aria-hidden="true"><div class="stat"><small>PEÇAS NO ACERVO</small><strong id="statTotal">0</strong><small>Itens catalogados</small></div><div class="stat"><small>COM FOTOGRAFIA</small><strong id="statFotos">0</strong><small>Peças fotografadas</small></div><div class="stat"><small>NO PORTFÓLIO</small><strong id="statSelected">0</strong><small>Peças selecionadas</small></div></div><section aria-labelledby="dashTitle" class="dash-panel" id="dashboard">
 <div class="dash-heading"><div><div class="eyebrow">SEU ACERVO EM NÚMEROS</div><h3 id="dashTitle">Distribuição e características</h3><p>Selecione uma categoria no gráfico ou um atributo nas barras para explorar as peças.</p></div><button class="btn sm" id="dashReset" type="button">Limpar filtros</button></div>
 <div aria-live="polite" class="dash-kpis" id="dashKpis"></div><div id="activeFilterChips" class="active-filter-chips" aria-live="polite"></div>
@@ -425,7 +542,7 @@ html[data-theme=dark] .visual-category{background:#23382b!important}html[data-th
 
   <div class="formgrid" style="margin-top:20px;">
     <label style="grid-column: span 2;">GitHub Personal Access Token (PAT) *
-      <input type="password" id="ghTokenInput" placeholder="ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" autocomplete="off" />
+      <input type="password" id="ghTokenInput" placeholder="Cole seu novo token GitHub (ghp_ ou github_pat_)" autocomplete="off" />
       <small class="muted" style="display:block;margin-top:5px;">O token exige permissão de acesso a repositórios (<code>repo</code> ou <code>contents:write</code>). Ele fica armazenado localmente apenas no seu navegador.</small>
     </label>
   </div>
@@ -554,9 +671,7 @@ async function fetchFromGithub() {
     });
 
     if (res.status === 404) {
-      currentFileSha = null;
-      updateSyncUI('online', 'Arquivo remoto ainda não criado. Pronto para enviar.');
-      return true;
+      throw new Error('Arquivo data/acervo.json não encontrado ou sem acesso. Verifique o repositório e as permissões do token antes de enviar.');
     }
 
     if (!res.ok) {
@@ -569,8 +684,10 @@ async function fetchFromGithub() {
     // Decodifica JSON remoto com suporte a UTF-8
     const contentUtf8 = base64ToUtf8(data.content.replace(/\n/g, ''));
     const parsedData = JSON.parse(contentUtf8);
-    const remoteItems = Array.isArray(parsedData) ? parsedData : (parsedData.items || []);
-
+    const remoteItems = Array.isArray(parsedData) ? parsedData : parsedData.items;
+    if (!Array.isArray(remoteItems) || !remoteItems.every(x => x && typeof x.id === 'string' && typeof x.nome === 'string')) {
+      throw new Error('Arquivo remoto inválido: acervo local preservado.');
+    }
     // Atualiza o IndexedDB com os dados vindos do GitHub
     await new Promise((resolve, reject) => {
       let t = db.transaction(STORE, 'readwrite'), s = t.objectStore(STORE);
@@ -705,18 +822,34 @@ $('reviewSuggestions').onclick=()=>{let suggestion=$('suggestionBox').dataset.su
 
 // Eventos da Aba GitHub
 $('saveGhTokenBtn').onclick = async () => {
-  const token = $('ghTokenInput').value.trim();
-  if(!token) {
-    toast('Por favor, informe um Personal Access Token válido.');
+  const token = $('ghTokenInput').value.replace(/\\s+/g, '').trim();
+  if (!/^(ghp_|github_pat_)[A-Za-z0-9_]+$/.test(token)) {
+    toast('Token inválido. Cole o token completo, sem espaços. Use um token novo e não o compartilhe.');
     return;
   }
-  ghToken = token;
-  localStorage.setItem('gh_pat_token', token);
-  toast('Token salvo! Testando conexão com o GitHub...');
-  const ok = await fetchFromGithub();
-  if(ok) toast('Conectado com sucesso ao GitHub!');
+  const btn=$('saveGhTokenBtn');btn.disabled=true;
+  updateSyncUI('syncing','Validando token e acesso ao repositório, sem alterar seu acervo...');
+  try {
+    const headers={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'};
+    const userRes=await fetch('https://api.github.com/user',{headers});
+    if(!userRes.ok)throw new Error(userRes.status===401?'Token inválido ou revogado.':'Falha ao validar token ('+userRes.status+').');
+    const repoRes=await fetch('https://api.github.com/repos/'+GH_OWNER+'/'+GH_REPO,{headers});
+    if(!repoRes.ok)throw new Error(repoRes.status===404?'Repositório inacessível. Autorize rcpmoraes/closet-da-raquel no token.':'Acesso ao repositório negado ('+repoRes.status+').');
+    const repo=await repoRes.json();
+    const contentRes=await fetch('https://api.github.com/repos/'+GH_OWNER+'/'+GH_REPO+'/contents/'+GH_PATH,{headers});
+    if(contentRes.status===200){const file=await contentRes.json();currentFileSha=file.sha;}
+    else if(contentRes.status===404){currentFileSha=null;}
+    else throw new Error('Sem acesso ao arquivo do acervo ('+contentRes.status+').');
+    ghToken=token;
+    localStorage.setItem('gh_pat_token',token);
+    updateSyncUI('online','Token validado para leitura. '+(currentFileSha?'Arquivo remoto encontrado.':'Arquivo remoto ainda não existe.')+' Para gravar, o token precisa de Contents: Read and write.');
+    toast('Conexão validada. Nenhum cadastro foi substituído.');
+    $('ghTokenInput').value='';
+  } catch(err){
+    updateSyncUI('offline',err.message);
+    toast(err.message);
+  } finally{btn.disabled=false;}
 };
-
 $('removeGhTokenBtn').onclick = () => {
   ghToken = '';
   localStorage.removeItem('gh_pat_token');
@@ -728,7 +861,7 @@ $('removeGhTokenBtn').onclick = () => {
 $('pushToGithubBtn').onclick = () => pushToGithub(false);
 $('pullFromGithubBtn').onclick = () => fetchFromGithub();
 
-async function init(){try{db=await openDB();let legacy=JSON.parse(localStorage.getItem('acervo-relogios-v1')||'[]');let existing=await txn('readonly',s=>s.getAll());if(!existing.length&&Array.isArray(legacy)&&legacy.length){for(let x of legacy)await txn('readwrite',s=>s.put(x));toast('Coleção anterior recuperada.')}await refresh(); if(ghToken) { $('ghTokenInput').value = ghToken; await fetchFromGithub(); } else { updateSyncUI('disconnected'); }}catch(e){toast('Armazenamento indisponível. Abra no navegador normal e habilite o armazenamento local.')}}init();
+async function init(){try{db=await openDB();let legacy=JSON.parse(localStorage.getItem('acervo-relogios-v1')||'[]');let existing=await txn('readonly',s=>s.getAll());if(!existing.length&&Array.isArray(legacy)&&legacy.length){for(let x of legacy)await txn('readwrite',s=>s.put(x));toast('Coleção anterior recuperada.')}await refresh(); if(ghToken) { updateSyncUI('disconnected','Token salvo neste navegador. Clique em Salvar & Conectar para revalidar; baixar o acervo é uma ação separada.'); } else { updateSyncUI('disconnected'); }}catch(e){toast('Armazenamento indisponível. Abra no navegador normal e habilite o armazenamento local.')}}init();
 
 
 function updatePortfolioSummary(list){
@@ -903,4 +1036,68 @@ function renderVisualCategories(){
 }
 const originalRenderDashboard=renderDashboard;
 renderDashboard=function(){originalRenderDashboard();renderVisualCategories()};
-</script></body></html>
+// Garante ilustrações no carregamento inicial, mesmo quando o dashboard
+// já foi desenhado antes da instalação do complemento.
+renderVisualCategories();
+window.addEventListener('pageshow',renderVisualCategories);
+
+</script>
+<script id="palette-options-script-v33">
+(function(){
+ const root=document.documentElement, select=document.getElementById('paletteSelect');
+ if(!select)return;
+ const palettes=['esmeralda','safira','terracota','grafite'];
+ let current='esmeralda';
+ try{const saved=localStorage.getItem('closet-palette');if(palettes.includes(saved))current=saved}catch(e){}
+ function update(){
+   if(root.getAttribute('data-theme')==='dark')root.removeAttribute('data-palette');
+   else root.setAttribute('data-palette',current);
+   select.value=current;
+ }
+ select.addEventListener('change',()=>{
+   if(!palettes.includes(select.value))return;
+   current=select.value;
+   try{localStorage.setItem('closet-palette',current)}catch(e){}
+   update();
+ });
+ const observer=new MutationObserver(update);
+ observer.observe(root,{attributes:true,attributeFilter:['data-theme']});
+ update();
+})();
+</script>
+
+<script id="header-indicators-v35">
+(function(){
+ const root=document.documentElement;
+ const view=document.getElementById('viewToggle');
+ const theme=document.getElementById('themeToggle');
+ const pal=document.querySelector('.palette-control');
+ const select=document.getElementById('paletteSelect');
+ const sync=document.getElementById('topSyncBadge');
+ if(!view||!theme||!pal||!select)return;
+ // Reutilizar os botões e eventos originais: só mudamos sua apresentação.
+ view.innerHTML='<span class="control-icon" aria-hidden="true">▣</span><span class="control-text">Auto</span>';
+ theme.innerHTML='<span class="control-icon" aria-hidden="true">☀</span><span class="control-text">Claro</span>';
+ pal.insertAdjacentHTML('afterbegin','<span class="palette-dot" aria-hidden="true"></span><span class="palette-label">Cor</span>');
+ function refresh(){
+   const v=root.getAttribute('data-view')||'auto';
+   const t=root.getAttribute('data-theme')||'light';
+   const vl={auto:['▣','Auto'],mobile:['▯','Celular'],desktop:['▤','Desktop']}[v]||['▣','Auto'];
+   const tl=t==='dark'?['☾','Escuro']:['☀','Claro'];
+   view.querySelector('.control-icon').textContent=vl[0];view.querySelector('.control-text').textContent=vl[1];view.dataset.choice=v;
+   theme.querySelector('.control-icon').textContent=tl[0];theme.querySelector('.control-text').textContent=tl[1];theme.dataset.choice=t;
+   view.title='Visualização selecionada: '+vl[1];theme.title='Tema selecionado: '+tl[1];
+   view.setAttribute('aria-label',view.title+'; clique para alterar');theme.setAttribute('aria-label',theme.title+'; clique para alterar');
+   const name=select.options[select.selectedIndex]?.text||'Esmeralda';
+   pal.title='Paleta selecionada: '+name;
+   pal.querySelector('.palette-dot').style.background={esmeralda:'#174C3A',safira:'#194E82',terracota:'#8C4635',grafite:'#344E46'}[select.value]||'#174C3A';
+ }
+ new MutationObserver(refresh).observe(root,{attributes:true,attributeFilter:['data-view','data-theme','data-palette']});
+ select.addEventListener('change',refresh);
+ view.addEventListener('click',()=>queueMicrotask(refresh));
+ theme.addEventListener('click',()=>queueMicrotask(refresh));
+ if(sync){sync.title='Ver status e configuração da sincronização GitHub';}
+ refresh();
+})();
+</script>
+</body></html>
