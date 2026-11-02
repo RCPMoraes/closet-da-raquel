@@ -633,7 +633,7 @@ html[data-palette] .btn.primary{background:var(--accent)!important;color:white!i
 html[data-palette] .side,html[data-palette] .mobile-nav{background:var(--palette-side)!important;background-image:none!important}
 html[data-palette] .side .nav button.active{background:var(--palette-active)!important;color:var(--palette-active-text)!important}
 @media print{html[data-palette] body{background:white!important}}
-</style></head><body><div class="app"><aside class="side"><div class="brand"><div class="brand-symbol">♧</div><div class="eyebrow">Coleção pessoal</div><h1>Closet da Raquel</h1><small>Moda, acessórios &amp; coleção</small></div><div class="nav" id="desktopNav"><button class="active" data-tab="acervo"><span>▥</span> Dashboard</button><button data-tab="cadastro"><span>＋</span> Adicionar peça</button><button data-tab="portfolio"><span>▤</span> Portfólio</button><button data-tab="github"><span>☁</span> Sincronização GitHub</button><button data-tab="backup"><span>⇅</span> Dados &amp; backup</button></div><div class="foot">CLOSET DA RAQUEL 26.0<br/>Uma coleção com história.<br/>Organizada do seu jeito.</div></aside><main class="main"><div class="top"><div><div class="eyebrow">Private collection · Jewelry &amp; Watches</div><div class="sub">Relógios, anéis, joias, pulseiras, colares e tênis em um só lugar</div></div><div class="top-actions"><button aria-label="Status GitHub" class="sync-badge" id="topSyncBadge" type="button" data-tab="github"><span class="sync-dot disconnected" id="topSyncDot"></span><span id="topSyncText">GitHub Desconectado</span></button><button aria-label="Escolher visualização" class="btn view-toggle" id="viewToggle" type="button">▣ Visualização</button><label class="palette-control" for="paletteSelect">◉ Paleta <select id="paletteSelect" aria-label="Escolher paleta de cores"><option value="esmeralda">Esmeralda</option><option value="verde">Verde</option><option value="safira">Safira</option><option value="terracota">Terracota</option><option value="grafite">Grafite</option><option value="vermelho">Vermelho</option></select></label><button class="btn primary" data-tab="cadastro">＋ Adicionar ao closet</button></div></div>
+.dash-bar-name{min-width:0}.dash-bar{grid-template-columns:minmax(96px,1.3fr) minmax(50px,2fr) 32px!important}.dash-legend .dash-legend-name{overflow:visible;text-overflow:clip}.gh-label{display:block;font-weight:600;font-size:13px;margin:0 0 14px}.gh-label input{display:block;width:100%;margin-top:6px;box-sizing:border-box}.gh-row{display:flex;gap:8px;margin-top:6px}.gh-row input{margin-top:0!important;flex:1;min-width:0}.gh-radios{display:flex;gap:18px;flex-wrap:wrap;margin:-4px 0 12px;font-size:14px}.gh-radios label,.gh-check{display:flex;align-items:center;gap:8px;cursor:pointer}.gh-check{margin:14px 0 8px;font-size:14px}.gh-details{white-space:pre-line;background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;line-height:1.45;margin-top:10px;overflow-wrap:anywhere}.gh-radios input[type=radio],.gh-check input[type=checkbox]{width:20px!important;height:20px!important;min-width:20px;padding:0!important;margin:0!important;flex:none;accent-color:var(--accent)}.gh-radios label,.gh-check{font-weight:500}.gh-radios{flex-direction:column;gap:10px}.gh-radios label{min-height:0!important;margin:0!important;padding:0!important;display:flex}</style></head><body><div class="app"><aside class="side"><div class="brand"><div class="brand-symbol">♧</div><div class="eyebrow">Coleção pessoal</div><h1>Closet da Raquel</h1><small>Moda, acessórios &amp; coleção</small></div><div class="nav" id="desktopNav"><button class="active" data-tab="acervo"><span>▥</span> Dashboard</button><button data-tab="cadastro"><span>＋</span> Adicionar peça</button><button data-tab="portfolio"><span>▤</span> Portfólio</button><button data-tab="github"><span>☁</span> Sincronização GitHub</button><button data-tab="backup"><span>⇅</span> Dados &amp; backup</button></div><div class="foot">CLOSET DA RAQUEL 26.0<br/>Uma coleção com história.<br/>Organizada do seu jeito.</div></aside><main class="main"><div class="top"><div><div class="eyebrow">Private collection · Jewelry &amp; Watches</div><div class="sub">Relógios, anéis, joias, pulseiras, colares e tênis em um só lugar</div></div><div class="top-actions"><button aria-label="Status GitHub" class="sync-badge" id="topSyncBadge" type="button" data-tab="github"><span class="sync-dot disconnected" id="topSyncDot"></span><span id="topSyncText">GitHub Desconectado</span></button><button aria-label="Escolher visualização" class="btn view-toggle" id="viewToggle" type="button">▣ Visualização</button><label class="palette-control" for="paletteSelect">◉ Paleta <select id="paletteSelect" aria-label="Escolher paleta de cores"><option value="esmeralda">Esmeralda</option><option value="verde">Verde</option><option value="safira">Safira</option><option value="terracota">Terracota</option><option value="grafite">Grafite</option><option value="vermelho">Vermelho</option></select></label><button class="btn primary" data-tab="cadastro">＋ Adicionar ao closet</button></div></div>
 <section id="acervo"><h2 class="title">Dashboard do Acervo</h2><p class="intro">Visão geral do seu closet com gráficos interativos e filtros inteligentes.</p><div class="shop-hero" hidden><div><span class="shop-kicker">SEU GUARDA-ROUPA DIGITAL</span><h3>Tudo o que você tem.<br/><em>Em um só lugar.</em></h3><p>Fotografe, organize e encontre suas peças como em uma loja online.</p><button class="btn hero-btn" id="heroAdd" type="button">+ Adicionar ao closet</button></div><div class="shop-art"><span>Closet da Raquel</span><small>CURATED BY YOU</small></div></div><div class="stats" hidden aria-hidden="true"><div class="stat"><small>PEÇAS NO ACERVO</small><strong id="statTotal">0</strong><small>Itens catalogados</small></div><div class="stat"><small>COM FOTOGRAFIA</small><strong id="statFotos">0</strong><small>Peças fotografadas</small></div><div class="stat"><small>NO PORTFÓLIO</small><strong id="statSelected">0</strong><small>Peças selecionadas</small></div></div><section aria-labelledby="dashTitle" class="dash-panel" id="dashboard">
 <div class="dash-heading"><div><div class="eyebrow">SEU ACERVO EM NÚMEROS</div><h3 id="dashTitle">Distribuição e características</h3><p>Selecione uma categoria no gráfico ou um atributo nas barras para explorar as peças.</p></div><button class="btn sm" id="dashReset" type="button">Limpar filtros</button></div>
 <div aria-live="polite" class="dash-kpis" id="dashKpis"></div><div id="activeFilterChips" class="active-filter-chips" aria-live="polite"></div>
@@ -650,46 +650,43 @@ html[data-palette] .side .nav button.active{background:var(--palette-active)!imp
 <section hidden="" id="portfolio"><h2 class="title hideprint">Seu portfólio.</h2><p class="intro hideprint">Crie uma apresentação elegante com peças de todas as categorias ou apenas suas favoritas.</p><div class="panel"><div class="hideprint"><label>Título do portfólio<input id="portfolioTitle" value="Closet da Raquel"/></label><div class="pdf-filter-panel"><div class="eyebrow">CURADORIA DO RELATÓRIO</div><p class="muted">Escolha uma categoria e, quando disponível, uma subcategoria. O PDF incluirá apenas as peças correspondentes.</p><div class="pdf-filter-grid"><details class="pdf-multi-field pdf-dropdown"><summary>Categorias <span class="pdf-selection-count" id="pdfCatSelected">Todas</span></summary><div class="pdf-dropdown-content"><div class="pdf-multi-actions"><button id="pdfAllCategories" type="button">Selecionar todas</button><button id="pdfNoCategories" type="button">Limpar</button></div><div class="pdf-check-options" id="pdfCategories"></div></div></details><details class="pdf-multi-field pdf-dropdown"><summary>Subcategorias <span class="pdf-selection-count" id="pdfSubSelected">Todas</span></summary><div class="pdf-dropdown-content"><div class="pdf-multi-actions"><button id="pdfAllSubcategories" type="button">Selecionar todas</button><button id="pdfNoSubcategories" type="button">Limpar</button></div><div class="pdf-check-options" id="pdfSubcategories"></div></div></details></div><div aria-live="polite" class="muted" id="pdfFilterCount"></div></div><div class="toolbar" style="margin-bottom:20px"><button class="btn" id="selectAll">Selecionar todos</button><button class="btn" id="clearAll">Limpar seleção</button><button class="btn" id="printAll">PDF completo do acervo</button><button class="btn primary" id="printPortfolio">↧ PDF das selecionadas</button></div><div class="notice">Para gerar o PDF, escolha “Salvar como PDF” na janela de impressão do navegador. As imagens mantêm suas proporções originais.</div></div><div class="pdf-report-cover"><div class="pdf-cover-mark">A</div><div><div class="pdf-cover-eyebrow">COLEÇÃO PRIVADA • INVENTÁRIO ILUSTRADO</div><div class="pdf-cover-title">Closet da Raquel</div><div class="pdf-cover-subtitle">Meu acervo, minha história.</div></div><div class="pdf-cover-art"><div class="illustration-tile"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" viewbox="0 0 24 24"><path d="M12 3l3 3 4 1 2 5-4 2-2-2v10H9V12l-2 2-4-2 2-5 4-1z"></path></svg><span>Roupas</span></div><div class="illustration-tile"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" viewbox="0 0 24 24"><path d="M3 16c3 0 5-2 6-6l3 2 2 3 7 2v4H3z"></path></svg><span>Sapatos</span></div><div class="illustration-tile"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" viewbox="0 0 24 24"><path d="M2 17l5-6 5 4 8 2 2 3H2z M7 14l2-2 M10 16l2-2"></path></svg><span>Tênis</span></div><div class="illustration-tile"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" viewbox="0 0 24 24"><path d="M9 2h6l1 4H8z M8 18h8l-1 4H9z M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10z M12 9v3l2 1"></path></svg><span>Relógios</span></div></div></div><div class="catalog-masthead"><span>CLOSET DA RAQUEL / COLEÇÃO PRIVADA</span><span id="catalogDate"></span></div><h2 class="print-head" id="printTitle">Closet da Raquel</h2><p class="catalog-lede">Inventário fotográfico e descritivo dos pertences cadastrados.</p><p class="pdf-applied-filter" id="pdfAppliedFilter"></p><div class="portfolio-summary" id="portfolioSummary"></div><div class="port-grid" id="portfolioGrid"></div></div></section>
 
 <!-- SEÇÃO: SINCRONIZAÇÃO GITHUB -->
-<section hidden="" id="github"><h2 class="title">Sincronização Online GitHub</h2><p class="intro">Persista automaticamente todo o acervo no repositório público <strong>rcpmoraes/closet-da-raquel</strong> para acessar de qualquer dispositivo.</p>
+<section hidden="" id="github"><h2 class="title">Sincronização Online GitHub</h2>
 <div class="github-card">
-  <div class="eyebrow">REPOSITÓRIO CONECTADO</div>
-  <h3 style="margin:8px 0 16px;">rcpmoraes / closet-da-raquel</h3>
-  <p class="muted">Os dados e fotos do acervo são gravados no arquivo <code>data/acervo.json</code> na nuvem do GitHub Pages.</p>
-  
+  <h3 style="margin:0 0 6px;">Closet da Raquel · GitHub Sync</h3>
+  <p class="muted" style="margin:0 0 16px;">Site publicado:<br/><a href="https://rcpmoraes.github.io/closet-da-raquel/" target="_blank" rel="noopener">rcpmoraes.github.io/closet-da-raquel</a></p>
+
+  <label class="gh-label">Repositório GitHub (deixe vazio ou "auto" para detectar pelo token, ou digite usuario/repositório)
+    <input id="ghRepoInput" placeholder="rcpmoraes/closet-da-raquel" autocomplete="off" autocapitalize="off" spellcheck="false"/>
+  </label>
+
+  <label class="gh-label">Personal Access Token (PAT) do GitHub
+    <span class="gh-row">
+      <input type="password" id="ghTokenInput" placeholder="ghp_… ou github_pat_…" autocomplete="off" autocapitalize="off" spellcheck="false"/>
+      <button class="btn" id="ghToggleToken" type="button" aria-label="Mostrar ou ocultar token">👁</button>
+    </span>
+  </label>
+  <div class="gh-radios">
+    <label><input type="radio" name="ghStore" value="local" checked/> Lembrar neste navegador</label>
+    <label><input type="radio" name="ghStore" value="session"/> Apenas nesta sessão</label>
+  </div>
+  <p class="muted" style="font-size:13px;">Aceita <strong>PAT Classic</strong> (escopo <code>repo</code>) ou <strong>Fine-grained PAT</strong> (com <em>Contents: Read and write</em>). Prefira um token limitado só a este repositório. Os dados ficam em <code>data/acervo.json</code> no repositório. Para apenas baixar o acervo (repositório público), o token não é necessário.</p>
+
+  <div class="toolbar" style="margin-top:14px;">
+    <button class="btn primary" id="saveGhTokenBtn" type="button">Salvar &amp; Conectar</button>
+    <button class="btn" id="pullFromGithubBtn" type="button">Baixar da nuvem</button>
+    <button class="btn" id="pushToGithubBtn" type="button">Salvar na nuvem</button>
+  </div>
+
+  <label class="gh-check"><input type="checkbox" id="ghAutoInput"/> <span>Sincronizar automaticamente após alterações (aguarda 60 s)</span></label>
+  <small class="muted" style="display:block;margin:-4px 0 14px;">Cada envio manda o acervo inteiro, fotos incluídas. Deixe desligado para economizar dados do celular.</small>
+
   <div class="github-status-box">
-    <div class="github-status-info">
-      <span class="sync-dot disconnected" id="panelSyncDot"></span>
-      <div>
-        <strong id="panelSyncStatusText">Status: Não Configurado</strong>
-        <div class="muted" id="panelSyncDetails" style="font-size:12px;">Insira seu Personal Access Token para habilitar a nuvem.</div>
-      </div>
-    </div>
+    <div class="github-status-info"><span class="sync-dot disconnected" id="panelSyncDot"></span><strong id="panelSyncStatusText">Status: Não Configurado</strong></div>
   </div>
+  <div class="gh-details" id="panelSyncDetails">Insira seu Personal Access Token para habilitar a nuvem.</div>
 
-  <div class="formgrid" style="margin-top:20px;">
-    <label style="grid-column: span 2;">GitHub Personal Access Token (PAT) *
-      <input type="password" id="ghTokenInput" placeholder="Cole seu novo token GitHub (ghp_ ou github_pat_)" autocomplete="off" />
-      <small class="muted" style="display:block;margin-top:5px;">O token exige permissão de acesso a repositórios (<code>repo</code> ou <code>contents:write</code>). Ele fica armazenado localmente apenas no seu navegador.</small>
-    </label>
-  </div>
-
-  <div class="toolbar" style="margin-top:20px;">
-    <button class="btn primary" id="saveGhTokenBtn" type="button">Salvar &amp; Conectar Token</button>
-    <button class="btn danger" id="removeGhTokenBtn" type="button">Remover Token</button>
-  </div>
-</div>
-
-<div class="panel">
-  <div class="eyebrow">OPERAÇÕES MANUAIS DE SINCRONIZAÇÃO</div>
-  <h3 style="margin:8px 0 16px;">Enviar e Baixar dados</h3>
-  <p class="muted">A sincronização ocorre automaticamente ao adicionar, editar ou excluir peças. Caso queira forçar a sincronização manual:</p>
-
-  <div class="toolbar" style="margin-top:20px;">
-    <button class="btn primary" id="pushToGithubBtn" type="button">☁ Salvar no GitHub agora (Push)</button>
-    <button class="btn" id="pullFromGithubBtn" type="button">↧ Carregar do GitHub agora (Pull)</button>
-  </div>
-  <div class="notice" style="margin-top:16px;">
-    Ao carregar do GitHub, o acervo no dispositivo atual será atualizado com os dados presentes no repositório remoto.
+  <div class="toolbar" style="margin-top:16px;">
+    <button class="btn danger" id="removeGhTokenBtn" type="button">Desconectar &amp; Esquecer Token</button>
   </div>
 </div>
 </section>
@@ -739,150 +736,146 @@ applyTheme('light');
 </script><script>
 'use strict';const atelierCollator=new Intl.Collator('pt-BR',{sensitivity:'base',numeric:true});let dashExtraFilter=null;const $=id=>document.getElementById(id);const fields=['categoria','nome','marca','cor','pulseiraCor','formato','material','estilo','tipo','obs','modelo','numeracao','fabricante','referencia','anoFabricacao','anoCompra','localCompra','descricao','fontes','tipoRoupa','tamanhoRoupa'];let db,items=[],selected=new Set(),editing=null,currentPhoto='',stream=null;const DB='atelier-watch-collection',STORE='watches';
 
-// GitHub Sync Module Configuration
-const GH_OWNER = 'rcpmoraes';
-const GH_REPO = 'closet-da-raquel';
-const GH_PATH = 'data/acervo.json';
-let ghToken = localStorage.getItem('gh_pat_token') || '';
-let currentFileSha = null;
-let ghWriteConfirmed = false;
+// GitHub Sync Module (modelo LifeHub)
+const GH_DEFAULT_REPO = 'rcpmoraes/closet-da-raquel';
+const GH_PATHS = ['data/acervo.json', 'acervo/acervo.json']; // tenta data/ primeiro
+let GH_PATH = GH_PATHS[0];
+const GH_AUTO_DELAY = 60000;
+const ghStore = (st) => ({
+  get(k){ try { return st.getItem(k); } catch(e){ return null; } },
+  set(k,v){ try { st.setItem(k,v); } catch(e){} },
+  del(k){ try { st.removeItem(k); } catch(e){} }
+});
+const ghLS = ghStore(window.localStorage), ghSS = ghStore(window.sessionStorage);
+let ghToken = ghSS.get('gh_pat_token') || ghLS.get('gh_pat_token') || '';
+let ghRepo = ghLS.get('gh_repo') || GH_DEFAULT_REPO;
+let ghAuto = ghLS.get('gh_auto') === '1';
+let ghLastSha = ghLS.get('gh_last_sha') || null;
+let ghAutoTimer = null, ghBusy = false;
 
 function updateSyncUI(state, msg) {
   const topDot = $('topSyncDot'), topText = $('topSyncText');
   const panelDot = $('panelSyncDot'), panelText = $('panelSyncStatusText'), panelDetails = $('panelSyncDetails');
-  
-  topDot.className = 'sync-dot ' + state;
-  panelDot.className = 'sync-dot ' + state;
-  
-  if(state === 'online') {
-    topText.textContent = '✓ GitHub';
-    panelText.textContent = 'Status: Conectado ao GitHub';
-    panelDetails.textContent = msg || 'Sincronizado com rcpmoraes/closet-da-raquel';
-  } else if(state === 'syncing') {
-    topText.textContent = '↻ Sincronizando...';
-    panelText.textContent = 'Status: Sincronizando...';
-    panelDetails.textContent = msg || 'Transferindo dados com a nuvem do GitHub...';
-  } else if(state === 'offline') {
-    topText.textContent = '! Offline';
-    panelText.textContent = 'Status: Erro na conexão';
-    panelDetails.textContent = msg || 'Verifique sua conexão ou token do GitHub.';
-  } else {
-    topText.textContent = 'GitHub Desconectado';
-    panelText.textContent = 'Status: Não Configurado';
-    panelDetails.textContent = 'Insira seu Personal Access Token para habilitar a nuvem.';
+  if (topDot) topDot.className = 'sync-dot ' + state;
+  if (panelDot) panelDot.className = 'sync-dot ' + state;
+  const set = (a, b, c) => { if (topText) topText.textContent = a; if (panelText) panelText.textContent = b; if (panelDetails) panelDetails.textContent = c; };
+  if (state === 'online') set('✓ GitHub', 'Sincronização ativa', msg || 'Sincronizado com ' + ghRepo);
+  else if (state === 'syncing') set('↻ Sincronizando...', 'Sincronizando...', msg || 'Transferindo dados com a nuvem do GitHub...');
+  else if (state === 'offline') set('! Offline', 'Erro na conexão', msg || 'Verifique sua conexão ou token do GitHub.');
+  else set('GitHub Desconectado', 'Não configurado', 'Insira seu Personal Access Token para habilitar a nuvem.');
+}
+
+function ghHeaders(accept, extra) {
+  const h = { 'Accept': accept || 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' };
+  if (ghToken) h['Authorization'] = 'Bearer ' + ghToken;
+  return Object.assign(h, extra || {});
+}
+function ghUrl(path) { return `https://api.github.com/repos/${ghRepo}/contents/${path || GH_PATH}`; }
+function ghSaveSha(sha) { ghLastSha = sha || null; if (sha) ghLS.set('gh_last_sha', sha); else ghLS.del('gh_last_sha'); }
+function ghError(status, fallback) {
+  if (status === 401) return 'Token inválido, expirado ou revogado (401).';
+  if (status === 403) return 'Acesso negado ou limite da API atingido (403). Confira as permissões do token (Contents: Read and write).';
+  if (status === 404) return 'Repositório ou arquivo ' + GH_PATH + ' não encontrado em ' + ghRepo + ' (404).';
+  if (status === 409 || status === 422) return 'O backup remoto mudou. Baixe da nuvem e tente salvar de novo.';
+  return fallback || ('Erro na API do GitHub (' + status + ').');
+}
+function ghToBase64(str) {
+  return new Promise((resolve, reject) => {
+    const fr = new FileReader();
+    fr.onload = () => resolve(String(fr.result).split(',')[1] || '');
+    fr.onerror = () => reject(fr.error);
+    fr.readAsDataURL(new Blob([str], { type: 'application/json' }));
+  });
+}
+function ghPersistToken(token) {
+  const mode = (document.querySelector('input[name="ghStore"]:checked') || {}).value || 'local';
+  if (mode === 'session') { ghSS.set('gh_pat_token', token); ghLS.del('gh_pat_token'); }
+  else { ghLS.set('gh_pat_token', token); ghSS.del('gh_pat_token'); }
+}
+
+// Metadados (sha) do arquivo remoto. Funciona para arquivos > 1 MB.
+async function getRemoteSha() {
+  // Procura o arquivo em data/acervo.json e, se não existir, em acervo/acervo.json.
+  for (const path of [GH_PATH, ...GH_PATHS.filter(p => p !== GH_PATH)]) {
+    const res = await fetch(ghUrl(path) + '?t=' + Date.now(), { headers: ghHeaders() });
+    if (res.status === 404) continue;
+    if (!res.ok) throw new Error(ghError(res.status));
+    const meta = await res.json();
+    GH_PATH = path;
+    return meta.sha || null;
   }
-}
-
-// Utilitários de codificação Base64 com suporte total a UTF-8
-function utf8ToBase64(str) {
-  return window.btoa(unescape(encodeURIComponent(str)));
-}
-
-function base64ToUtf8(str) {
-  return decodeURIComponent(escape(window.atob(str)));
+  return null;
 }
 
 async function fetchFromGithub() {
-  if (!ghToken) return false;
+  if (ghBusy) return false;
+  ghBusy = true;
   updateSyncUI('syncing', 'Buscando acervo remoto no GitHub...');
   try {
-    const res = await fetch(`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_PATH}`, {
-      headers: {
-        'Authorization': `token ${ghToken}`,
-        'Accept': 'application/vnd.github.v3+json'
-      }
-    });
-
-    if (res.status === 404) {
-      throw new Error('Arquivo data/acervo.json não encontrado ou sem acesso. Verifique o repositório e as permissões do token antes de enviar.');
-    }
-
-    if (!res.ok) {
-      throw new Error(`Erro na API do GitHub (${res.status})`);
-    }
-
-    const data = await res.json();
-    currentFileSha = data.sha;
-    
-    // Decodifica JSON remoto com suporte a UTF-8
-    const contentUtf8 = base64ToUtf8(data.content.replace(/\n/g, ''));
-    const parsedData = JSON.parse(contentUtf8);
-    const remoteItems = Array.isArray(parsedData) ? parsedData : parsedData.items;
+    // "raw" devolve o arquivo inteiro (até 100 MB); o formato JSON padrão só traz conteúdo até 1 MB.
+    try { await getRemoteSha(); } catch (e) {}
+    const res = await fetch(ghUrl() + '?t=' + Date.now(), { headers: ghHeaders('application/vnd.github.raw+json') });
+    if (!res.ok) throw new Error(ghError(res.status));
+    const text = await res.text();
+    let parsed;
+    try { parsed = JSON.parse(text); } catch (e) { throw new Error('Arquivo remoto não é um JSON válido: acervo local preservado.'); }
+    const remoteItems = Array.isArray(parsed) ? parsed : parsed.items;
     if (!Array.isArray(remoteItems) || !remoteItems.every(x => x && typeof x.id === 'string' && typeof x.nome === 'string')) {
       throw new Error('Arquivo remoto inválido: acervo local preservado.');
     }
-    // Atualiza o IndexedDB com os dados vindos do GitHub
+    if (items.length && !confirm('Substituir as ' + items.length + ' peça(s) deste aparelho pelas ' + remoteItems.length + ' peça(s) do GitHub?')) {
+      updateSyncUI('online', 'Download cancelado. Acervo local preservado.');
+      return false;
+    }
+    let sha = null; try { sha = await getRemoteSha(); } catch (e) {}
     await new Promise((resolve, reject) => {
-      let t = db.transaction(STORE, 'readwrite'), s = t.objectStore(STORE);
+      const t = db.transaction(STORE, 'readwrite'), s = t.objectStore(STORE);
       s.clear();
       remoteItems.forEach(item => s.put(item));
       t.oncomplete = resolve;
       t.onerror = () => reject(t.error);
     });
-
+    ghSaveSha(sha);
     await refresh();
-    updateSyncUI('online', `Sincronizado com sucesso (${remoteItems.length} peças).`);
+    updateSyncUI('online', `Acervo baixado com sucesso (${remoteItems.length} peças).`);
+    toast('Acervo carregado do GitHub (' + remoteItems.length + ' peças).');
     return true;
   } catch (err) {
     console.error('Erro ao baixar do GitHub:', err);
     updateSyncUI('offline', err.message);
+    toast('Erro ao carregar do GitHub: ' + err.message);
     return false;
-  }
+  } finally { ghBusy = false; }
 }
 
 async function pushToGithub(auto = false) {
-  if (!ghToken) {
-    if (!auto) toast('Configure um Personal Access Token para sincronizar com o GitHub.');
-    return false;
-  }
-
+  if (!ghToken) { if (!auto) toast('Conecte um token do GitHub para salvar na nuvem.'); return false; }
+  if (ghBusy) return false;
+  ghBusy = true;
   updateSyncUI('syncing', 'Enviando alterações para o GitHub...');
   try {
-    if (!currentFileSha) {
-      const getRes = await fetch(`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_PATH}`, {
-        headers: {
-          'Authorization': `token ${ghToken}`,
-          'Accept': 'application/vnd.github.v3+json'
+    const allItems = await txn('readonly', s => s.getAll());
+    const remoteSha = await getRemoteSha();
+    if (remoteSha) {
+      if (!allItems.length) throw new Error('O acervo deste aparelho está vazio; envio cancelado para não apagar o backup remoto.');
+      if (remoteSha !== ghLastSha) {
+        const why = ghLastSha ? 'O backup no GitHub foi alterado depois da última sincronização deste aparelho.' : 'Já existe um backup no GitHub que ainda não foi baixado neste aparelho.';
+        if (auto) throw new Error(why + ' Baixe da nuvem ou salve manualmente.');
+        if (!confirm(why + '\n\nSobrescrever o backup remoto com as ' + allItems.length + ' peça(s) deste aparelho?')) {
+          updateSyncUI('online', 'Envio cancelado. Backup remoto preservado.');
+          return false;
         }
-      });
-      if (getRes.ok) {
-        const getData = await getRes.json();
-        currentFileSha = getData.sha;
-      } else if (getRes.status !== 404) {
-        throw new Error('Não foi possível verificar o arquivo remoto ('+getRes.status+'). Confira o acesso ao repositório.');
       }
     }
-
-    const allItems = await txn('readonly', s => s.getAll());
-    const payloadContent = utf8ToBase64(JSON.stringify(allItems, null, 2));
-
-    const bodyData = {
-      message: `Atualização de acervo via Closet da Raquel v24 (${allItems.length} peças)`,
-      content: payloadContent
-    };
-
-    if (currentFileSha) {
-      bodyData.sha = currentFileSha;
+    const body = { message: `Atualização do acervo via Closet da Raquel (${allItems.length} peças)`, content: await ghToBase64(JSON.stringify(allItems)) };
+    if (remoteSha) body.sha = remoteSha;
+    const put = await fetch(ghUrl(), { method: 'PUT', headers: ghHeaders(null, { 'Content-Type': 'application/json' }), body: JSON.stringify(body) });
+    if (!put.ok) {
+      const j = await put.json().catch(() => ({}));
+      throw new Error(put.status === 403 ? 'Permissão de gravação negada. No token fine-grained, habilite Contents: Read and write para este repositório.' : ghError(put.status, j.message));
     }
-
-    const putRes = await fetch(`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_PATH}`, {
-      method: 'PUT',
-      headers: {
-        'Authorization': `token ${ghToken}`,
-        'Content-Type': 'application/json',
-        'Accept': 'application/vnd.github.v3+json'
-      },
-      body: JSON.stringify(bodyData)
-    });
-
-    if (!putRes.ok) {
-      const errJson = await putRes.json().catch(() => ({}));
-      throw new Error(putRes.status===403 ? 'Permissão de gravação negada. No token fine-grained, habilite Contents: Read and write para este repositório.' : putRes.status===409 ? 'O acervo remoto mudou. Atualize o estado da conexão antes de enviar novamente.' : (errJson.message || `Erro no upload (${putRes.status})`));
-    }
-
-    const putResult = await putRes.json();
-    currentFileSha = putResult.content.sha;
-    ghWriteConfirmed = true;
+    const result = await put.json();
+    ghSaveSha(result.content && result.content.sha);
     updateSyncUI('online', `Salvo na nuvem do GitHub! (${allItems.length} peças)`);
     if (!auto) toast('Acervo salvo no GitHub com sucesso!');
     return true;
@@ -891,11 +884,18 @@ async function pushToGithub(auto = false) {
     updateSyncUI('offline', err.message);
     if (!auto) toast('Erro ao salvar no GitHub: ' + err.message);
     return false;
-  }
+  } finally { ghBusy = false; }
 }
 
-function toast(msg){$('toast').textContent=msg;$('toast').classList.remove('hidden');clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('toast').classList.add('hidden'),4200)}function openDB(){return new Promise((resolve,reject)=>{let r=indexedDB.open(DB,1);r.onupgradeneeded=()=>r.result.createObjectStore(STORE,{keyPath:'id'});r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)})}function txn(mode,fn){return new Promise((resolve,reject)=>{let t=db.transaction(STORE,mode),s=t.objectStore(STORE),r=fn(s);r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);t.onerror=()=>reject(t.error)})}async function refresh(){items=await txn('readonly',s=>s.getAll());render()}async function save(item){await txn('readwrite',s=>s.put(item));await refresh();if(ghToken && ghWriteConfirmed) pushToGithub(true);}async function remove(id){await txn('readwrite',s=>s.delete(id));selected.delete(id);await refresh();if(ghToken && ghWriteConfirmed) pushToGithub(true);}function go(tab){stopCamera();document.querySelectorAll('main section').forEach(s=>s.hidden=s.id!==tab);document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));if(tab==='portfolio')renderPortfolio();if(tab==='acervo')render();window.scrollTo({top:0,behavior:'smooth'})}document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.tab==='cadastro')resetForm();go(b.dataset.tab)}));
-$('heroAdd').addEventListener('click',()=>{resetForm();go('cadastro')});function el(tag,cls,text){let x=document.createElement(tag);if(cls)x.className=cls;if(text!==undefined)x.textContent=text;return x}function setOptions(id,key,all){let s=$(id),v=s.value;s.replaceChildren(new Option(all,''));[...new Set(items.map(x=>x[key]).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'pt-BR')).forEach(v=>s.add(new Option(v,v)));s.value=v}function filtered(){let q=$('search').value.toLocaleLowerCase('pt-BR').trim();let out=items.filter(x=>(!$('filterCategoria').value||(x.categoria||'Relógios')===$('filterCategoria').value)&&(!$('filterTipoRoupa').value||x.tipoRoupa===$('filterTipoRoupa').value)&&(!$('filterCor').value||x.cor===$('filterCor').value)&&(!$('filterEstilo').value||x.estilo===$('filterEstilo').value)&&((fields.some(k=>String(x[k]||'').toLocaleLowerCase('pt-BR').includes(q))||Object.values(x.detalhesCategoria||{}).some(v=>String(v).toLocaleLowerCase('pt-BR').includes(q)))||(!x.categoria&&'relógios'.includes(q))));if(dashExtraFilter)out=out.filter(x=>((dashExtraFilter.key==='subtipoSapato'?x.detalhesCategoria?.subtipoSapato:x[dashExtraFilter.key])||'Não informado')===dashExtraFilter.value);let sort=$('sort').value;out.sort((a,b)=>sort==='name'?a.nome.localeCompare(b.nome,'pt-BR'):sort==='brand'?(a.marca||'').localeCompare(b.marca||'','pt-BR'):String(b.created||b.id).localeCompare(String(a.created||a.id)));return out}function photoNode(x){let p=el('div','photo');if(x.foto){let i=el('img');i.src=x.foto;i.alt='Fotografia de '+x.nome;i.loading='lazy';p.append(i)}else {let svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox','0 0 24 24');svg.setAttribute('fill','none');svg.setAttribute('stroke','currentColor');svg.setAttribute('stroke-width','1.1');let path=document.createElementNS('http://www.w3.org/2000/svg','path');path.setAttribute('d',categoryIconPaths[x.categoria]||categoryIconPaths['Roupas']);svg.append(path);p.classList.add('photo-illustration');p.append(svg,el('small','','Ilustração • sem fotografia cadastrada'))}return p}function render(){$('statTotal').textContent=items.length;$('statFotos').textContent=items.filter(x=>x.foto).length;$('statSelected').textContent=selected.size;setOptions('filterTipoRoupa','tipoRoupa','Todos os tipos de roupa');setOptions('filterCor','cor','Todas as cores');setOptions('filterEstilo','estilo','Todos os estilos');let list=filtered();renderDashboard();$('resultCount').textContent=`${list.length} peça${list.length===1?'':'s'} encontrada${list.length===1?'':'s'}`;let g=$('gallery');g.replaceChildren();if(!list.length){let e=el('div','empty-state');e.style.gridColumn='1/-1';e.append(el('div','symbol','◷'),el('h3','',items.length?'Nenhuma peça encontrada':'Seu acervo começa aqui'),el('p','',items.length?'Tente outra busca ou ajuste os filtros.':'Cadastre sua primeira peça com uma foto e seus detalhes.'));let b=el('button','btn primary','＋ Adicionar peça');b.onclick=()=>{resetForm();go('cadastro')};e.append(b);g.append(e)}list.forEach(x=>{let card=el('article','watch');card.append(photoNode(x));let body=el('div','watch-body');body.append(el('h3','',x.nome),el('div','muted',[x.categoria||'Relógios',x.marca,x.modelo,x.numeracao&&`nº ${x.numeracao}`,x.tipoRoupa,x.tamanhoRoupa&&`Tam. ${x.tamanhoRoupa}`,x.detalhesCategoria?.subtipoSapato,x.cor].filter(Boolean).join(' · ')||'Peça da coleção'));if(x.estilo)body.append(el('span','chip',x.estilo));if(x.formato)body.append(el('span','chip',x.formato));let actions=el('div','watch-actions');let lab=el('label');let check=el('input');check.type='checkbox';check.checked=selected.has(x.id);check.onchange=()=>{check.checked?selected.add(x.id):selected.delete(x.id);$('statSelected').textContent=selected.size};lab.append(check,document.createTextNode(' Portfólio'));actions.append(lab);let buttons=el('div','toolbar');let edit=el('button','btn sm','Editar');edit.onclick=()=>editItem(x);let del=el('button','btn sm danger','Excluir');del.onclick=async()=>{if(confirm('Excluir esta peça do acervo?'))try{await remove(x.id);toast('Peça excluída.')}catch(e){toast('Não foi possível excluir.')}};buttons.append(edit,del);actions.append(buttons);body.append(actions);card.append(body);g.append(card)})}['search','filterCategoria','filterTipoRoupa','filterCor','filterEstilo','sort'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',render));document.querySelectorAll('[data-cat]').forEach(b=>b.onclick=()=>{$('filterCategoria').value=b.dataset.cat;document.querySelectorAll('[data-cat]').forEach(c=>c.classList.toggle('active',c===b));render()});$('filterCategoria').addEventListener('change',()=>document.querySelectorAll('[data-cat]').forEach(c=>c.classList.toggle('active',c.dataset.cat===$('filterCategoria').value)));$('selectVisible').onclick=()=>{filtered().forEach(x=>selected.add(x.id));render();toast('Peças exibidas selecionadas para o portfólio.')};function resetForm(){editing=null;currentPhoto='';$('suggestionBox').hidden=true;delete $('suggestionBox').dataset.suggestion;$('watchForm').reset();updateModeloLabel();$('preview').classList.add('hidden');$('removePhoto').classList.add('hidden');$('preview').removeAttribute('src');$('formTitle').textContent='Adicionar ao closet';$('cameraInput').value='';$('fileInput').value='';stopCamera()}const categorySchema={
+function scheduleAutoSync() {
+  if (!ghAuto || !ghToken) return;
+  clearTimeout(ghAutoTimer);
+  updateSyncUI('syncing', 'Alterações pendentes: envio automático em até 60 s...');
+  ghAutoTimer = setTimeout(() => pushToGithub(true), GH_AUTO_DELAY);
+}
+
+function toast(msg){$('toast').textContent=msg;$('toast').classList.remove('hidden');clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('toast').classList.add('hidden'),4200)}function openDB(){return new Promise((resolve,reject)=>{let r=indexedDB.open(DB,1);r.onupgradeneeded=()=>r.result.createObjectStore(STORE,{keyPath:'id'});r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)})}function txn(mode,fn){return new Promise((resolve,reject)=>{let t=db.transaction(STORE,mode),s=t.objectStore(STORE),r=fn(s);r.onsuccess=()=>{if(mode==='readwrite'&&typeof scheduleAutoSync==='function')scheduleAutoSync();resolve(r.result)};r.onerror=()=>reject(r.error);t.onerror=()=>reject(t.error)})}async function refresh(){items=await txn('readonly',s=>s.getAll());render()}async function save(item){await txn('readwrite',s=>s.put(item));await refresh();}async function remove(id){await txn('readwrite',s=>s.delete(id));selected.delete(id);await refresh();}function go(tab){stopCamera();document.querySelectorAll('main section').forEach(s=>s.hidden=s.id!==tab);document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));if(tab==='portfolio')renderPortfolio();if(tab==='acervo')render();window.scrollTo({top:0,behavior:'smooth'})}document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.tab==='cadastro')resetForm();go(b.dataset.tab)}));
+$('heroAdd').addEventListener('click',()=>{resetForm();go('cadastro')});function el(tag,cls,text){let x=document.createElement(tag);if(cls)x.className=cls;if(text!==undefined)x.textContent=text;return x}function setOptions(id,key,all){let s=$(id),v=s.value;s.replaceChildren(new Option(all,''));[...new Set(items.map(x=>x[key]).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'pt-BR')).forEach(v=>s.add(new Option(v,v)));s.value=v}function filtered(){let q=$('search').value.toLocaleLowerCase('pt-BR').trim();let out=items.filter(x=>(!$('filterCategoria').value||(x.categoria||'Relógios')===$('filterCategoria').value)&&(!$('filterTipoRoupa').value||x.tipoRoupa===$('filterTipoRoupa').value)&&(!$('filterCor').value||x.cor===$('filterCor').value)&&(!$('filterEstilo').value||x.estilo===$('filterEstilo').value)&&((fields.some(k=>String(x[k]||'').toLocaleLowerCase('pt-BR').includes(q))||Object.values(x.detalhesCategoria||{}).some(v=>String(v).toLocaleLowerCase('pt-BR').includes(q)))||(!x.categoria&&'relógios'.includes(q))));if(dashExtraFilter)out=out.filter(x=>dashValue(x,dashExtraFilter.key)===dashExtraFilter.value);let sort=$('sort').value;out.sort((a,b)=>sort==='name'?a.nome.localeCompare(b.nome,'pt-BR'):sort==='brand'?(a.marca||'').localeCompare(b.marca||'','pt-BR'):String(b.created||b.id).localeCompare(String(a.created||a.id)));return out}function photoNode(x){let p=el('div','photo');if(x.foto){let i=el('img');i.src=x.foto;i.alt='Fotografia de '+x.nome;i.loading='lazy';p.append(i)}else {let svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox','0 0 24 24');svg.setAttribute('fill','none');svg.setAttribute('stroke','currentColor');svg.setAttribute('stroke-width','1.1');let path=document.createElementNS('http://www.w3.org/2000/svg','path');path.setAttribute('d',categoryIconPaths[x.categoria]||categoryIconPaths['Roupas']);svg.append(path);p.classList.add('photo-illustration');p.append(svg,el('small','','Ilustração • sem fotografia cadastrada'))}return p}function render(){$('statTotal').textContent=items.length;$('statFotos').textContent=items.filter(x=>x.foto).length;$('statSelected').textContent=selected.size;setOptions('filterTipoRoupa','tipoRoupa','Todos os tipos de roupa');setOptions('filterCor','cor','Todas as cores');setOptions('filterEstilo','estilo','Todos os estilos');let list=filtered();renderDashboard();$('resultCount').textContent=`${list.length} peça${list.length===1?'':'s'} encontrada${list.length===1?'':'s'}`;let g=$('gallery');g.replaceChildren();if(!list.length){let e=el('div','empty-state');e.style.gridColumn='1/-1';e.append(el('div','symbol','◷'),el('h3','',items.length?'Nenhuma peça encontrada':'Seu acervo começa aqui'),el('p','',items.length?'Tente outra busca ou ajuste os filtros.':'Cadastre sua primeira peça com uma foto e seus detalhes.'));let b=el('button','btn primary','＋ Adicionar peça');b.onclick=()=>{resetForm();go('cadastro')};e.append(b);g.append(e)}list.forEach(x=>{let card=el('article','watch');card.append(photoNode(x));let body=el('div','watch-body');body.append(el('h3','',x.nome),el('div','muted',[x.categoria||'Relógios',x.marca,x.modelo,x.numeracao&&`nº ${x.numeracao}`,x.tipoRoupa,x.tamanhoRoupa&&`Tam. ${x.tamanhoRoupa}`,x.detalhesCategoria?.subtipoSapato,x.cor].filter(Boolean).join(' · ')||'Peça da coleção'));if(x.estilo)body.append(el('span','chip',x.estilo));if(x.formato)body.append(el('span','chip',x.formato));let actions=el('div','watch-actions');let lab=el('label');let check=el('input');check.type='checkbox';check.checked=selected.has(x.id);check.onchange=()=>{check.checked?selected.add(x.id):selected.delete(x.id);$('statSelected').textContent=selected.size};lab.append(check,document.createTextNode(' Portfólio'));actions.append(lab);let buttons=el('div','toolbar');let edit=el('button','btn sm','Editar');edit.onclick=()=>editItem(x);let del=el('button','btn sm danger','Excluir');del.onclick=async()=>{if(confirm('Excluir esta peça do acervo?'))try{await remove(x.id);toast('Peça excluída.')}catch(e){toast('Não foi possível excluir.')}};buttons.append(edit,del);actions.append(buttons);body.append(actions);card.append(body);g.append(card)})}['search','filterCategoria','filterTipoRoupa','filterCor','filterEstilo','sort'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',render));document.querySelectorAll('[data-cat]').forEach(b=>b.onclick=()=>{$('filterCategoria').value=b.dataset.cat;document.querySelectorAll('[data-cat]').forEach(c=>c.classList.toggle('active',c===b));render()});$('filterCategoria').addEventListener('change',()=>document.querySelectorAll('[data-cat]').forEach(c=>c.classList.toggle('active',c.dataset.cat===$('filterCategoria').value)));$('selectVisible').onclick=()=>{filtered().forEach(x=>selected.add(x.id));render();toast('Peças exibidas selecionadas para o portfólio.')};function resetForm(){editing=null;currentPhoto='';$('suggestionBox').hidden=true;delete $('suggestionBox').dataset.suggestion;$('watchForm').reset();updateModeloLabel();$('preview').classList.add('hidden');$('removePhoto').classList.add('hidden');$('preview').removeAttribute('src');$('formTitle').textContent='Adicionar ao closet';$('cameraInput').value='';$('fileInput').value='';stopCamera()}const categorySchema={
 'Relógios':[['movimento','Movimento','select',['','Quartzo','Automático','Manual','Digital','Smartwatch','Não sei']],['mostrador','Cor do mostrador','text'],['pulseiraMaterial','Material da pulseira','select',['','Aço','Couro','Silicone','Tecido','Metal','Outro']],['diametro','Tamanho da caixa (mm)','text'],['resistencia','Resistência à água','text'],['estado','Estado de conservação','select',['','Novo','Ótimo','Bom','Com marcas de uso']]],
 'Sapatos':[['subtipoSapato','Tipo de sapato','select',['','Scarpin','Sapatilha','Mocassim','Loafer','Oxford','Brogue','Sandália','Rasteirinha','Papete','Tamanco','Mule','Peep toe','Anabela','Espadrille','Bota de cano curto','Bota de cano médio','Bota de cano longo','Bota over the knee','Coturno','Sapato social','Outro']],['saltoAltura','Altura do salto (cm)','text'],['saltoTipo','Tipo de salto','select',['','Sem salto','Bloco','Fino','Agulha','Kitten heel','Plataforma','Anabela','Outro']],['bico','Formato do bico','select',['','Fino','Redondo','Quadrado','Aberto','Outro']],['fechamento','Fechamento','select',['','Sem fecho','Fivela','Tira','Zíper','Cadarço','Outro']],['ocasiao','Ocasião de uso','select',['','Trabalho','Casual','Festa','Social','Viagem','Versátil']],['estado','Estado de conservação','select',['','Novo','Ótimo','Bom','Com marcas de uso']]],
 'Tênis':[['uso','Finalidade','select',['','Casual','Caminhada','Corrida','Treino','Moda']],['cano','Altura do cano','select',['','Baixo','Médio','Alto']],['fechamento','Fechamento','select',['','Cadarço','Velcro','Slip-on','Outro']],['solado','Tipo / cor do solado','text'],['estado','Estado de conservação','select',['','Novo','Ótimo','Bom','Com marcas de uso']]],
@@ -938,7 +938,7 @@ const detailFields=[['Marca',x.marca],['Modelo',x.modelo],['Tipo de roupa',x.tip
 detailFields.forEach(([label,value])=>{if(value!==undefined&&value!==null&&String(value).trim()){detail.append(el('dt','',label),el('dd','',String(value)))}});Object.entries(x.detalhesCategoria||{}).forEach(([key,value])=>{const def=(categorySchema[x.categoria]||[]).find(row=>row[0]===key);if(def&&value){detail.append(el('dt','',def[1]),el('dd','',String(value)))}});if(detail.children.length)info.append(detail);
 if(x.descricao){info.append(el('div','catalog-subtitle','Descrição'),el('p','catalog-copy',x.descricao))}
 if(x.obs){info.append(el('div','catalog-subtitle','Observações'),el('p','catalog-copy',x.obs))}
-card.append(info);g.append(card)})}$('portfolioTitle').oninput=renderPortfolio;$('selectAll').onclick=()=>{items.forEach(x=>selected.add(x.id));renderPortfolio();toast('Toda a coleção foi selecionada.')};$('clearAll').onclick=()=>{selected.clear();renderPortfolio();toast('Seleção limpa.')};$('printPortfolio').onclick=()=>{renderPortfolio();if(!items.some(x=>selected.has(x.id)&&matchesPdfFilter(x))){toast('Nenhuma peça corresponde aos filtros do PDF.');return}window.print()};function download(data,name,type){let blob=new Blob([data],{type}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),3000)}$('export').onclick=()=>download(JSON.stringify({version:3,exportedAt:new Date().toISOString(),items},null,2),'atelier-acervo-backup-'+new Date().toISOString().slice(0,10)+'.json','application/json');$('importButton').onclick=()=>$('importInput').click();$('importInput').onchange=async e=>{let f=e.target.files[0];if(!f)return;try{let obj=JSON.parse(await f.text());if(!Array.isArray(obj.items)||obj.items.length>10000||!obj.items.every(x=>x&&typeof x.id==='string'&&typeof x.nome==='string'&&x.id.length<150&&x.nome.length<500))throw Error('Backup inválido.');if(!confirm(`Restaurar ${obj.items.length} peça(s)? O acervo atual será substituído.`))return;await new Promise((resolve,reject)=>{let t=db.transaction(STORE,'readwrite'),s=t.objectStore(STORE);s.clear();obj.items.forEach(x=>s.put(x));t.oncomplete=resolve;t.onerror=()=>reject(t.error)});selected.clear();await refresh();go('acervo');toast('Backup restaurado com sucesso.'); if(ghToken && ghWriteConfirmed) pushToGithub(true);}catch(err){toast('Erro na importação: '+err.message)}finally{e.target.value=''}};
+card.append(info);g.append(card)})}$('portfolioTitle').oninput=renderPortfolio;$('selectAll').onclick=()=>{items.forEach(x=>selected.add(x.id));renderPortfolio();toast('Toda a coleção foi selecionada.')};$('clearAll').onclick=()=>{selected.clear();renderPortfolio();toast('Seleção limpa.')};$('printPortfolio').onclick=()=>{renderPortfolio();if(!items.some(x=>selected.has(x.id)&&matchesPdfFilter(x))){toast('Nenhuma peça corresponde aos filtros do PDF.');return}window.print()};function download(data,name,type){let blob=new Blob([data],{type}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),3000)}$('export').onclick=()=>download(JSON.stringify({version:3,exportedAt:new Date().toISOString(),items},null,2),'atelier-acervo-backup-'+new Date().toISOString().slice(0,10)+'.json','application/json');$('importButton').onclick=()=>$('importInput').click();$('importInput').onchange=async e=>{let f=e.target.files[0];if(!f)return;try{let obj=JSON.parse(await f.text());if(Array.isArray(obj))obj={items:obj};if(!obj||!Array.isArray(obj.items)||obj.items.length>10000||!obj.items.every(x=>x&&typeof x.id==='string'&&typeof x.nome==='string'&&x.id.length<150&&x.nome.length<500))throw Error('Backup inválido.');if(!confirm(`Restaurar ${obj.items.length} peça(s)? O acervo atual será substituído.`))return;await new Promise((resolve,reject)=>{let t=db.transaction(STORE,'readwrite'),s=t.objectStore(STORE);s.clear();obj.items.forEach(x=>s.put(x));t.oncomplete=resolve;t.onerror=()=>reject(t.error)});selected.clear();await refresh();go('acervo');toast('Backup restaurado com sucesso.'); }catch(err){toast('Erro na importação: '+err.message)}finally{e.target.value=''}};
 function researchQuery(){return [document.getElementById('marca').value,document.getElementById('modelo').value,document.getElementById('referencia').value,document.getElementById('fabricante').value,document.getElementById('cor').value,document.getElementById('categoria').value,'identificação características referência especificações'].filter(Boolean).join(' ')}
 $('webSearch').onclick=()=>{let q=researchQuery();window.open('https://www.google.com/search?q='+encodeURIComponent(q),'_blank','noopener,noreferrer');toast('Pesquisa aberta. Confira as fontes antes de atualizar o cadastro.')};
 $('lensSearch').onclick=()=>{window.open('https://lens.google.com/','_blank','noopener,noreferrer');toast('No Google Lens, envie a foto da peça para pesquisar imagens semelhantes.')};
@@ -947,47 +947,80 @@ $('suggestDescription').onclick=()=>{let parts=[$('categoria').value==='Relógio
 $('reviewSuggestions').onclick=()=>{let suggestion=$('suggestionBox').dataset.suggestion;if(!suggestion){toast('Primeiro gere uma descrição sugerida.');return}if(confirm('Aplicar esta descrição ao cadastro? Ela foi composta apenas com os dados informados, sem validação externa.')){$('descricao').value=suggestion;toast('Descrição aplicada. Salve a peça para confirmar.')}};
 
 // Eventos da Aba GitHub
+async function ghListRepos(H) {
+  try { const r = await fetch('https://api.github.com/user/repos?per_page=100&sort=updated', { headers: H }); return r.ok ? await r.json() : []; }
+  catch (e) { return []; }
+}
 $('saveGhTokenBtn').onclick = async () => {
   const token = ($('ghTokenInput').value || ghToken).replace(/\s+/g, '').trim();
   if (!/^(ghp_|github_pat_)[A-Za-z0-9_]+$/.test(token)) {
-    toast('Token inválido. Cole o token completo, sem espaços. Use um token novo e não o compartilhe.');
+    toast('Token inválido. Cole o token completo (ghp_… ou github_pat_…), sem espaços.');
     return;
   }
-  const btn=$('saveGhTokenBtn');btn.disabled=true;
-  updateSyncUI('syncing','Validando token e acesso ao repositório, sem alterar seu acervo...');
+  const btn = $('saveGhTokenBtn'); btn.disabled = true;
+  updateSyncUI('syncing', 'Validando token e acesso ao repositório, sem alterar seu acervo...');
   try {
-    const headers={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'};
-    const userRes=await fetch('https://api.github.com/user',{headers});
-    if(!userRes.ok)throw new Error(userRes.status===401?'Token inválido ou revogado.':'Falha ao validar token ('+userRes.status+').');
-    const repoRes=await fetch('https://api.github.com/repos/'+GH_OWNER+'/'+GH_REPO,{headers});
-    if(!repoRes.ok)throw new Error(repoRes.status===404?'Repositório inacessível. Autorize rcpmoraes/closet-da-raquel no token.':'Acesso ao repositório negado ('+repoRes.status+').');
-    const repo=await repoRes.json();
-    const contentRes=await fetch('https://api.github.com/repos/'+GH_OWNER+'/'+GH_REPO+'/contents/'+GH_PATH,{headers});
-    if(contentRes.status===200){const file=await contentRes.json();currentFileSha=file.sha;}
-    else if(contentRes.status===404){currentFileSha=null;}
-    else throw new Error('Sem acesso ao arquivo do acervo ('+contentRes.status+').');
-    ghToken=token;
-    ghWriteConfirmed=false;
-    localStorage.setItem('gh_pat_token',token);
-    updateSyncUI('online','Token validado para leitura. '+(currentFileSha?'Arquivo remoto encontrado.':'Arquivo remoto ainda não existe.')+' Para gravar, o token precisa de Contents: Read and write.');
+    const H = { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' };
+    const userRes = await fetch('https://api.github.com/user', { headers: H });
+    if (!userRes.ok) throw new Error(userRes.status === 401 ? 'Token inválido ou revogado.' : 'Falha ao validar token (' + userRes.status + ').');
+    const user = await userRes.json();
+    let name = ($('ghRepoInput').value || '').trim().replace(/^https?:\/\/github\.com\//i, '').replace(/\/+$/, '');
+    if (!name || name.toLowerCase() === 'auto') {
+      const list = await ghListRepos(H);
+      const found = list.find(r => r.name.toLowerCase() === 'closet-da-raquel') || list.find(r => /closet/i.test(r.name));
+      if (!found) throw new Error('Não encontrei o repositório do closet entre os acessíveis pelo token.' + (list.length ? '\nVisíveis: ' + list.slice(0, 8).map(r => r.full_name).join(', ') : '') + '\nDigite usuario/repositório.');
+      name = found.full_name;
+    }
+    const repoRes = await fetch('https://api.github.com/repos/' + name, { headers: H });
+    if (!repoRes.ok) {
+      if (repoRes.status === 404) {
+        const list = await ghListRepos(H);
+        throw new Error('Repositório ' + name + ' não encontrado ou sem acesso para este token.' + (list.length ? '\nVisíveis: ' + list.slice(0, 8).map(r => r.full_name).join(', ') : ''));
+      }
+      throw new Error('Acesso ao repositório negado (' + repoRes.status + ').');
+    }
+    const repo = await repoRes.json();
+    ghToken = token; ghRepo = repo.full_name;
+    ghPersistToken(token); ghLS.set('gh_repo', ghRepo);
+    $('ghRepoInput').value = ghRepo; $('ghTokenInput').value = ''; $('ghTokenInput').type = 'password';
+    let sha = null; try { sha = await getRemoteSha(); } catch (e) {}
+    const canWrite = !repo.permissions || repo.permissions.push;
+    updateSyncUI('online', 'Conectado com sucesso!\nConta: ' + user.login + ' · Repositório: ' + repo.full_name + ' (' + (repo.private ? 'privado' : 'público') + ').\n' +
+      (sha ? 'Backup remoto localizado (SHA ' + sha.slice(0, 7) + '). Pronto para Baixar ou Salvar na nuvem.' : 'Ainda não há backup em ' + GH_PATH + '. Use Salvar na nuvem para criá-lo.') +
+      (canWrite ? '' : '\nAtenção: este token não tem permissão de escrita (Contents: Read and write).'));
     toast('Conexão validada. Nenhum cadastro foi substituído.');
-    $('ghTokenInput').value='';
-  } catch(err){
-    updateSyncUI('offline',err.message);
-    toast(err.message);
-  } finally{btn.disabled=false;}
+  } catch (err) {
+    updateSyncUI('offline', err.message);
+    toast(err.message.split('\n')[0]);
+  } finally { btn.disabled = false; }
 };
 $('removeGhTokenBtn').onclick = () => {
   ghToken = '';
-  ghWriteConfirmed = false;
-  localStorage.removeItem('gh_pat_token');
+  clearTimeout(ghAutoTimer);
+  ghLS.del('gh_pat_token'); ghSS.del('gh_pat_token');
   $('ghTokenInput').value = '';
   updateSyncUI('disconnected');
-  toast('Token removido.');
+  toast('Token removido deste aparelho.');
 };
-
+$('ghToggleToken').onclick = () => { const i = $('ghTokenInput'); i.type = i.type === 'password' ? 'text' : 'password'; };
+document.querySelectorAll('input[name="ghStore"]').forEach(r => r.addEventListener('change', () => { if (ghToken) ghPersistToken(ghToken); }));
+$('ghAutoInput').addEventListener('change', e => {
+  ghAuto = e.target.checked; ghLS.set('gh_auto', ghAuto ? '1' : '0');
+  if (!ghAuto) { clearTimeout(ghAutoTimer); if (ghToken) updateSyncUI('online', 'Sincronização automática desligada.'); }
+  toast(ghAuto ? 'Sincronização automática ligada (envia 60 s após a última alteração).' : 'Sincronização automática desligada.');
+});
 $('pushToGithubBtn').onclick = () => pushToGithub(false);
 $('pullFromGithubBtn').onclick = () => fetchFromGithub();
+
+// Estado inicial da aba
+(function ghInitUI() {
+  $('ghRepoInput').value = ghRepo;
+  $('ghAutoInput').checked = ghAuto;
+  const inSession = !!ghSS.get('gh_pat_token');
+  const radio = document.querySelector('input[name="ghStore"][value="' + (inSession ? 'session' : 'local') + '"]'); if (radio) radio.checked = true;
+  if (ghToken) updateSyncUI('online', 'Token salvo ' + (inSession ? 'nesta sessão' : 'neste navegador') + '. Repositório: ' + ghRepo + '.\nUse Baixar da nuvem ou Salvar na nuvem.');
+  else updateSyncUI('disconnected');
+})();
 
 async function init(){try{db=await openDB();let legacy=JSON.parse(localStorage.getItem('acervo-relogios-v1')||'[]');let existing=await txn('readonly',s=>s.getAll());if(!existing.length&&Array.isArray(legacy)&&legacy.length){for(let x of legacy)await txn('readwrite',s=>s.put(x));toast('Coleção anterior recuperada.')}await refresh(); if(ghToken) { updateSyncUI('disconnected','Token encontrado neste navegador. Clique em Salvar & Conectar Token para revalidar, sem precisar colá-lo novamente.'); } else { updateSyncUI('disconnected'); }}catch(e){toast('Armazenamento indisponível. Abra no navegador normal e habilite o armazenamento local.')}}init();
 
@@ -1010,7 +1043,15 @@ document.getElementById('printAll').addEventListener('click',()=>{
 
 
 
-function dashGroup(rows,key){const groups=new Map();rows.forEach(x=>{let v=key==='categoria'?(x.categoria||'Relógios'):(key==='subtipoSapato'?(x.detalhesCategoria?.subtipoSapato||'Não informado'):(x[key]||'Não informado'));groups.set(v,(groups.get(v)||0)+1)});return [...groups].sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0],'pt-BR'))}
+function dashCap(v){v=String(v||'').trim();return v?v.charAt(0).toLocaleUpperCase('pt-BR')+v.slice(1).toLocaleLowerCase('pt-BR'):''}
+function dashValue(x,key){
+ if(key==='categoria')return x.categoria||'Relógios';
+ if(key==='subtipoSapato')return x.detalhesCategoria?.subtipoSapato||'Não informado';
+ if(key.startsWith('d:'))return dashCap(x.detalhesCategoria?.[key.slice(2)])||'Não informado';
+ if(key==='cor')return dashCap(x.cor)||'Não informado';
+ return x[key]||'Não informado';
+}
+function dashGroup(rows,key){const groups=new Map();rows.forEach(x=>{const v=dashValue(x,key);groups.set(v,(groups.get(v)||0)+1)});return [...groups].sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0],'pt-BR'))}
 function dashBarChart(target,groups,max,click,active){
  target.replaceChildren();if(!groups.length){target.append(el('p','muted','Nenhum dado para os filtros atuais.'));return}
  groups.forEach(([name,count])=>{const btn=el('button','dash-bar'+(active===name?' is-active':''));btn.type='button';btn.setAttribute('aria-label',name+': '+count+' peças');const label=el('span','dash-bar-name',name),track=el('span','dash-track'),fill=el('span','dash-fill'),n=el('span','dash-count',String(count));fill.style.width=(max?Math.max(4,count/max*100):0)+'%';track.append(fill);btn.append(label,track,n);btn.onclick=()=>click(name);target.append(btn)})
@@ -1035,6 +1076,19 @@ function renderVisualCharts(rows){
  $('dashPhotoPercent').textContent=pct+'%';$('dashPhotoCount').textContent=photos+' de '+photoTotal;$('dashPhotoMissing').textContent=(photoTotal-photos)+' sem fotografia';
 }
 
+let dashBreakdownUserChose=false;
+function ensureBreakdownOptions(){
+ const sel=$('dashBreakdown');if(!sel)return;
+ const labels={comprimento:'Comprimento',modelagem:'Modelagem',estampa:'Estampa',manga:'Manga',ocasiao:'Ocasião',gola:'Gola',tecido:'Tecido'};
+ const keys=new Set();items.forEach(x=>Object.keys(x.detalhesCategoria||{}).forEach(k=>{if(k!=='subtipoSapato'&&x.detalhesCategoria[k])keys.add(k)}));
+ [...keys].sort((a,b)=>a.localeCompare(b,'pt-BR')).forEach(k=>{
+  if(![...sel.options].some(o=>o.value==='d:'+k)){const o=document.createElement('option');o.value='d:'+k;o.textContent=labels[k]||dashCap(k.replace(/([A-Z])/g,' $1'));sel.append(o)}
+ });
+ if(!dashBreakdownUserChose&&items.length){
+  const hasData=k=>items.some(x=>dashValue(x,k)!=='Não informado');
+  if(!hasData(sel.value)){const pick=['cor',...[...sel.options].map(o=>o.value)].find(k=>[...sel.options].some(o=>o.value===k)&&hasData(k));if(pick)sel.value=pick}
+ }
+}
 function renderDashboard(){
  const rows=filtered(),total=items.length,photos=rows.filter(x=>!!x.foto).length;
  renderVisualCharts(rows);
@@ -1043,14 +1097,15 @@ function renderDashboard(){
  const kpis=$('dashKpis');kpis.replaceChildren();stats.forEach(([name,value])=>{const box=el('div','dash-kpi');box.append(el('strong','',String(value)),el('span','',name));kpis.append(box)});
  const cats=dashGroup(rows,'categoria'),catMax=Math.max(1,...cats.map(x=>x[1]));
 
+ ensureBreakdownOptions();
  const key=$('dashBreakdown').value;
- const detailRows=rows.filter(x=>(key!=='tipoRoupa'||(x.categoria||'Relógios')==='Roupas')&&(key!=='subtipoSapato'||x.categoria==='Sapatos'));
+ const detailRows=rows.filter(x=>(key!=='tipoRoupa'||(x.categoria||'Relógios')==='Roupas')&&(key!=='subtipoSapato'||x.categoria==='Sapatos')&&(!key.startsWith('d:')||(x.detalhesCategoria&&x.detalhesCategoria[key.slice(2)])));
  const details=dashGroup(detailRows,key),max=Math.max(1,...details.map(x=>x[1]));
  dashBarChart($('dashDetailChart'),details,max,(name)=>{
-  if(['cor','estilo'].includes(key)){const select=$(key==='cor'?'filterCor':'filterEstilo');select.value=select.value===name?'':name;dashExtraFilter=null}
+  if(key==='estilo'){const select=$('filterEstilo');select.value=select.value===name?'':name;dashExtraFilter=null}
   else dashExtraFilter=(dashExtraFilter&&dashExtraFilter.key===key&&dashExtraFilter.value===name)?null:{key,value:name};
   render()
- },dashExtraFilter?.key===key?dashExtraFilter.value:(['cor','estilo'].includes(key)?$(key==='cor'?'filterCor':'filterEstilo').value:''));
+ },dashExtraFilter?.key===key?dashExtraFilter.value:(key==='estilo'?$('filterEstilo').value:''));
  renderFilterChips();$('dashFoot').textContent='Exibindo '+rows.length+' de '+total+' peças cadastradas. '+(total?Math.round(photos/Math.max(rows.length,1)*100)+'% das peças filtradas têm foto.':'Cadastre sua primeira peça para começar.')+(dashExtraFilter?' Filtro adicional: '+dashExtraFilter.value+'.':'');
 }
 function renderFilterChips(){
@@ -1059,7 +1114,7 @@ function renderFilterChips(){
  filters.forEach(([id,label])=>{const value=$(id).value;if(!value)return;const b=el('button','active-chip',label+': '+value+' ×');b.type='button';b.title='Remover filtro '+label;b.onclick=()=>{$(id).value='';render()};root.append(b)});
  if(dashExtraFilter){const b=el('button','active-chip','Detalhe: '+dashExtraFilter.value+' ×');b.type='button';b.onclick=()=>{dashExtraFilter=null;render()};root.append(b)}
 }
-$('dashBreakdown').addEventListener('change',()=>{dashExtraFilter=null;renderDashboard()});
+$('dashBreakdown').addEventListener('change',()=>{dashBreakdownUserChose=true;dashExtraFilter=null;renderDashboard()});
 $('dashReset').addEventListener('click',()=>{$('search').value='';['filterCategoria','filterTipoRoupa','filterCor','filterEstilo'].forEach(id=>$(id).value='');dashExtraFilter=null;render()});
 
 const categoryIconPaths={"Roupas": "M12 3l3 3 4 1 2 5-4 2-2-2v10H9V12l-2 2-4-2 2-5 4-1z", "Sapatos": "M3 16c3 0 5-2 6-6l3 2 2 3 7 2v4H3z", "Tênis": "M2 17l5-6 5 4 8 2 2 3H2z M7 14l2-2 M10 16l2-2", "Relógios": "M9 2h6l1 4H8z M8 18h8l-1 4H9z M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10z M12 9v3l2 1", "Anéis": "M12 10a6 6 0 1 0 0 12 6 6 0 0 0 0-12z M9 8l3-5 3 5-3 3z", "Joias": "M12 3l8 7-8 11-8-11z M4 10h16 M9 3l-2 7 5 11 5-11-2-7", "Pulseiras": "M6 6c-5 5-5 11 0 13s7 2 12-3 4-11 0-13-7-2-12 3z", "Colares": "M3 4c1 9 4 13 9 14 5-1 8-5 9-14 M12 18l-3-4 3-3 3 3z"};
@@ -1211,13 +1266,16 @@ window.addEventListener('pageshow',renderVisualCategories);
 
    const vl={auto:['▣','Auto'],mobile:['▯','Celular'],desktop:['▤','Desktop']}[v]||['▣','Auto'];
 
-   view.querySelector('.control-icon').textContent=vl[0];view.querySelector('.control-text').textContent=vl[1];view.dataset.choice=v;
+   // applyMode() (script anterior) sobrescreve o texto do botão e apaga os <span>; recria se necessário.
+   let ic=view.querySelector('.control-icon'),tx=view.querySelector('.control-text');
+   if(!ic||!tx){view.innerHTML='<span class="control-icon" aria-hidden="true">▣</span><span class="control-text">Auto</span>';ic=view.querySelector('.control-icon');tx=view.querySelector('.control-text');}
+   ic.textContent=vl[0];tx.textContent=vl[1];view.dataset.choice=v;
 
    view.title='Visualização selecionada: '+vl[1];
    view.setAttribute('aria-label',view.title+'; clique para alterar');
    const name=select.options[select.selectedIndex]?.text||'Esmeralda';
    pal.title='Paleta selecionada: '+name;
-   pal.querySelector('.palette-dot').style.background={esmeralda:'#174C3A',verde:'#278348',safira:'#194E82',terracota:'#8C4635',grafite:'#344E46'}[select.value]||'#174C3A';
+   const dot=pal.querySelector('.palette-dot');if(dot)dot.style.background={esmeralda:'#174C3A',verde:'#278348',safira:'#194E82',terracota:'#8C4635',grafite:'#344E46'}[select.value]||'#174C3A';
  }
  new MutationObserver(refresh).observe(root,{attributes:true,attributeFilter:['data-view','data-theme','data-palette']});
  select.addEventListener('change',refresh);
