@@ -1858,4 +1858,709 @@ function attach(){
 if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', attach);
 else attach();
 })();
-</script></body></html>
+</script>
+<style id="animated-showcase-modes-v58">
+/* v58 — Três modos de exibição na galeria: Linha Vertical Animada, Linha Horizontal Animada e Grade */
+.vscroll-controls-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 10px 14px;
+  margin-bottom: 14px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+}
+.vscroll-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.vscroll-pulse {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: inline-block;
+  box-shadow: 0 0 0 3px var(--soft);
+  animation: pulseBeacon 1.6s infinite ease-in-out;
+}
+.vscroll-pulse.paused {
+  background: var(--muted);
+  opacity: 0.55;
+  box-shadow: none;
+  animation: none;
+}
+@keyframes pulseBeacon {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 2px var(--soft); }
+  50% { transform: scale(1.25); box-shadow: 0 0 0 6px var(--soft); }
+}
+.vscroll-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.vscroll-mode-switcher {
+  display: inline-flex;
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 2px;
+  gap: 2px;
+}
+.vscroll-btn {
+  border: 1px solid var(--line);
+  background: var(--soft);
+  color: var(--ink);
+  border-radius: 8px;
+  padding: 6px 11px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  user-select: none;
+  transition: all 0.18s ease;
+}
+.vscroll-mode-switcher .vscroll-btn {
+  border: 0;
+  background: transparent;
+  padding: 5px 10px;
+}
+.vscroll-btn:hover {
+  border-color: var(--accent);
+}
+.vscroll-btn.active {
+  background: var(--accent) !important;
+  color: #ffffff !important;
+  border-color: var(--accent) !important;
+}
+.vscroll-speed-select {
+  width: auto !important;
+  min-height: 32px !important;
+  height: 32px !important;
+  padding: 4px 10px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+}
+
+/* Animação da trilha luminosa (Vertical e Horizontal) */
+@keyframes flowVerticalLine {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 48px; }
+}
+@keyframes flowHorizontalLine {
+  0% { background-position: 0 0; }
+  100% { background-position: 48px 0; }
+}
+@keyframes cardEntrance {
+  from { opacity: 0.75; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* =========================================================
+   MODO 1: LINHA VERTICAL ANIMADA (#gallery.vscroll-line-mode)
+   ========================================================= */
+#gallery.vscroll-line-mode {
+  display: flex !important;
+  flex-direction: column !important;
+  grid-template-columns: none !important;
+  gap: 14px !important;
+  max-height: 68vh;
+  min-height: 360px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 16px 16px 16px 36px !important;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  position: relative;
+  scroll-behavior: auto;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+  user-select: none;
+  box-shadow: inset 0 2px 12px rgba(0,0,0,0.03);
+}
+#gallery.vscroll-line-mode.is-dragging {
+  cursor: grabbing;
+}
+#gallery.vscroll-line-mode::-webkit-scrollbar {
+  width: 8px;
+}
+#gallery.vscroll-line-mode::-webkit-scrollbar-track {
+  background: var(--soft);
+  border-radius: 10px;
+}
+#gallery.vscroll-line-mode::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 10px;
+}
+
+#gallery.vscroll-line-mode .watch {
+  display: grid !important;
+  grid-template-columns: 155px minmax(0, 1fr) !important;
+  align-items: stretch;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 15px !important;
+  border: 1.5px solid var(--line) !important;
+  background: var(--paper) !important;
+  transition: transform 0.25s cubic-bezier(.2,.8,.2,1), box-shadow 0.25s ease, border-color 0.2s ease, background-color 0.2s ease;
+  animation: cardEntrance 0.3s ease;
+  cursor: pointer;
+  overflow: visible !important;
+}
+#gallery.vscroll-line-mode .watch:hover {
+  transform: translateX(4px) scale(1.008);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.08) !important;
+}
+/* Linha vertical animada contínua à esquerda dos cartões */
+#gallery.vscroll-line-mode .watch::before {
+  content: '';
+  position: absolute;
+  left: -21px;
+  top: -9px;
+  bottom: -9px;
+  width: 3px;
+  border-radius: 3px;
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--accent) 0px,
+    var(--accent) 12px,
+    var(--line) 12px,
+    var(--line) 24px
+  );
+  background-size: 3px 48px;
+  animation: flowVerticalLine 1.4s linear infinite;
+  pointer-events: none;
+}
+#gallery.vscroll-line-mode.is-paused .watch::before {
+  animation-play-state: paused;
+}
+/* Nó/Marcador pulsante na linha vertical */
+#gallery.vscroll-line-mode .watch::after {
+  content: '';
+  position: absolute;
+  left: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2.5px solid var(--accent);
+  box-shadow: 0 0 0 3px var(--soft);
+  pointer-events: none;
+  transition: transform 0.22s ease, background-color 0.22s ease, box-shadow 0.22s ease;
+}
+#gallery.vscroll-line-mode .watch:hover::after,
+#gallery.vscroll-line-mode .watch.is-selected::after {
+  background: var(--accent);
+  transform: translateY(-50%) scale(1.35);
+  box-shadow: 0 0 0 5px var(--soft);
+}
+#gallery.vscroll-line-mode .watch .photo {
+  height: 155px !important;
+  border-radius: 13px 0 0 13px;
+  overflow: hidden;
+}
+#gallery.vscroll-line-mode .watch .watch-body {
+  padding: 15px 18px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+}
+#gallery.vscroll-line-mode .watch h3 {
+  font-size: 18px !important;
+  margin: 0 0 4px !important;
+}
+
+/* ============================================================
+   MODO 2: LINHA HORIZONTAL ANIMADA (#gallery.hscroll-line-mode)
+   ============================================================ */
+#gallery.hscroll-line-mode {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  grid-template-columns: none !important;
+  gap: 16px !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 34px 18px 18px 18px !important;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  position: relative;
+  scroll-behavior: auto;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+  user-select: none;
+  box-shadow: inset 0 2px 12px rgba(0,0,0,0.03);
+  align-items: stretch;
+}
+#gallery.hscroll-line-mode.is-dragging {
+  cursor: grabbing;
+}
+#gallery.hscroll-line-mode::-webkit-scrollbar {
+  height: 8px;
+}
+#gallery.hscroll-line-mode::-webkit-scrollbar-track {
+  background: var(--soft);
+  border-radius: 10px;
+}
+#gallery.hscroll-line-mode::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 10px;
+}
+#gallery.hscroll-line-mode .watch {
+  flex: 0 0 255px !important;
+  width: 255px !important;
+  max-width: 78vw;
+  display: flex !important;
+  flex-direction: column !important;
+  position: relative;
+  border-radius: 15px !important;
+  border: 1.5px solid var(--line) !important;
+  background: var(--paper) !important;
+  transition: transform 0.25s cubic-bezier(.2,.8,.2,1), box-shadow 0.25s ease, border-color 0.2s ease, background-color 0.2s ease;
+  animation: cardEntrance 0.3s ease;
+  cursor: pointer;
+  overflow: visible !important;
+}
+#gallery.hscroll-line-mode .watch:hover {
+  transform: translateY(-5px) scale(1.015);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.09) !important;
+}
+/* Linha horizontal animada contínua no topo dos cartões */
+#gallery.hscroll-line-mode .watch::before {
+  content: '';
+  position: absolute;
+  top: -19px;
+  left: -10px;
+  right: -10px;
+  height: 3px;
+  border-radius: 3px;
+  background: repeating-linear-gradient(
+    to right,
+    var(--accent) 0px,
+    var(--accent) 12px,
+    var(--line) 12px,
+    var(--line) 24px
+  );
+  background-size: 48px 3px;
+  animation: flowHorizontalLine 1.4s linear infinite;
+  pointer-events: none;
+}
+#gallery.hscroll-line-mode.is-paused .watch::before {
+  animation-play-state: paused;
+}
+/* Nó/Marcador pulsante na linha horizontal */
+#gallery.hscroll-line-mode .watch::after {
+  content: '';
+  position: absolute;
+  top: -23px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2.5px solid var(--accent);
+  box-shadow: 0 0 0 3px var(--soft);
+  pointer-events: none;
+  transition: transform 0.22s ease, background-color 0.22s ease, box-shadow 0.22s ease;
+}
+#gallery.hscroll-line-mode .watch:hover::after,
+#gallery.hscroll-line-mode .watch.is-selected::after {
+  background: var(--accent);
+  transform: translateX(-50%) scale(1.35);
+  box-shadow: 0 0 0 5px var(--soft);
+}
+#gallery.hscroll-line-mode .watch .photo {
+  height: 195px !important;
+  border-radius: 13px 13px 0 0;
+  overflow: hidden;
+}
+#gallery.hscroll-line-mode .watch .watch-body {
+  padding: 14px !important;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Destaque de Peça Selecionada em Todos os Modos (Vertical, Horizontal e Grade) */
+.watch.is-selected {
+  border-color: var(--accent) !important;
+  background: var(--soft) !important;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08) !important;
+  outline: 2px solid var(--accent);
+}
+
+@media (max-width: 600px) {
+  #gallery.vscroll-line-mode {
+    padding: 12px 10px 12px 26px !important;
+    max-height: 64vh;
+  }
+  #gallery.vscroll-line-mode .watch {
+    grid-template-columns: 108px minmax(0, 1fr) !important;
+  }
+  #gallery.vscroll-line-mode .watch .photo {
+    height: 132px !important;
+  }
+  #gallery.vscroll-line-mode .watch .watch-body {
+    padding: 11px 12px !important;
+  }
+  #gallery.vscroll-line-mode .watch h3 {
+    font-size: 15px !important;
+  }
+  #gallery.vscroll-line-mode .watch::before {
+    left: -15px;
+  }
+  #gallery.vscroll-line-mode .watch::after {
+    left: -19px;
+  }
+  #gallery.hscroll-line-mode .watch {
+    flex: 0 0 215px !important;
+    width: 215px !important;
+  }
+  #gallery.hscroll-line-mode .watch .photo {
+    height: 165px !important;
+  }
+}
+@media print {
+  .vscroll-controls-bar { display: none !important; }
+}
+</style>
+<script id="animated-showcase-script-v58">
+(function(){
+'use strict';
+const gallery = document.getElementById('gallery');
+if (!gallery) return;
+
+// Modos disponíveis: 'vertical' (Linha Vertical Animada), 'horizontal' (Linha Horizontal Animada), 'grid' (Grade)
+let displayMode = 'vertical';
+let autoPlay = true;
+let userInteracting = false;
+let resumeTimer = null;
+let speedPxPerFrame = 0.68;
+let direction = 1; // 1 = avança (desce ou vai p/ direita), -1 = volta (sobe ou vai p/ esquerda)
+let fracScroll = 0;
+
+// Cria barra de controle completa acima da galeria
+const controlsBar = document.createElement('div');
+controlsBar.className = 'vscroll-controls-bar hideprint';
+controlsBar.innerHTML =
+  '<div class="vscroll-status">' +
+    '<span class="vscroll-pulse" id="vscrollPulse"></span>' +
+    '<span id="vscrollStatusText">Linha Vertical Animada · Rolagem Automática</span>' +
+    '<small class="muted" style="font-weight:400;margin-left:4px">(Clique ou toque num item para selecionar)</small>' +
+  '</div>' +
+  '<div class="vscroll-btn-group">' +
+    '<button type="button" class="vscroll-btn" id="vscrollPrevBtn" title="Retroceder">▲ Subir</button>' +
+    '<button type="button" class="vscroll-btn active" id="vscrollTogglePlayBtn" title="Pausar ou retomar rolagem automática">⏸ Pausar</button>' +
+    '<button type="button" class="vscroll-btn" id="vscrollNextBtn" title="Avançar">▼ Descer</button>' +
+    '<select id="vscrollSpeedSel" class="vscroll-speed-select" aria-label="Velocidade da rolagem">' +
+      '<option value="0.38">Vel. Lenta</option>' +
+      '<option value="0.68" selected>Vel. Normal</option>' +
+      '<option value="1.25">Vel. Rápida</option>' +
+    '</select>' +
+    '<div class="vscroll-mode-switcher" role="group" aria-label="Modo de exibição dos itens">' +
+      '<button type="button" class="vscroll-btn active" data-showcase-mode="vertical" title="Linha Vertical com Rolagem Automática">↕ Linha Vertical</button>' +
+      '<button type="button" class="vscroll-btn" data-showcase-mode="horizontal" title="Linha Horizontal com Rolagem Automática">↔ Linha Horizontal</button>' +
+      '<button type="button" class="vscroll-btn" data-showcase-mode="grid" title="Visualização em Grade">⊞ Grade</button>' +
+    '</div>' +
+  '</div>';
+
+gallery.parentNode.insertBefore(controlsBar, gallery);
+
+const pulseEl = document.getElementById('vscrollPulse');
+const statusTextEl = document.getElementById('vscrollStatusText');
+const playBtn = document.getElementById('vscrollTogglePlayBtn');
+const prevBtn = document.getElementById('vscrollPrevBtn');
+const nextBtn = document.getElementById('vscrollNextBtn');
+const speedSel = document.getElementById('vscrollSpeedSel');
+const modeButtons = controlsBar.querySelectorAll('[data-showcase-mode]');
+
+function applyDisplayMode(mode) {
+  displayMode = ['vertical', 'horizontal', 'grid'].includes(mode) ? mode : 'vertical';
+  gallery.classList.toggle('vscroll-line-mode', displayMode === 'vertical');
+  gallery.classList.toggle('hscroll-line-mode', displayMode === 'horizontal');
+  direction = 1;
+  fracScroll = displayMode === 'horizontal' ? gallery.scrollLeft : gallery.scrollTop;
+  updateStatusUI();
+}
+
+function updateStatusUI() {
+  const isLine = displayMode === 'vertical' || displayMode === 'horizontal';
+  const running = isLine && autoPlay && !userInteracting;
+  gallery.classList.toggle('is-paused', !running);
+  if (pulseEl) pulseEl.classList.toggle('paused', !running);
+
+  // Atualiza rótulos dos botões de direção conforme o eixo (Vertical vs Horizontal)
+  if (prevBtn && nextBtn) {
+    if (displayMode === 'horizontal') {
+      prevBtn.textContent = '◀ Esquerda';
+      nextBtn.textContent = 'Direita ▶';
+    } else {
+      prevBtn.textContent = '▲ Subir';
+      nextBtn.textContent = '▼ Descer';
+    }
+    prevBtn.style.display = isLine ? '' : 'none';
+    nextBtn.style.display = isLine ? '' : 'none';
+    playBtn.style.display = isLine ? '' : 'none';
+    speedSel.style.display = isLine ? '' : 'none';
+  }
+
+  if (statusTextEl) {
+    const modeLabel = displayMode === 'vertical'
+      ? 'Linha Vertical Animada'
+      : displayMode === 'horizontal'
+        ? 'Linha Horizontal Animada'
+        : 'Exibição em Grade';
+    if (!isLine) statusTextEl.textContent = modeLabel + ' · Todas as peças visíveis';
+    else if (!autoPlay) statusTextEl.textContent = modeLabel + ' · Pausada';
+    else if (userInteracting) statusTextEl.textContent = modeLabel + ' · Controle Manual (Mouse/Tela)';
+    else statusTextEl.textContent = modeLabel + ' · Rolagem Automática Ativa';
+  }
+
+  if (playBtn) {
+    playBtn.textContent = autoPlay ? '⏸ Pausar' : '▶ Rodar';
+    playBtn.classList.toggle('active', autoPlay);
+  }
+
+  modeButtons.forEach((btn) => {
+    const active = btn.getAttribute('data-showcase-mode') === displayMode;
+    btn.classList.toggle('active', active);
+    btn.setAttribute('aria-pressed', String(active));
+  });
+}
+
+function syncFracScroll() {
+  fracScroll = displayMode === 'horizontal' ? gallery.scrollLeft : gallery.scrollTop;
+}
+
+function pauseTemporarily(ms) {
+  userInteracting = true;
+  updateStatusUI();
+  clearTimeout(resumeTimer);
+  if (ms > 0) {
+    resumeTimer = setTimeout(() => {
+      userInteracting = false;
+      syncFracScroll();
+      updateStatusUI();
+    }, ms);
+  }
+}
+
+// Eventos dos botões
+playBtn.addEventListener('click', () => {
+  autoPlay = !autoPlay;
+  userInteracting = false;
+  clearTimeout(resumeTimer);
+  syncFracScroll();
+  updateStatusUI();
+});
+
+prevBtn.addEventListener('click', () => {
+  direction = -1;
+  pauseTemporarily(1800);
+  if (displayMode === 'horizontal') gallery.scrollBy({ left: -260, behavior: 'smooth' });
+  else gallery.scrollBy({ top: -220, behavior: 'smooth' });
+});
+
+nextBtn.addEventListener('click', () => {
+  direction = 1;
+  pauseTemporarily(1800);
+  if (displayMode === 'horizontal') gallery.scrollBy({ left: 260, behavior: 'smooth' });
+  else gallery.scrollBy({ top: 220, behavior: 'smooth' });
+});
+
+speedSel.addEventListener('change', () => {
+  speedPxPerFrame = parseFloat(speedSel.value) || 0.68;
+});
+
+modeButtons.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    applyDisplayMode(btn.getAttribute('data-showcase-mode'));
+  });
+});
+
+// Interação por Mouse (Hover, Roda do Mouse e Arraste Click & Drag em 2 eixos)
+gallery.addEventListener('mouseenter', () => {
+  userInteracting = true;
+  clearTimeout(resumeTimer);
+  updateStatusUI();
+});
+
+gallery.addEventListener('mouseleave', () => {
+  if (!isDragging) {
+    userInteracting = false;
+    syncFracScroll();
+    updateStatusUI();
+  }
+});
+
+gallery.addEventListener('wheel', (e) => {
+  if (displayMode === 'horizontal' && Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+    // Permite rolar a linha horizontal usando a roda vertical do mouse
+    e.preventDefault();
+    gallery.scrollLeft += e.deltaY;
+    syncFracScroll();
+  }
+  pauseTemporarily(2200);
+}, { passive: false });
+
+let isDragging = false;
+let startX = 0, startY = 0;
+let startScrollLeft = 0, startScrollTop = 0;
+let dragMoved = false;
+
+gallery.addEventListener('mousedown', (e) => {
+  if (displayMode === 'grid') return;
+  if (e.target.closest('button, input, select, a, label')) return;
+  isDragging = true;
+  dragMoved = false;
+  startX = e.pageX;
+  startY = e.pageY;
+  startScrollLeft = gallery.scrollLeft;
+  startScrollTop = gallery.scrollTop;
+  gallery.classList.add('is-dragging');
+  userInteracting = true;
+  clearTimeout(resumeTimer);
+  updateStatusUI();
+});
+
+window.addEventListener('mousemove', (e) => {
+  if (!isDragging) return;
+  const dx = e.pageX - startX;
+  const dy = e.pageY - startY;
+  if (Math.abs(dx) > 5 || Math.abs(dy) > 5) dragMoved = true;
+  if (displayMode === 'horizontal') {
+    gallery.scrollLeft = startScrollLeft - dx;
+  } else if (displayMode === 'vertical') {
+    gallery.scrollTop = startScrollTop - dy;
+  }
+  syncFracScroll();
+});
+
+window.addEventListener('mouseup', () => {
+  if (!isDragging) return;
+  isDragging = false;
+  gallery.classList.remove('is-dragging');
+  pauseTemporarily(1500);
+});
+
+// Interação por Tela Touch (Celular e Tablet)
+gallery.addEventListener('touchstart', () => {
+  userInteracting = true;
+  clearTimeout(resumeTimer);
+  updateStatusUI();
+}, { passive: true });
+
+gallery.addEventListener('touchend', () => {
+  pauseTemporarily(2600);
+}, { passive: true });
+
+// Seleção direta de qualquer cartão clicando com o mouse ou tocando na tela
+function enhanceGalleryCards() {
+  const cards = gallery.querySelectorAll('.watch');
+  cards.forEach((card) => {
+    const cb = card.querySelector('input[type="checkbox"]');
+    if (!cb) return;
+    card.classList.toggle('is-selected', cb.checked);
+
+    if (!cb.dataset.vscrollBound) {
+      cb.dataset.vscrollBound = '1';
+      cb.addEventListener('change', () => {
+        card.classList.toggle('is-selected', cb.checked);
+      });
+    }
+
+    if (!card.dataset.vscrollCardBound) {
+      card.dataset.vscrollCardBound = '1';
+      card.addEventListener('click', (e) => {
+        if (dragMoved) {
+          dragMoved = false;
+          return;
+        }
+        if (e.target.closest('button, input, label, a')) return;
+        cb.checked = !cb.checked;
+        cb.dispatchEvent(new Event('change', { bubbles: true }));
+      });
+    }
+  });
+}
+
+const obs = new MutationObserver(() => {
+  enhanceGalleryCards();
+});
+obs.observe(gallery, { childList: true });
+enhanceGalleryCards();
+
+// Motor de Rolagem Automática Suave (60fps) para Linha Vertical e Linha Horizontal
+let boundaryPauseUntil = 0;
+function stepAutoScroll(now) {
+  const isLine = displayMode === 'vertical' || displayMode === 'horizontal';
+  if (isLine && autoPlay && !userInteracting && !gallery.closest('[hidden]')) {
+    if (displayMode === 'vertical') {
+      const maxScroll = gallery.scrollHeight - gallery.clientHeight;
+      if (maxScroll > 8 && now >= boundaryPauseUntil) {
+        if (Math.abs(gallery.scrollTop - fracScroll) > 3) fracScroll = gallery.scrollTop;
+        fracScroll += speedPxPerFrame * direction;
+        if (fracScroll >= maxScroll) {
+          fracScroll = maxScroll;
+          gallery.scrollTop = maxScroll;
+          direction = -1;
+          boundaryPauseUntil = now + 1100;
+        } else if (fracScroll <= 0) {
+          fracScroll = 0;
+          gallery.scrollTop = 0;
+          direction = 1;
+          boundaryPauseUntil = now + 1100;
+        } else {
+          gallery.scrollTop = fracScroll;
+        }
+      }
+    } else if (displayMode === 'horizontal') {
+      const maxScroll = gallery.scrollWidth - gallery.clientWidth;
+      if (maxScroll > 8 && now >= boundaryPauseUntil) {
+        if (Math.abs(gallery.scrollLeft - fracScroll) > 3) fracScroll = gallery.scrollLeft;
+        fracScroll += speedPxPerFrame * direction;
+        if (fracScroll >= maxScroll) {
+          fracScroll = maxScroll;
+          gallery.scrollLeft = maxScroll;
+          direction = -1;
+          boundaryPauseUntil = now + 1100;
+        } else if (fracScroll <= 0) {
+          fracScroll = 0;
+          gallery.scrollLeft = 0;
+          direction = 1;
+          boundaryPauseUntil = now + 1100;
+        } else {
+          gallery.scrollLeft = fracScroll;
+        }
+      }
+    }
+  }
+  requestAnimationFrame(stepAutoScroll);
+}
+
+applyDisplayMode('vertical');
+requestAnimationFrame(stepAutoScroll);
+})();
+</script>
+</body></html>
