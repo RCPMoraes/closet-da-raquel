@@ -682,6 +682,53 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
   <p class="intro">Inspirado no Acloset: monte combinações com as peças do seu acervo, receba sugestões por clima e ocasião, agende o Look do Dia (OOTD) e acompanhe o Custo por Uso (CPW).</p>
 
   <div class="acloset-top-kpis" id="aclosetKpis"></div>
+  <div class="panel" id="diaryPanel" style="margin:0 0 18px">
+    <div class="eyebrow">00 / DIÁRIO · LOOK VESTIDO</div>
+    <h3>O que você vestiu?</h3>
+    <p class="muted">Registre o look do dia com peças do seu acervo. Cada registro soma +1 uso e atualiza o último uso das peças, alimentando Custo por Uso e Esquecidas.</p>
+    <div class="acloset-controls-row">
+      <label>Data<input type="date" id="diaryDate"/></label>
+      <label>Ocasião<select id="diaryOcc" data-no-alpha="true"><option value="">Sem ocasião</option><option>Trabalho</option><option>Casual</option><option>Festa</option><option>Viagem</option><option>Esportivo</option></select></label>
+    </div>
+    <div class="acloset-controls-row">
+      <label>Como se sentiu<select id="diaryRating" data-no-alpha="true"><option value="0">Sem nota</option><option value="5">★★★★★ Amei</option><option value="4">★★★★ Gostei</option><option value="3">★★★ Ok</option><option value="2">★★ Meh</option><option value="1">★ Não repetiria</option></select></label>
+      <div><div class="muted" style="font-size:12px;font-weight:700;margin-bottom:6px">Foto do look (opcional)</div>
+        <div class="toolbar" style="gap:6px;align-items:center;flex-wrap:wrap">
+          <button class="btn sm" id="diaryCamBtn" type="button">📷 Tirar foto</button>
+          <button class="btn sm" id="diaryGalBtn" type="button">🖼 Galeria</button>
+          <span id="diaryPhotoPrev" style="display:none;align-items:center;gap:6px"><img id="diaryPhotoImg" class="diary-photo" style="width:44px;height:56px" alt=""><button class="btn sm" id="diaryPhotoDel" type="button" title="Remover foto">✕</button></span>
+        </div>
+        <input type="file" id="diaryPhotoCam" accept="image/*" capture="environment" hidden>
+        <input type="file" id="diaryPhoto" accept="image/*" hidden></div>
+    </div>
+    <label>Observação<input id="diaryNote" placeholder="Ex.: elogiaram a jaqueta, o sapato apertou..."/></label>
+    <div class="style-form" id="diaryFilters">
+      <div class="ward-filter-group"><span class="ward-filter-title">1. Categoria</span><div class="ward-chip-filter-bar" id="dfCat"></div></div>
+      <div id="dfSubWrap" class="ward-subfilter-box" hidden>
+        <div class="ward-filter-group"><span class="ward-filter-title">2. Tipo / Subtipo</span><div class="ward-chip-filter-bar" id="dfSub"></div></div>
+        <div class="ward-filter-group"><span class="ward-filter-title">3. Cor principal</span><div class="ward-chip-filter-bar" id="dfColor"></div></div>
+        <div class="ward-filter-group"><span class="ward-filter-title">4. Estilo / Ocasião</span><div class="ward-chip-filter-bar" id="dfStyle"></div></div>
+        <div class="ward-filter-group"><span class="ward-filter-title">5. Marca / Material</span><div class="ward-chip-filter-bar" id="dfBrand"></div></div>
+        <div class="ward-filter-group"><span class="ward-filter-title">6. Estação / Cápsula atual</span><div class="ward-chip-filter-bar" id="dfSeason"></div></div>
+      </div>
+      <input id="diarySearch" placeholder="⌕ Busca rápida por nome, marca, cor ou observação..." style="margin-top:4px"/>
+    </div>
+    <div class="toolbar" style="justify-content:space-between;align-items:center;margin:8px 0 6px;flex-wrap:wrap;gap:6px">
+      <span class="muted" id="diaryGridHead" style="font-size:13px"></span>
+      <button class="btn sm" id="dfClear" type="button">Limpar filtros</button>
+    </div>
+    <div class="ward-interactive-grid" id="diaryPicker"></div>
+    <div id="diarySelected" class="muted" style="margin:8px 0"></div>
+    <div id="diaryWarn" class="notice" style="display:none;margin:0 0 10px"></div>
+    <div class="toolbar" style="flex-wrap:wrap;margin:8px 0 12px">
+      <button class="btn primary" id="diaryRegisterBtn" type="button">✓ Registrar look vestido</button>
+      <button class="btn" id="diarySuggestBtn" type="button">✦ Sugerir para hoje</button>
+      <button class="btn" id="diaryClearBtn" type="button">Limpar seleção</button>
+    </div>
+    <div id="diarySuggest"></div>
+    <div id="diaryStats" class="muted" style="margin:12px 0 6px"></div>
+    <div id="diaryHistory"></div>
+  </div>
 
   <div class="acloset-grid">
     <!-- Coluna 1: Gerador e Quadro de Look (Outfit Creator) -->
@@ -5708,4 +5755,160 @@ else initWardrobeV65();
 </script>
 
 
+<style id="diary-css">
+.diary-picker{display:flex;flex-wrap:wrap;gap:6px;max-height:210px;overflow:auto;padding:8px;border:1px solid var(--line,#ddd);border-radius:14px}
+.diary-chip{display:inline-flex;align-items:center;gap:6px;padding:4px 10px 4px 4px!important;font-size:12px!important}
+.diary-chip img,.diary-th{width:28px;height:28px;border-radius:8px;object-fit:cover;flex:none}
+.diary-entry{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;padding:10px 0;border-top:1px solid var(--line,#ddd)}
+.diary-photo{width:56px;height:72px;border-radius:10px;object-fit:cover;background:var(--soft,#eee)}
+.diary-ths{display:flex;gap:4px;flex-wrap:wrap;margin-top:4px}
+.diary-sug{display:grid;gap:6px;padding:10px 12px;border:1px dashed var(--line,#ccc);border-radius:14px;margin-bottom:10px}
+</style>
+<script id="diary-script">
+(function(){try{
+const KEY='closet_raquel_diary_v1',$=id=>document.getElementById(id);
+const esc=v=>String(v==null?'':v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const say=m=>{try{(window.toast||alert)(m)}catch(e){}};
+const today=()=>{const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')};
+const fmt=d=>d.split('-').reverse().slice(0,2).join('/');
+let diary=[];try{diary=JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){}
+let sel=new Set(),photo='';
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(diary));return true}catch(e){say('Sem espaço para guardar a foto. Registre sem foto.');return false}};
+const all=()=>(typeof items!=='undefined'&&items)||[];
+const byId=id=>all().find(x=>x.id===id);
+const gap=d=>d?Math.floor((new Date(today()+'T12:00:00')-new Date(d+'T12:00:00'))/864e5):null;
+function lastWorn(id){let l=(byId(id)||{}).ultimoUso||'';diary.forEach(e=>{if(e.itemIds.includes(id)&&e.date>l)l=e.date});return l}
+function th(x){return x&&x.foto?'<img class="diary-th" src="'+esc(x.foto)+'" alt="">':'<span class="diary-th" style="background:var(--soft,#eee)"></span>'}
+let F={cat:'',sub:'',color:'',style:'',brand:'',season:''};
+const arr=v=>(Array.isArray(v)?v:[v]).map(t=>String(t||'').trim()).filter(Boolean);
+const dc=x=>x.detalhesCategoria||{};
+const FX={
+  sub:x=>[String(x.tipoRoupa||dc(x).subtipoSapato||dc(x).subtipo||dc(x).movimento||dc(x).uso||x.tipo||x.formato||'').trim()||'Sem subtipo'],
+  color:x=>{const c=String(x.cor||'').trim();return c?[c.charAt(0).toUpperCase()+c.slice(1).toLowerCase()]:[]},
+  style:x=>arr([x.estilo,dc(x).ocasiao,dc(x).modelagem]),
+  brand:x=>arr([x.marca,x.material,dc(x).banho,dc(x).pulseiraMaterial]),
+  season:x=>arr([x.estacao,x.capsula?'♡ '+x.capsula:''])
+};
+const FIDS={sub:'dfSub',color:'dfColor',style:'dfStyle',brand:'dfBrand',season:'dfSeason'};
+const HEX={preto:'#1d1f1e',branco:'#f7f7f5',cinza:'#8d9390',bege:'#d8c7a9',nude:'#dfc6b0',marrom:'#6d4c3d',caramelo:'#b3733d',dourado:'#c9a23f',prata:'#bfc5c7',amarelo:'#eab308',laranja:'#ea580c',vermelho:'#dc2626',vinho:'#7f1d1d',bordo:'#6b1d2f',rosa:'#ec4899',roxo:'#7e22ce',lilas:'#a855f7',azul:'#2563eb',marinho:'#1e3a8a',verde:'#16a34a',oliva:'#4d7c0f',esmeralda:'#047857',offwhite:'#f4f1ea',creme:'#f3ead8'};
+const hex=n=>{const k=String(n).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z]/g,'');for(const h in HEX)if(k.includes(h))return HEX[h];return '#9ca3af'};
+function match(x,skip,q){
+  if(F.cat&&(x.categoria||'Relógios')!==F.cat)return false;
+  for(const k in FX){if(k===skip||!F[k]||(k==='sub'&&F.sub==='__ALL__'))continue;if(!FX[k](x).includes(F[k]))return false}
+  if(q&&![x.nome,x.marca,x.cor,FX.sub(x)[0],x.capsula,x.obs].join(' ').toLowerCase().includes(q))return false;
+  return true;
+}
+function chipBar(box,counts,active,onPick,o){
+  box.replaceChildren();
+  const mk=(label,val,dot)=>{const b=document.createElement('button');b.type='button';b.className='ward-filter-chip'+(active===val?' active':'');
+    if(dot){const d=document.createElement('span');d.className='ward-color-dot';d.style.background=hex(val);b.appendChild(d)}
+    b.appendChild(document.createTextNode(label));b.onclick=()=>onPick(active===val?'':val);box.appendChild(b)};
+  if(o&&o.total!=null)mk('Ver todos ('+o.total+')','__ALL__');
+  [...counts.keys()].sort((a,b)=>a.localeCompare(b,'pt-BR')).forEach(v=>mk(v+' ('+counts.get(v)+')',v,o&&o.color));
+}
+function renderPicker(){
+  const q=($('diarySearch').value||'').toLowerCase().trim();
+  const cc=new Map();all().forEach(x=>{const c=x.categoria||'Relógios';cc.set(c,(cc.get(c)||0)+1)});
+  chipBar($('dfCat'),cc,F.cat,v=>{F={cat:v,sub:'',color:'',style:'',brand:'',season:''};renderPicker()});
+  $('dfSubWrap').hidden=!F.cat;
+  if(F.cat)Object.keys(FIDS).forEach(k=>{
+    const pool=all().filter(x=>match(x,k,'')),m=new Map();
+    pool.forEach(x=>FX[k](x).forEach(v=>m.set(v,(m.get(v)||0)+1)));
+    const box=$(FIDS[k]);chipBar(box,m,F[k],v=>{F[k]=v;renderPicker()},{total:k==='sub'?pool.length:null,color:k==='color'});
+    box.closest('.ward-filter-group').hidden=!m.size&&k!=='sub';
+  });
+  const grid=$('diaryPicker'),hasF=Object.values(F).some(Boolean)||q;
+  const list=hasF?all().filter(x=>match(x,'',q)):[];
+  $('diaryGridHead').textContent=hasF?list.length+' peça(s) · toque para incluir no look':'Escolha uma categoria ou busque para ver as peças.';
+  grid.replaceChildren();
+  if(!hasF){grid.hidden=true;return}
+  grid.hidden=false;
+  if(!list.length){grid.innerHTML='<p class="muted" style="grid-column:1/-1;text-align:center;margin:0;padding:12px">Nenhuma peça corresponde aos filtros.</p>';return}
+  list.forEach(x=>{
+    const c=document.createElement('button');c.type='button';c.className='wi-card'+(sel.has(x.id)?' is-selected':'');
+    c.title=[x.nome,FX.sub(x)[0],x.marca,x.cor].filter(Boolean).join(' · ');
+    const t=document.createElement('div');t.className='wi-thumb';
+    if(x.foto){const im=document.createElement('img');im.src=x.foto;im.alt='';im.loading='lazy';t.appendChild(im)}else{t.textContent='✨'}
+    const n=document.createElement('strong');n.textContent=x.nome||'Peça';
+    const m=document.createElement('small');m.textContent=[FX.sub(x)[0],x.cor,x.marca].filter(Boolean).join(' · ');
+    c.append(t,n,m);c.onclick=()=>{sel.has(x.id)?sel.delete(x.id):sel.add(x.id);renderPicker();renderSel()};grid.appendChild(c);
+  });
+}
+function renderSel(){
+  const ids=[...sel],n=ids.length;
+  $('diarySelected').textContent=n?n+' peça(s) no look: '+ids.map(i=>(byId(i)||{}).nome).filter(Boolean).join(' + '):'Toque nas peças acima para montar o look vestido.';
+  const rep=ids.map(i=>({x:byId(i),d:gap(lastWorn(i))})).filter(r=>r.x&&r.d!=null&&r.d>=0&&r.d<=3);
+  const w=$('diaryWarn');
+  if(rep.length){w.style.display='';w.textContent='Repetição recente: '+rep.map(r=>r.x.nome+' ('+(r.d===0?'hoje':'há '+r.d+' dia(s)')+')').join(', ')+'.'}else w.style.display='none';
+}
+function renderHistory(){
+  const h=$('diaryHistory'),m=today().slice(0,7);
+  const cnt={};diary.forEach(e=>e.itemIds.forEach(i=>cnt[i]=(cnt[i]||0)+1));
+  const top=Object.entries(cnt).sort((a,b)=>b[1]-a[1])[0];
+  $('diaryStats').textContent=diary.length?diary.length+' look(s) registrados · '+diary.filter(e=>e.date.slice(0,7)===m).length+' neste mês'+(top&&byId(top[0])?' · mais vestida: '+byId(top[0]).nome+' ('+top[1]+'×)':''):'Nenhum look registrado ainda.';
+  h.replaceChildren();
+  diary.slice(0,12).forEach(e=>{
+    const d=document.createElement('div');d.className='diary-entry';
+    const ph=e.photo?'<img class="diary-photo" src="'+e.photo+'" alt="">':'<div class="diary-photo" style="display:grid;place-items:center">👗</div>';
+    d.innerHTML=ph+'<div><strong>'+fmt(e.date)+'</strong>'+(e.occ?' · '+esc(e.occ):'')+(e.rating?' · '+'★'.repeat(e.rating):'')+(e.note?'<div class="muted" style="font-size:12px">'+esc(e.note)+'</div>':'')+'<div class="diary-ths">'+e.itemIds.map(i=>th(byId(i))).join('')+'</div><div class="muted" style="font-size:12px;margin-top:2px">'+esc(e.itemIds.map(i=>(byId(i)||{}).nome).filter(Boolean).join(' + '))+'</div></div>';
+    const x=document.createElement('button');x.type='button';x.className='btn sm';x.textContent='✕';x.title='Excluir e desfazer o uso';x.onclick=()=>removeEntry(e.id);d.appendChild(x);h.appendChild(d)});
+}
+async function bump(ids,delta,date){
+  for(const it of all().filter(x=>ids.includes(x.id))){
+    it.usos=String(Math.max(0,(parseInt(it.usos,10)||0)+delta));
+    if(delta>0){if(!it.ultimoUso||date>it.ultimoUso)it.ultimoUso=date}else it.ultimoUso=lastWorn(it.id)||'';
+    await txn('readwrite',st=>st.put(it));
+  }
+  await refresh();
+}
+async function register(){
+  if(!sel.size){say('Selecione ao menos uma peça.');return}
+  const date=$('diaryDate').value||today();
+  const e={id:'dia-'+Date.now(),date,occ:$('diaryOcc').value,rating:+$('diaryRating').value||0,note:$('diaryNote').value.trim(),photo,itemIds:[...sel]};
+  diary.push(e);diary.sort((a,b)=>b.date.localeCompare(a.date)||b.id.localeCompare(a.id));
+  if(!save()){diary=diary.filter(x=>x!==e);e.photo='';diary.push(e);diary.sort((a,b)=>b.date.localeCompare(a.date));save()}
+  await bump(e.itemIds,1,date);
+  sel=new Set();clearPhoto();$('diaryNote').value='';$('diarySuggest').replaceChildren();
+  renderAll();say('Look registrado! +1 uso nas peças.');
+}
+async function removeEntry(id){
+  const e=diary.find(x=>x.id===id);if(!e||!confirm('Excluir este registro e desfazer o +1 uso das peças?'))return;
+  diary=diary.filter(x=>x.id!==id);save();await bump(e.itemIds,-1,e.date);renderAll();
+}
+function suggest(){
+  const clim=($('aclosetClimate')||{}).value||'all',occ=$('diaryOcc').value;
+  const recent=new Set();diary.filter(e=>{const g=gap(e.date);return g!=null&&g>=0&&g<=2}).forEach(e=>e.itemIds.forEach(i=>recent.add(i)));
+  const CM={quente:['quente','verão'],frio:['frio','inverno'],ameno:['ameno','meia']}[clim];
+  const out=[['Roupas'],['Sapatos','Tênis'],['Relógios'],['Joias','Anéis','Colares','Pulseiras']].map(cats=>{
+    const r=all().filter(x=>cats.includes(x.categoria)).map(x=>{
+      let sc=Math.random()*3;const why=[],lw=lastWorn(x.id),d=gap(lw);
+      if(!lw){sc+=30;why.push('ainda não vestida')}else{sc+=Math.min(d,60)/2;if(d>=14)why.push('parada há '+d+' dias')}
+      if((parseInt(x.usos,10)||0)<3)sc+=6;
+      if(recent.has(x.id))sc-=40;
+      const t=[x.estacao,x.estilo,x.detalhesCategoria&&x.detalhesCategoria.ocasiao].join(' ').toLowerCase();
+      if(CM&&CM.some(k=>t.includes(k))){sc+=14;why.push('combina com o clima')}
+      if(occ&&t.includes(occ.toLowerCase())){sc+=16;why.push('combina com a ocasião')}
+      return{x,sc,why}}).sort((a,b)=>b.sc-a.sc)[0];return r}).filter(Boolean);
+  const box=$('diarySuggest');box.replaceChildren();
+  if(!out.length){say('Cadastre peças para receber sugestões.');return}
+  const d=document.createElement('div');d.className='diary-sug';
+  d.innerHTML='<strong>Sugestão para hoje</strong>'+out.map(r=>'<div style="display:flex;gap:8px;align-items:center">'+th(r.x)+'<span><b>'+esc(r.x.nome)+'</b><span class="muted" style="font-size:12px"> · '+esc(r.why.join(', ')||'boa opção')+'</span></span></div>').join('')+'<div class="toolbar"><button class="btn primary sm" id="diaryUseSug" type="button">Vestir este look</button><button class="btn sm" id="diaryOtherSug" type="button">Outra sugestão</button></div>';
+  box.appendChild(d);
+  $('diaryUseSug').onclick=()=>{sel=new Set(out.map(r=>r.x.id));renderPicker();renderSel();box.replaceChildren()};
+  $('diaryOtherSug').onclick=suggest;
+}
+function renderAll(){renderPicker();renderSel();renderHistory()}
+$('diaryDate').value=today();
+$('diarySearch').addEventListener('input',renderPicker);$('dfClear').onclick=()=>{F={cat:'',sub:'',color:'',style:'',brand:'',season:''};$('diarySearch').value='';renderPicker()};
+$('diaryRegisterBtn').onclick=register;$('diarySuggestBtn').onclick=suggest;
+$('diaryClearBtn').onclick=()=>{sel=new Set();renderPicker();renderSel()};
+function clearPhoto(){photo='';$('diaryPhoto').value='';$('diaryPhotoCam').value='';$('diaryPhotoPrev').style.display='none'}
+function onPhoto(ev){const f=ev.target.files[0];if(!f)return;const r=new FileReader();
+  r.onload=()=>{const im=new Image();im.onload=()=>{const k=Math.min(1,640/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=im.width*k;c.height=im.height*k;c.getContext('2d').drawImage(im,0,0,c.width,c.height);photo=c.toDataURL('image/jpeg',.7);$('diaryPhotoImg').src=photo;$('diaryPhotoPrev').style.display='inline-flex'};im.src=r.result};r.readAsDataURL(f)}
+$('diaryPhoto').addEventListener('change',onPhoto);$('diaryPhotoCam').addEventListener('change',onPhoto);
+$('diaryCamBtn').onclick=()=>$('diaryPhotoCam').click();$('diaryGalBtn').onclick=()=>$('diaryPhoto').click();$('diaryPhotoDel').onclick=clearPhoto;
+document.addEventListener('click',e=>{if(e.target.closest('[data-tab="looks"]'))setTimeout(renderAll,80)});
+setTimeout(renderAll,1200);
+}catch(err){console.warn('Diário de looks:',err)}})();
+</script>
 </body></html>
