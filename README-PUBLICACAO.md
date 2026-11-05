@@ -1,5 +1,7 @@
 # Closet da Raquel — checklist de publicação (GitHub Pages) · v5 "10/10"
 
+> **v7 (05/11/2026):** Retrospectiva de looks (KPIs, calendário de 12 semanas, peças-coringa e esquecidas), busca rápida com Ctrl K e atalhos. Detalhes no `CHANGELOG.md`. Service worker: `closet-raquel-v7.0.0`.
+
 O site é o `index.html` + alguns arquivos ao lado dele (sem build, sem servidor):
 
 | Arquivo | Para quê |
