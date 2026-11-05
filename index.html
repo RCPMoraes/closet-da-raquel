@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR"><head><script>document.documentElement.setAttribute("data-theme","light");try{localStorage.setItem("atelier-theme","light")}catch(e){}</script><meta charset="utf-8"/>
+<html lang="pt-BR"><head><script>(function(){var r=document.documentElement,p="light";try{p=localStorage.getItem("closet-theme")||"light"}catch(e){}if(p!=="dark"&&p!=="auto")p="light";var d=p==="dark"||(p==="auto"&&window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches);r.setAttribute("data-theme-pref",p);r.setAttribute("data-theme",d?"dark":"light")})();</script><meta charset="utf-8"/>
 <link rel="manifest" href="manifest.webmanifest"/><link rel="apple-touch-icon" href="icons/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png"/><meta name="apple-mobile-web-app-title" content="Closet"/><meta name="apple-mobile-web-app-status-bar-style" content="default"/>
 <meta name="theme-color" content="#183D2C" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -587,7 +587,7 @@ html[data-view="mobile"] .mobile-nav{width:min(430px,100%)!important}
 /* Desktop forçado: largura de computador (no celular, a página abre "afastada", como "versão para computador") */
 html[data-view="desktop"] .app{min-width:1280px!important}
 @media print{.vp-box{display:none!important}}
-</style><style id="light-only-v40">html,html[data-theme="dark"]{color-scheme:light!important}html[data-palette] .top .top-actions{grid-template-columns:repeat(2,minmax(0,1fr))!important}html[data-palette] .top-actions #viewToggle,html[data-palette] .top-actions .palette-control{grid-column:auto!important}html[data-palette] .top-actions #topSyncBadge,html[data-palette] .top-actions .btn.primary{grid-column:1/-1!important}@media(max-width:800px){html[data-palette] .top .top-actions{grid-template-columns:repeat(2,minmax(0,1fr))!important}} </style><style id="pdf-rollback-v45">
+</style><style id="light-only-v40">html[data-theme="light"]{color-scheme:light}html[data-palette] .top .top-actions{grid-template-columns:repeat(2,minmax(0,1fr))!important}html[data-palette] .top-actions #viewToggle,html[data-palette] .top-actions .palette-control{grid-column:auto!important}html[data-palette] .top-actions #topSyncBadge,html[data-palette] .top-actions .btn.primary{grid-column:1/-1!important}@media(max-width:800px){html[data-palette] .top .top-actions{grid-template-columns:repeat(2,minmax(0,1fr))!important}} </style><style id="pdf-rollback-v45">
 /* Restaura a impressão direta do portfólio, isolando-o do restante da interface. */
 @media print {
 @page{size:A4 portrait;margin:14mm}
@@ -655,7 +655,7 @@ html[data-palette] #portfolio .port-card .chip{background:var(--soft)!important;
 </style><style id="app-light-palette-fix-v54">
 /* v54 — tema claro definitivo: fundo da interface segue a paleta.
    Preserva a barra lateral colorida e o PDF independente. */
-:root,html,html[data-theme="light"],html[data-theme="dark"]{color-scheme:light!important}
+:root,html,html[data-theme="light"]{color-scheme:light}
 html[data-palette] {background:var(--bg)!important;color:var(--ink)!important}
 html[data-palette] body{background:var(--bg)!important;background-image:none!important;color:var(--ink)!important}
 html[data-palette] .app,html[data-palette] .main,html[data-palette] main{background:var(--bg)!important;background-image:none!important;color:var(--ink)!important}
@@ -785,8 +785,8 @@ window.closetMedia=M;
   </div>
   <div class="eyebrow">Moda com identidade</div>
   <small>Seu estilo, sua história</small>
-</div><div class="vp-box vp-side" role="group" aria-label="Modo de exibição"><span class="vp-label" aria-hidden="true">MODO DE EXIBIÇÃO</span><div class="vp-switch"><button type="button" data-vp="auto" aria-pressed="false"><span class="vp-ico" aria-hidden="true">✨</span>Auto</button><button type="button" data-vp="desktop" aria-pressed="false"><span class="vp-ico" aria-hidden="true">💻</span>Desktop</button><button type="button" data-vp="mobile" aria-pressed="false"><span class="vp-ico" aria-hidden="true">📱</span>Celular</button></div></div><div class="nav" id="desktopNav"><button class="active" data-tab="acervo"><span>▥</span> Início</button><button data-tab="cadastro"><span>＋</span> Adicionar peça</button><button data-tab="looks"><span>✦</span> Looks &amp; Agenda</button><button data-tab="looks" data-quick-look="1" aria-label="Look do Dia: registrar com foto na hora"><span>📸</span> Look do Dia</button><button data-tab="stylist"><span>✧</span> Estilista</button><button data-tab="wardrobe"><span>♡</span> Cápsulas &amp; Cuidados</button><button data-tab="portfolio"><span>▤</span> Portfólio</button><button data-tab="github"><span>☁</span> Sincronização GitHub</button><button data-tab="backup"><span>⇅</span> Dados &amp; backup</button></div><div class="foot">CLOSET DA RAQUEL<br/>Uma coleção com história.<br/>Feito com carinho pelo Douglas.</div></div></aside><main class="main" id="conteudo" tabindex="-1"><div class="top"><div><div class="mobile-brand" id="mobileBrand" aria-hidden="true"><img id="mobileBrandImg" alt="" hidden/><span>Closet da Raquel</span></div><div class="eyebrow">Coleção particular · Roupas, joias &amp; acessórios</div><div class="sub">Roupas, sapatos, tênis, joias e relógios em um só lugar</div></div><div class="top-actions"><button aria-label="Status GitHub" class="sync-badge" id="topSyncBadge" type="button" data-tab="github"><span class="sync-dot disconnected" id="topSyncDot"></span><span id="topSyncText">GitHub Desconectado</span></button><button aria-label="Escolher visualização" class="btn view-toggle" id="viewToggle" type="button">▣ Visualização</button><label class="palette-control" for="paletteSelect">◉ Paleta <select id="paletteSelect" aria-label="Escolher paleta de cores"><option value="esmeralda">Esmeralda</option><option value="verde">Verde</option><option value="safira">Safira</option><option value="terracota">Terracota</option><option value="grafite">Grafite</option><option value="vermelho">Vermelho</option></select></label><button class="btn primary" data-tab="cadastro">＋ Adicionar ao closet</button></div></div>
-<div class="vp-box vp-main" role="group" aria-label="Modo de exibição"><span class="vp-label" aria-hidden="true">MODO DE EXIBIÇÃO</span><div class="vp-switch"><button type="button" data-vp="auto" aria-pressed="false">✨ Auto</button><button type="button" data-vp="desktop" aria-pressed="false">💻 Desktop</button><button type="button" data-vp="mobile" aria-pressed="false">📱 Celular</button></div></div>
+</div><div class="vp-box vp-side" role="group" aria-label="Modo de exibição"><span class="vp-label" aria-hidden="true">MODO DE EXIBIÇÃO</span><div class="vp-switch"><button type="button" data-vp="auto" aria-pressed="false"><span class="vp-ico" aria-hidden="true">✨</span>Auto</button><button type="button" data-vp="desktop" aria-pressed="false"><span class="vp-ico" aria-hidden="true">💻</span>Desktop</button><button type="button" data-vp="mobile" aria-pressed="false"><span class="vp-ico" aria-hidden="true">📱</span>Celular</button></div></div><div class="vp-box vp-side th-box" role="group" aria-label="Tema"><span class="vp-label" aria-hidden="true">TEMA</span><div class="vp-switch"><button type="button" data-theme-set="light" aria-pressed="false"><span class="vp-ico" aria-hidden="true">☀️</span>Claro</button><button type="button" data-theme-set="dark" aria-pressed="false"><span class="vp-ico" aria-hidden="true">🌙</span>Escuro</button><button type="button" data-theme-set="auto" aria-pressed="false" title="Segue o claro/escuro do aparelho"><span class="vp-ico" aria-hidden="true">🌗</span>Sistema</button></div></div><div class="nav" id="desktopNav"><button class="active" data-tab="acervo"><span>▥</span> Início</button><button data-tab="cadastro"><span>＋</span> Adicionar peça</button><button data-tab="looks"><span>✦</span> Looks &amp; Agenda</button><button data-tab="looks" data-quick-look="1" aria-label="Look do Dia: registrar com foto na hora"><span>📸</span> Look do Dia</button><button data-tab="stylist"><span>✧</span> Estilista</button><button data-tab="wardrobe"><span>♡</span> Cápsulas &amp; Cuidados</button><button data-tab="portfolio"><span>▤</span> Portfólio</button><button data-tab="github"><span>☁</span> Sincronização GitHub</button><button data-tab="backup"><span>⇅</span> Dados &amp; backup</button></div><div class="foot">CLOSET DA RAQUEL<br/>Uma coleção com história.<br/>Feito com carinho pelo Douglas.</div></div></aside><main class="main" id="conteudo" tabindex="-1"><div class="top"><div><div class="mobile-brand" id="mobileBrand" aria-hidden="true"><img id="mobileBrandImg" alt="" hidden/><span>Closet da Raquel</span></div><div class="eyebrow">Coleção particular · Roupas, joias &amp; acessórios</div><div class="sub">Roupas, sapatos, tênis, joias e relógios em um só lugar</div></div><div class="top-actions"><button aria-label="Status GitHub" class="sync-badge" id="topSyncBadge" type="button" data-tab="github"><span class="sync-dot disconnected" id="topSyncDot"></span><span id="topSyncText">GitHub Desconectado</span></button><button aria-label="Escolher visualização" class="btn view-toggle" id="viewToggle" type="button">▣ Visualização</button><label class="palette-control" for="paletteSelect">◉ Paleta <select id="paletteSelect" aria-label="Escolher paleta de cores"><option value="esmeralda">Esmeralda</option><option value="verde">Verde</option><option value="safira">Safira</option><option value="terracota">Terracota</option><option value="grafite">Grafite</option><option value="vermelho">Vermelho</option></select></label><button class="btn primary" data-tab="cadastro">＋ Adicionar ao closet</button></div></div>
+<div class="vp-box vp-main" role="group" aria-label="Modo de exibição"><span class="vp-label" aria-hidden="true">MODO DE EXIBIÇÃO</span><div class="vp-switch"><button type="button" data-vp="auto" aria-pressed="false">✨ Auto</button><button type="button" data-vp="desktop" aria-pressed="false">💻 Desktop</button><button type="button" data-vp="mobile" aria-pressed="false">📱 Celular</button></div></div><div class="vp-box vp-main th-box" role="group" aria-label="Tema"><span class="vp-label" aria-hidden="true">TEMA</span><div class="vp-switch"><button type="button" data-theme-set="light" aria-pressed="false">☀️ Claro</button><button type="button" data-theme-set="dark" aria-pressed="false">🌙 Escuro</button><button type="button" data-theme-set="auto" aria-pressed="false" title="Segue o claro/escuro do aparelho">🌗 Sistema</button></div></div>
 <div class="cloud-newer-banner" id="cloudNewerBanner" role="status">
   <span>☁️ Existe uma versão mais nova na nuvem (salva em outro aparelho).</span>
   <span style="display:flex;gap:6px;flex-wrap:wrap">
@@ -1226,9 +1226,9 @@ function applyMode(mode){
  chooser.hidden=true;safeSet('atelier-view-mode',m);
 }
 function applyTheme(theme){
- const t='light';
- root.setAttribute('data-theme',t);
- safeSet('atelier-theme',t);
+ /* v6.3: o tema é controlado pelo seletor Claro / Escuro / Sistema (closet-theme). */
+ if(window.closetSetTheme){window.closetSetTheme(safeGet('closet-theme')||'light',true);return}
+ root.setAttribute('data-theme',root.getAttribute('data-theme')==='dark'?'dark':'light');
 }
 modeButton.addEventListener('click',e=>{const b=e.target.closest('[data-view-set]');if(b)applyMode(b.dataset.viewSet);});
 window.closetSetView=applyMode;
@@ -7084,4 +7084,71 @@ window.closetLookViewer={open:open,close:close};
 })();
 </script>
 
+<style id="theme-dark-v63">
+/* v6.3 — Tema Claro / Escuro / Sistema. As paletas continuam valendo: no escuro
+   só trocamos fundo, papel, texto e linhas, e clareamos o destaque para ter contraste. */
+html[data-theme="dark"]{color-scheme:dark!important}
+html[data-theme="dark"][data-palette]{--bg:#121716;--paper:#1b2220;--ink:#eef3ef;--muted:#aebcb4;--line:#33413b;--soft:#22302b;--gold:#e0b981;--palette-active:#2c3d36;--palette-active-text:#ffffff;--brand-ivory:#121716;--brand-forest:#eef3ef}
+html[data-theme="dark"][data-palette="esmeralda"]{--accent:#2f8a67;--soft:#1f302a;--palette-side:#0f2a20;--palette-chart:#4cb487}
+html[data-theme="dark"][data-palette="verde"]{--accent:#2f9152;--soft:#1e3125;--palette-side:#103a20;--palette-chart:#4fbf74}
+html[data-theme="dark"][data-palette="safira"]{--accent:#3577b8;--soft:#1d2836;--palette-side:#122640;--palette-chart:#5c9fd8}
+html[data-theme="dark"][data-palette="terracota"]{--accent:#b3604a;--soft:#33241f;--palette-side:#3f221b;--palette-chart:#d58a6a}
+html[data-theme="dark"][data-palette="grafite"]{--accent:#557d70;--soft:#232b29;--palette-side:#161e1b;--palette-chart:#7fa898}
+html[data-theme="dark"][data-palette="vermelho"]{--accent:#c2414f;--soft:#352024;--palette-side:#4a1219;--palette-chart:#e0606f}
+html[data-theme="dark"] body{background:var(--bg)!important;color:var(--ink)!important}
+html[data-theme="dark"] .side{background:var(--palette-side)!important}
+html[data-theme="dark"] .side .foot{border-color:rgba(255,255,255,.14)!important;color:rgba(255,255,255,.66)!important}
+html[data-theme="dark"] .brand small,html[data-theme="dark"] .brand .eyebrow{color:rgba(255,255,255,.7)!important}
+html[data-theme="dark"] input,html[data-theme="dark"] select,html[data-theme="dark"] textarea{background:#151c1a!important;color:var(--ink)!important;border-color:#3d4d46!important}
+html[data-theme="dark"] input::placeholder,html[data-theme="dark"] textarea::placeholder{color:#7f8f87!important}
+html[data-theme="dark"] option{background:#1b2220;color:#eef3ef}
+html[data-theme="dark"] dialog,html[data-theme="dark"] .modal,html[data-theme="dark"] .modal-card,html[data-theme="dark"] .view-dialog{background:var(--paper)!important;color:var(--ink)!important;border-color:var(--line)!important}
+html[data-theme="dark"] .feature-card,html[data-theme="dark"] .panel,html[data-theme="dark"] .dash-panel{box-shadow:0 10px 30px rgba(0,0,0,.35)!important}
+html[data-theme="dark"] .vp-main{background:var(--paper)!important;border-color:var(--line)!important}
+html[data-theme="dark"] .vp-main .vp-switch button{color:var(--muted)}
+html[data-theme="dark"] .vp-main .vp-switch button[aria-pressed="true"]{color:#fff}
+html[data-theme="dark"][data-view="mobile"] body{background:#0b0f0e!important}
+html[data-theme="dark"] .visual-category img,html[data-theme="dark"] #visualCategoryCards .visual-category img{background:#efe6d6!important}
+html[data-theme="dark"] a{color:var(--palette-chart)}
+html[data-theme="dark"] hr{border-color:var(--line)}
+html[data-theme="dark"] .th-box.vp-main{margin-top:-6px}
+html[data-theme="dark"][data-palette] .github-card .notice.gh-privacy-warning,html[data-theme="dark"] .github-card .notice.gh-privacy-warning{background:#3b2a26!important;color:#f2c9bf!important;border-color:#6b4038!important}
+html[data-theme="dark"] .gh-privacy-warning code{color:#ffd9cf!important;background:rgba(0,0,0,.25)!important}
+html[data-theme="dark"] .recado-card,html[data-theme="dark"] .historia-panel{background:linear-gradient(120deg,#1f2a26,#1a2320)!important;border-color:var(--line)!important;box-shadow:0 8px 24px rgba(0,0,0,.3)!important}
+html[data-theme="dark"] .special-looks{background:linear-gradient(120deg,#2a2023,#1f2522)!important;border-color:#4a3a36!important}
+html[data-theme="dark"] .feature-card.feature-hero,html[data-theme="dark"][data-palette] .feature-card.feature-hero{background:linear-gradient(120deg,#1e2c27,#1b2220)!important}
+@media print{html[data-theme="dark"],html[data-theme="dark"] body{color-scheme:light!important;background:#fff!important;color:#171b1a!important}.th-box{display:none!important}}
+</style>
+<script id="theme-switch-v63">
+/* Tema: Claro / Escuro / Sistema. Fica salvo neste aparelho (localStorage 'closet-theme').
+   "Sistema" acompanha o modo claro/escuro do celular ou computador. */
+(function(){
+ 'use strict';
+ var root=document.documentElement, KEY='closet-theme';
+ var mq=window.matchMedia?matchMedia('(prefers-color-scheme: dark)'):null;
+ var meta=document.querySelector('meta[name="theme-color"]'), metaLight=meta?meta.getAttribute('content'):'#183D2C';
+ function pref(){var p;try{p=localStorage.getItem(KEY)}catch(e){}return p==='dark'||p==='auto'?p:'light'}
+ function resolve(p){return p==='dark'||(p==='auto'&&mq&&mq.matches)?'dark':'light'}
+ function paint(p){
+  var t=resolve(p);
+  if(root.getAttribute('data-theme')!==t)root.setAttribute('data-theme',t);
+  root.setAttribute('data-theme-pref',p);
+  if(meta)meta.setAttribute('content',t==='dark'?'#121716':metaLight);
+  document.querySelectorAll('[data-theme-set]').forEach(function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-theme-set')===p))});
+ }
+ function setTheme(p,silent){
+  p=p==='dark'||p==='auto'?p:'light';
+  try{localStorage.setItem(KEY,p)}catch(e){}
+  paint(p);
+  if(!silent){var live=document.getElementById('vpLive');if(live)live.textContent='Tema: '+({light:'Claro',dark:'Escuro',auto:'Sistema'}[p])}
+ }
+ document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('[data-theme-set]');if(b){e.preventDefault();setTheme(b.getAttribute('data-theme-set'))}},true);
+ if(mq){var on=function(){if(pref()==='auto')paint('auto')};mq.addEventListener?mq.addEventListener('change',on):mq.addListener&&mq.addListener(on)}
+ // outro código antigo que tente forçar "claro" é corrigido na hora
+ new MutationObserver(function(){var t=resolve(pref());if(root.getAttribute('data-theme')!==t)root.setAttribute('data-theme',t)}).observe(root,{attributes:true,attributeFilter:['data-theme']});
+ window.addEventListener('storage',function(e){if(e.key===KEY)paint(pref())});
+ window.closetSetTheme=setTheme;
+ paint(pref());
+})();
+</script>
 </body></html>

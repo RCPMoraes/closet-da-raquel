@@ -1,7 +1,7 @@
 /* Closet da Raquel — service worker (cache offline do "esqueleto" do app).
    Nunca guarda nada do GitHub, da previsão do tempo ou de outros sites:
    os dados da Raquel ficam no IndexedDB/localStorage do aparelho, não neste cache. */
-const VERSION = 'closet-raquel-v5.1.0';
+const VERSION = 'closet-raquel-v6.3.0';
 const SHELL = [
   './',
   './index.html',

@@ -119,3 +119,39 @@ O site é o `index.html` + alguns arquivos ao lado dele (sem build, sem servidor
 - Fotos do diário: `window.closetMedia` (banco `closet-raquel-media`, store `diaryPhotos`, chave = id do registro). `buildSnapshot` usa `hydrateDiary` (coloca a foto de volta como dataURL), e `applySnapshot` usa `storeDiary` (separa a foto e limpa as órfãs). `normalizeSnapshot` descarta `photoRef` vindo de fora.
 - O Auto-Sync continua igual: qualquer gravação em `closet_raquel_*` (looks, agenda, diário…) ou nas peças marca "mudou"; o envio é o snapshot inteiro com hash para não repetir commits.
 - Service worker: o site é buscado na rede primeiro, com o cache como reserva; os arquivos estáticos vêm do cache e se atualizam em segundo plano. Domínios de fora (GitHub, Open-Meteo) ficam fora do cache.
+
+## Look do Dia · foto na hora (v6)
+- No menu: **📸 Look do Dia** (menu lateral e barra do celular). No celular, o toque já abre a câmera; depois da foto, **✓ Salvar Look do Dia** (data e hora entram sozinhas) — 1 toque.
+- Opcionais no mesmo painel (aba Looks, acima do diário): ocasião (chips), **cápsula** existente ou nova, **look salvo** (lote de peças), marcar peças do acervo (+1 uso) e observação.
+- **Peça nova na foto?** Vira **rascunho** no registro do diário; o botão **＋ Cadastrar peça** abre o cadastro já com nome, categoria, cápsula e a foto. Ao salvar, a peça é vinculada ao registro (+1 uso).
+- Os registros são do mesmo **diário de looks**: foto no IndexedDB, entram no backup e no Push/Pull v4 (campos novos: `time`, `quick`, `capsula`, `lookId`, `draft`).
+
+## Categorias Bolsa e Conjunto (v6)
+- **Bolsa**: tipo, tamanho, material, ferragens, alça, fechamento, ocasião, estado, história.
+- **Conjunto** (peças de roupa combinadas): tipo (blazer + calça, cropped + saia, tricô...), quantas peças, tecido, estampa, se usa separado, ocasião, estado, história + tamanho.
+- Aparecem no cadastro, filtros, cards ilustrados, PDF, lista de desejos, sugestões do diário e no montador de looks (Conjunto no slot da roupa; novo slot **Bolsa**).
+
+## Look do Dia · ampliar, editar e excluir (v6.1)
+- **Ampliar:** toque em qualquer registro do diário (foto ou texto) → abre a foto grande com data, hora, ocasião, cápsula, nota, look salvo e as peças. Tocar na foto abre em tela cheia; `Esc` fecha.
+- **Editar (✎):** troca/remove foto (câmera ou galeria), data, hora, ocasião, cápsula (ou nova), look salvo, nota (“como se sentiu”), peças e observação. Os usos e o último uso das peças são ajustados sozinhos (peça removida −1, peça incluída +1).
+- **Excluir (🗑 / ✕):** pede confirmação; desfaz o +1 uso das peças e apaga a foto do banco do aparelho.
+- Fotos continuam no IndexedDB; backup e nuvem (snapshot v4) não mudaram. Service worker: `closet-raquel-v6.1.0` (na época).
+
+## Look do Dia unificado (v6.2)
+- **“O que você vestiu?” e “Look do Dia” viraram um só:** aba Looks → painel **📸 Look do Dia**, com 4 entradas: 📷 Tirar foto agora · 🖼 Galeria · 👗 Registrar sem foto · ✦ Sugerir para hoje.
+- **Um formulário só:** foto (opcional, dá para adicionar/trocar/remover), data, hora, ocasião, **como se sentiu** (😍 Amei … 🙅 Não repetiria), cápsula (ou nova), look salvo (lote de peças), peças marcadas, **⌕ Buscar mais peças no acervo** (os filtros por categoria/cor/estilo do antigo diário), peça nova da foto (rascunho) e observação.
+- **Um histórico só:** “Seus Looks do Dia” (12 mais recentes + “Ver todos”). Tocar abre ampliado com ✎ editar e 🗑 excluir (igual à v6.1).
+- **Estúdio de Looks:** o antigo “✓ Usar Hoje (+1 uso)” agora é **📸 Vesti hoje → Look do Dia**: salva o look, agenda e cria o registro no Look do Dia (sem contar uso em dobro). A agenda do mês mostra “📸 Ver o Look do Dia que você vestiu” nos dias com registro.
+- **Migração automática (sem perder nada):** na primeira abertura, todos os registros antigos (diário e foto na hora) ganham `v: 2` e `origem` (`foto`, `diario` ou `estudio`); o campo `quick` sai. Campos desconhecidos são mantidos; fotos antigas no localStorage continuam indo para o IndexedDB.
+- **Backup e nuvem:** formato do snapshot continua **v4** (mesma chave `diary`); backups e Pulls antigos são normalizados para o modelo novo ao restaurar.
+- Datas “hoje” agora usam o fuso do aparelho (antes, depois das 21h em São Paulo o Estúdio marcava o dia seguinte).
+- Service worker: `closet-raquel-v6.2.0`.
+
+## Tema Claro / Escuro / Sistema (v6.3)
+
+- Novo seletor **TEMA** (☀️ Claro · 🌙 Escuro · 🌗 Sistema) logo abaixo de **Modo de exibição** — na barra lateral (computador) e no topo (celular).
+- **Sistema** acompanha o claro/escuro do aparelho e troca sozinho quando o aparelho muda.
+- A escolha fica salva só neste aparelho (`localStorage` → `closet-theme`). Padrão: Claro.
+- As 6 paletas continuam valendo no escuro (fundo/texto escurecem, o destaque da paleta é ajustado para contraste).
+- PDF/impressão continuam sempre em fundo branco.
+- Service worker: `closet-raquel-v6.3.0`.
